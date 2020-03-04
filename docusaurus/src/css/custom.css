@@ -1,0 +1,105 @@
+/* stylelint-disable unit-blacklist, media-feature-name-value-whitelist */
+
+/* ==========================================================================
+   Infima theme variables
+   ========================================================================== */
+
+:root {
+    --ifm-code-font-size: 95%;
+    --ifm-code-border-radius: 3px;
+}
+
+html:not([data-theme="dark"]) {
+    --ifm-font-base-color: #180d2d; /* A darker variant of Dark Blue - #221240 */
+    --ifm-color-primary: #2932d3; /* Vivid Blue */
+    --ifm-color-primary-dark: #252dbe;
+    --ifm-color-primary-darker: #232ab3;
+    --ifm-color-primary-darkest: #1d2394;
+    --ifm-color-primary-light: #3c44d9;
+    --ifm-color-primary-lighter: #474edb;
+    --ifm-color-primary-lightest: #666de1;
+    --ifm-code-background: rgba(34, 18, 64, 0.05);
+}
+
+html[data-theme="dark"] {
+    --ifm-color-primary: #9fa4ec; /* A much lighter variant of Dark Blue - #221240 */
+    --ifm-color-primary-dark: #7e85e5;
+    --ifm-color-primary-darker: #6e75e2;
+    --ifm-color-primary-darkest: #3c46d8;
+    --ifm-color-primary-light: #c0c3f3;
+    --ifm-color-primary-lighter: #d0d3f6;
+    --ifm-color-primary-lightest: #fff;
+    --ifm-code-background: rgba(208, 211, 246, 0.05);
+}
+
+/* ==========================================================================
+   Code block tweaks
+   ========================================================================== */
+
+code {
+    --ifm-code-font-size: 85%;
+}
+
+a > code {
+    color: inherit;
+}
+
+/* ==========================================================================
+   Navbar tweaks
+   ========================================================================== */
+
+.navbar.navbar .navbar__inner {
+    flex-wrap: nowrap;
+}
+
+.navbar.navbar .navbar__items {
+    max-width: 50%;
+    flex: 1 1 auto;
+}
+
+.navbar.navbar .navbar__inner .navbar__brand,
+.navbar.navbar .navbar-sidebar .navbar__brand {
+    max-width: 100%;
+    flex: 1 1 auto;
+}
+
+.navbar.navbar .navbar__inner .navbar__brand strong,
+.navbar.navbar .navbar-sidebar .navbar__brand strong {
+    overflow: hidden;
+    flex-shrink: initial;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+html[data-theme="dark"] .navbar.navbar .navbar__inner .navbar__brand .navbar__logo,
+html[data-theme="dark"] .navbar.navbar .navbar-sidebar .navbar__brand .navbar__logo {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 996px) {
+    .navbar.navbar .navbar__items:not(.navbar__items--right) {
+        max-width: calc(100% - 160px);
+    }
+
+    .navbar.navbar .navbar__items--right {
+        max-width: 160px;
+    }
+
+    .navbar.navbar .navbar__inner .navbar__brand {
+        max-width: calc(100% - 33px);
+    }
+
+    .navbar.navbar .navbar-sidebar .navbar__brand {
+        max-width: calc(100% - 50px - 16px);
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar.navbar .navbar__items:not(.navbar__items--right) {
+        max-width: calc(100% - 38px);
+    }
+
+    .navbar.navbar .navbar__items--right {
+        max-width: 38px;
+    }
+}

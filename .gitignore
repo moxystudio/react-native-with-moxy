@@ -1,14 +1,11 @@
-# OSX
-#
-.DS_Store
-
 # Jest
 #
 coverage/
 
-# VSCode
+# Docusaurus
 #
-.vscode/
+/docusaurus/.docusaurus
+/docusaurus/build
 
 # Xcode
 #
