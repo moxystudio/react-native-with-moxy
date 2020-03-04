@@ -16,7 +16,6 @@
     "url": "git@github.com:{project-org}/{project-name}"
   },
   "scripts": {
-    "test": "jest",
     "start:ios:dev": "cross-env ENVFILE=.env.dev react-native run-ios --configuration Debug",
     "start:ios:prod": "cross-env ENVFILE=.env.prod react-native run-ios --configuration Release",
     "start:android:dev": "cross-env ENVFILE=.env.dev react-native run-android --variant devDebug",
@@ -24,14 +23,20 @@
     "build:android:js:dev": "react-native bundle --platform android --dev true --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle",
     "build:android:js:prod": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle",
     "build:android:aab:prod": "npm run build:android:js:prod && cd android && ./gradlew bundleProdRelease || cd -",
-    "build:android:aab:qa": "npm run build:android:js:prod && cd android && ./gradlew bundleQaRelease || cd -",
-    "build:android:apk": "cd android && ./gradlew assembleProdRelease || cd -",
-    "list:ios:simulators": "xcrun simctl list",
+    "build:android:aab:staging": "npm run build:android:js:prod && cd android && ./gradlew bundleStagingRelease || cd -",
+    "list:ios:simulators": "xcrun simctl list devices",
     "list:android:simulators": "avdmanager list avd 2>/dev/null || emulator -list-avds 2>/dev/null || echo 'Not found in PATH: avdmanager and emulator'",
+    "list:android:devices": "adb devices 2>/dev/null || echo 'Not found in PATH: adb",
+    "postinstall": "npm run pods",
+    "pods": "cd ios/ && pod install || cd -",
     "release": "standard-version",
     "postrelease": "git push --follow-tags origin HEAD",
     "lint": "eslint --ignore-path .gitignore .",
-    "pods": "cd ios/ && pod install || cd -"
+    "test": "jest",
+    "docs": "npm run start --prefix docusaurus -- --port 4000",
+    "clean:ios": "cd ios/ && xcodebuild clean || cd -",
+    "clean:android": "cd android/ && ./gradlew clean && rimraf android/app/src/main/assets/index.android.bundle || cd -",
+    "clean": "npm run clean:ios && npm run clean:android"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.7",
