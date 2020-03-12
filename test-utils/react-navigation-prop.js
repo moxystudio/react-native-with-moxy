@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable no-undef */
 export default () => ({
     state: { params: {} },
     dispatch: jest.fn(),
@@ -17,5 +17,5 @@ export default () => ({
     popToTop: jest.fn(),
     isFocused: jest.fn(() => false),
 });
+/* eslint-enable no-undef */
 
-/* eslint-enable */

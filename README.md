@@ -11,13 +11,14 @@
 [david-dm-dev-url]:https://david-dm.org/moxystudio/react-native-with-moxy?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/react-native-with-moxy.svg
 
-MOXY's boilerplate to accelerate the setup of new [React Native](https://reactnative.dev/) based web applications.
+MOXY's boilerplate to accelerate the setup of new [React Native](https://reactnative.dev/) based mobile applications.
 
 ## Documentation
 
 Please check out the documentation page at https://react-native-with.moxy.tech.
 
 To view the documentation locally, you may run:
+
 ```bash
 npm i --prefix docusarus
 npm run docs

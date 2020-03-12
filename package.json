@@ -1,13 +1,15 @@
 {
   "name": "react-native-with-moxy",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "The https://play.google.com/store/apps/details?id=<package> Android and https://apps.apple.com/us/app/<name>/id<AppleID> iOS apps",
   "author": "MOXY <hello@moxy.studio>",
   "private": true,
   "license": "UNLICENSED",
   "keywords": [
     "app",
-    "native"
+    "react",
+    "native",
+    "mobile"
   ],
   "repository": {
     "type": "git",
