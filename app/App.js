@@ -4,7 +4,7 @@ import AppStack, { rootNavigation } from './navigation';
 import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => (
-    <NavigationContainer ref={ rootNavigation }>
+    <NavigationContainer ref={ rootNavigation.navigationRef }>
         <AppStack />
     </NavigationContainer>
 );

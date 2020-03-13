@@ -1,3 +1,5 @@
+// Reference documentation: https://reactnavigation.org/docs/navigation-prop/
+
 /* eslint-disable no-undef */
 export default () => ({
     state: { params: {} },

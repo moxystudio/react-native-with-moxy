@@ -6,7 +6,7 @@ const esModules = ['react-native', 'react-navigation', '@react-navigation', '@re
 
 nativePresetConfig.preset = 'react-native';
 nativePresetConfig.setupFilesAfterEnv = [
-    './config/jest',
+    './jest.setup.js',
     './node_modules/react-native-gesture-handler/jestSetup.js',
 ];
 nativePresetConfig.transformIgnorePatterns = [
