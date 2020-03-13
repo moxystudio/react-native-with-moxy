@@ -1,7 +1,7 @@
-// https://enzymejs.github.io/enzyme/docs/guides/react-native.html
+// React Native configuration for Enzyme: https://enzymejs.github.io/enzyme/docs/guides/react-native.html
 const { JSDOM } = require('jsdom');
 
-const jsdom = new JSDOM('<!doctype html><html><body></body></html>', { url: 'http://www.wook.pt' });
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;
 
 function copyProps(src, target) {
@@ -16,6 +16,7 @@ global.document = window.document;
 global.navigator = {
     userAgent: 'node.js',
 };
+
 copyProps(window, global);
 
 const originalConsoleError = console.error;
