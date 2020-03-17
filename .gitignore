@@ -32,11 +32,19 @@ project.xcworkspace
 build/
 .idea
 .gradle
+secrets.properties
 local.properties
 *.iml
 
 # Pods
+#
 ios/Pods
+
+# App signing
+#
+*.keystore
+*.jks
+!debug.keystore
 
 # npm & yarn
 #
@@ -44,11 +52,15 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
+# .env
+#
+.env*
+!.env.sample
+
 # BUCK
+#
 buck-out/
 \.buckd/
-*.keystore
-!debug.keystore
 
 # fastlane
 #

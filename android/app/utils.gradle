@@ -1,0 +1,105 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+import java.util.stream.Collectors
+
+class MacOSKeychainSigningConfigException extends GradleScriptException {
+    public MacOSKeychainSigningConfigException(message) {
+        super("Unable to load release signing config from MacOS keychain: ${message}")
+    }
+}
+
+class FileSigningConfigException extends GradleScriptException {
+    public FileSigningConfigException(message) {
+        super("Unable to load release signing config from file: ${message}")
+    }
+}
+
+def getPasswordFromMacOSKeychain(account, service) {
+    def stdout = new ByteArrayOutputStream()
+    def stderr = new ByteArrayOutputStream()
+    exec {
+        // $ security help find-generic-password
+        commandLine 'security', '-q', 'find-generic-password', '-a', account, '-s', service, '-w'
+        ignoreExitValue = true
+        errorOutput = stderr
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
+
+def getPropertiesFromFile(fileName) {
+    def file = rootProject.file(fileName)
+    def inputProperties = new Properties()
+
+    if (!file.exists()) {
+        return inputProperties
+    }
+
+    inputProperties.load(new FileInputStream(file))
+
+    def outputProperties = inputProperties
+    .entrySet()
+    .stream()
+    .filter{ entry -> entry.getValue()?.trim() ? true : false }
+    .collect(
+        { -> new Properties() },
+        { properties, entry -> properties.setProperty(entry.getKey(), entry.getValue()) },
+        { properties -> properties }
+    )
+
+    return outputProperties
+}
+
+def getReleaseSigningConfigProperties() {
+    def properties = getPropertiesFromFile("secrets.properties")
+
+    if (properties.isEmpty()) {
+        properties.setProperty("ANDROID_SIGNING_KEYSTORE_FILE", "${System.getenv('ANDROID_SIGNING_KEYSTORE_FILE')}")
+        properties.setProperty("ANDROID_SIGNING_KEYSTORE_PASSWORD", "${System.getenv('ANDROID_SIGNING_KEYSTORE_PASSWORD')}")
+        properties.setProperty("ANDROID_SIGNING_KEY_PASSWORD", "${System.getenv('ANDROID_SIGNING_KEY_PASSWORD')}")
+        properties.setProperty("ANDROID_SIGNING_KEY_ALIAS", "${System.getenv('ANDROID_SIGNING_KEY_ALIAS')}")
+
+        println "Loaded release signing config from environment: ${properties}"
+
+        return properties
+    }
+
+    def keystorePassword = properties.getProperty("ANDROID_SIGNING_KEYSTORE_PASSWORD")
+    def keyPassword = properties.getProperty("ANDROID_SIGNING_KEY_PASSWORD")
+
+    if (keyPassword && keystorePassword) {
+        println "Loaded release signing config from secrets.properties file: ${properties}"
+        return properties
+    }
+
+    if (!Os.isFamily(Os.FAMILY_MAC)) {
+        throw new FileSigningConfigException("Keystore or key password not found")
+    }
+
+    def keychainService = rootProject.findProperty("macos.keychain.service")
+    def keychainKeystoreAccount = rootProject.findProperty("macos.keychain.account.keystore")
+    def keychainKeyAccount = rootProject.findProperty("macos.keychain.account.key")
+
+    println "Looking up release signing config secrets in MacOS keychain:${[keychainService, keychainKeystoreAccount, keychainKeyAccount]}"
+
+    keystorePassword = getPasswordFromMacOSKeychain(keychainKeystoreAccount, keychainService)
+    keyPassword = getPasswordFromMacOSKeychain(keychainKeyAccount, keychainService)
+
+    if (!keystorePassword) {
+        throw new MacOSKeychainSigningConfigException("Keystore password not found")
+    }
+
+    if (!keyPassword) {
+        throw new MacOSKeychainSigningConfigException("Key password not found")
+    }
+
+    properties.setProperty("ANDROID_SIGNING_KEYSTORE_PASSWORD", keystorePassword)
+    properties.setProperty("ANDROID_SIGNING_KEY_PASSWORD", keyPassword)
+
+    println "Loaded release signing config from MacOS keychain: ${properties}"
+
+    return properties
+}
+
+ext {
+    getReleaseSigningConfigProperties = this.&getReleaseSigningConfigProperties
+}
