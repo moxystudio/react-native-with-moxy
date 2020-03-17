@@ -19,7 +19,7 @@
     "start:ios:dev": "ENVFILE=.env.dev react-native run-ios --configuration Debug",
     "start:ios:prod": "ENVFILE=.env.prod react-native run-ios --configuration Release",
     "start:android:dev": "ENVFILE=.env.dev react-native run-android --variant devDebug",
-    "start:android:prod": "npm run build:android:js:prod && ENVFILE=.env.prod react-native run-android --variant prodRelease",
+    "start:android:prod": "ENVFILE=.env.prod react-native run-android --variant prodRelease",
     "build:android:js:dev": "react-native bundle --platform android --dev true --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle",
     "build:android:js:prod": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle",
     "build:android:aab:prod": "npm run build:android:js:prod && cd android && ./gradlew bundleProdRelease || cd -",
@@ -35,7 +35,7 @@
     "test": "jest",
     "docs": "npm run start --prefix docusaurus -- --port 4000",
     "clean:ios": "cd ios/ && xcodebuild clean || cd -",
-    "clean:android": "cd android/ && ./gradlew clean && rimraf android/app/src/main/assets/index.android.bundle || cd -",
+    "clean:android": "cd android/ && ./gradlew clean || cd -",
     "clean": "npm run clean:ios && npm run clean:android"
   },
   "dependencies": {

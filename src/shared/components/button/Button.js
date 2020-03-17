@@ -14,8 +14,11 @@ const Button = ({ type, style, title, onPress, textStyle, ...props }) => {
 
 Button.propTypes = {
     type: PropTypes.oneOf(['highlight', 'opacity']),
-    style: PropTypes.object,
-    title: PropTypes.string,
+    style: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.arrayOf(PropTypes.object),
+    ]),
+    title: PropTypes.string.isRequired,
     textStyle: PropTypes.object,
     onPress: PropTypes.func.isRequired,
 };

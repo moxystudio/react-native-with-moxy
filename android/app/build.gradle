@@ -81,12 +81,13 @@ project.ext.react = [
 ]
 
 project.ext.envConfigFiles = [
-        devDebug: ".env.dev",
-        prodRelease: ".env.prod",
-        stagingRelease: ".env.staging"
+    devDebug: ".env.dev",
+    prodRelease: ".env.prod",
+    stagingRelease: ".env.staging"
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: './utils.gradle'
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -155,6 +156,17 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            /**
+             * An instance of Properties class which holds the app signing configuration for the release build type.
+            */
+            def releaseSigningConfigProperties = getReleaseSigningConfigProperties()
+
+            storeFile file("${releaseSigningConfigProperties['ANDROID_SIGNING_KEYSTORE_FILE']}")
+            storePassword releaseSigningConfigProperties['ANDROID_SIGNING_KEYSTORE_PASSWORD']
+            keyAlias releaseSigningConfigProperties['ANDROID_SIGNING_KEY_ALIAS']
+            keyPassword releaseSigningConfigProperties['ANDROID_SIGNING_KEY_PASSWORD']
+        }
     }
     buildTypes {
         debug {
@@ -162,9 +174,7 @@ android {
             debuggable true
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://facebook.github.io/react-native/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -187,7 +197,7 @@ android {
     }
 
     variantFilter { variant ->
-        if (variant.buildType.name == "devRelease" || variant.buildType.name == "prodDebug") {
+        if (variant.name == "devRelease" || variant.name == "prodDebug") {
           setIgnore(true)
         }
     }
