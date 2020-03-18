@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create navigation correctly 1`] = `
+<StackNavigator>
+  <Screen
+    component={[Function]}
+    name="Home"
+  />
+  <Screen
+    component={[Function]}
+    name="Profile"
+    options={
+      Object {
+        "header": [Function],
+      }
+    }
+  />
+</StackNavigator>
+`;

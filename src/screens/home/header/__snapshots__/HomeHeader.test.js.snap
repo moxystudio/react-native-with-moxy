@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<HomeHeader>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <logo.svg
+        height="50"
+        width="120"
+      />
+    </View>
+  </View>
+</HomeHeader>
+`;

@@ -44,13 +44,3 @@ target 'reactNativeWithMoxy' do
 
   use_native_modules!
 end
-
-target 'reactNativeWithMoxy-tvOS' do
-  # Pods for reactNativeWithMoxy-tvOS
-
-  target 'reactNativeWithMoxy-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
