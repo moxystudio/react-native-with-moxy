@@ -134,7 +134,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "studio.moxy.boilerplate"
+        applicationId "studio.moxy.rnwm"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
