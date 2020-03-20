@@ -58,7 +58,7 @@
     "@moxy/eslint-config-browser": "^1.0.0",
     "@moxy/eslint-config-jest": "^1.0.0",
     "@moxy/eslint-config-react": "^1.0.0",
-    "@moxy/jest-config": "^2.0.0",
+    "@moxy/jest-config": "^3.0.0",
     "babel-jest": "^25.1.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "commitlint": "^8.0.0",

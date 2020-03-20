@@ -1,20 +1,31 @@
 const { compose, baseConfig, withEnzyme } = require('@moxy/jest-config');
+const reactNativeConfig = require('react-native/jest-preset');
 
-const nativePresetConfig = baseConfig();
+const rnwmConfig = baseConfig();
 
-const esModules = ['react-native', 'react-navigation', '@react-navigation', '@react-native-community/async-storage'].join('|');
+const esModules = [
+    'react-native',
+    'react-navigation',
+    '@react-navigation',
+    '@react-native-community/async-storage',
+].join('|');
 
-nativePresetConfig.preset = 'react-native';
-nativePresetConfig.setupFilesAfterEnv = [
+rnwmConfig.setupFilesAfterEnv = [
     './jest.setup.js',
     './node_modules/react-native-gesture-handler/jestSetup.js',
 ];
-nativePresetConfig.transformIgnorePatterns = [
+rnwmConfig.transformIgnorePatterns = [
     `<rootDir>node_modules/(?!${esModules})`,
 ];
-nativePresetConfig.collectCoverageFrom = ['./app/**/*.js', '!./app/**/styles/*'];
+rnwmConfig.collectCoverageFrom = [
+    './app/**/*.js',
+    '!./app/**/styles/*',
+];
+rnwmConfig.setupFiles = reactNativeConfig.setupFiles;
+rnwmConfig.haste = reactNativeConfig.haste;
+rnwmConfig.testEnvironment = reactNativeConfig.testEnvironment;
 
 module.exports = compose([
-    () => nativePresetConfig,
+    () => rnwmConfig,
     withEnzyme('enzyme-adapter-react-16'),
 ]);
