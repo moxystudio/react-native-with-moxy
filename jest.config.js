@@ -1,20 +1,22 @@
-const { compose, baseConfig, withEnzyme } = require('@moxy/jest-config');
+'use strict';
 
-const nativePresetConfig = baseConfig();
+const { compose, baseConfig, withReactNative, withEnzymeReactNative } = require('@moxy/jest-config');
 
-const esModules = ['react-native', 'react-navigation', '@react-navigation', '@react-native-community/async-storage'].join('|');
-
-nativePresetConfig.preset = 'react-native';
-nativePresetConfig.setupFilesAfterEnv = [
-    './jest.setup.js',
-    './node_modules/react-native-gesture-handler/jestSetup.js',
-];
-nativePresetConfig.transformIgnorePatterns = [
-    `<rootDir>node_modules/(?!${esModules})`,
-];
-nativePresetConfig.collectCoverageFrom = ['./app/**/*.js', '!./app/**/styles/*'];
-
-module.exports = compose([
-    () => nativePresetConfig,
-    withEnzyme('enzyme-adapter-react-16'),
-]);
+module.exports = compose(
+    baseConfig(),
+    withEnzymeReactNative('enzyme-adapter-react-16'),
+    withReactNative({
+        transformModules: (patterns) => [...patterns, '@react-navigation/'],
+    }),
+    (config) => ({
+        ...config,
+        coveragePathIgnorePatterns: [
+            ...config.coveragePathIgnorePatterns,
+            '/test-utils/',
+        ],
+        setupFilesAfterEnv: [
+            ...config.setupFilesAfterEnv,
+            require.resolve('react-native-gesture-handler/jestSetup'),
+        ],
+    }),
+);

@@ -1,7 +1,11 @@
 {
     "root": true,
+    "env": {
+        "browser": true
+    },
     "extends": [
-        "@moxy/eslint-config-browser",
+        "@moxy/eslint-config-base/esm",
+        "@moxy/eslint-config-babel",
         "@moxy/eslint-config-jest",
         "@moxy/eslint-config-react"
     ]

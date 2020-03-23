@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     title: 'React Native with MOXY',
     tagline: 'MOXY\'s boilerplate to create React Native applications',

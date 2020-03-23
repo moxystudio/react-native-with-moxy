@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function (api) {
     const babelConfig = { presets: ['module:metro-react-native-babel-preset'] };
 
