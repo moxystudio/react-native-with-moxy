@@ -42,7 +42,7 @@
     "@react-native-community/masked-view": "^0.1.7",
     "@react-navigation/native": "^5.0.9",
     "@react-navigation/stack": "^5.1.1",
-    "react": "16.9.0",
+    "react": "^16.9.0",
     "react-intl": "^4.1.1",
     "react-native": "0.61.5",
     "react-native-config": "^0.12.0",
@@ -66,7 +66,6 @@
     "jest": "^25.1.0",
     "lint-staged": "^10.0.2",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-dom": "^16.13.1",
     "standard-version": "^7.1.0"
   },
   "optionalDependencies": {
