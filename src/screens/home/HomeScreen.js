@@ -1,8 +1,9 @@
 import React, { useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 import HomeHeader from './header';
 import { Button, useTheme } from '../../shared/components';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import buildStyles from './styles';
 
@@ -19,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
     }, [navigation]);
 
     return (
-        <View style={ styles.container }>
+        <SafeAreaView style={ styles.container }>
             <Text style={ styles.text }>This is the Homescreen</Text>
             <Button
                 type="highlight"
@@ -28,7 +29,7 @@ const HomeScreen = ({ navigation }) => {
                 onPress={ handlePress }
                 textStyle={ styles.buttonText }
                 underlayColor={ themeStyles.colors.terciary } />
-        </View>
+        </SafeAreaView>
     );
 };
 

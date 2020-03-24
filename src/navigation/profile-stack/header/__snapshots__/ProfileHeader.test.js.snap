@@ -2,167 +2,177 @@
 
 exports[`should render correctly 1`] = `
 <AppTree>
-  <ThemeContextProvider>
-    <ProfileHeader
-      navigation={
-        Object {
-          "addListener": [Function],
-          "closeDrawer": [MockFunction],
-          "dismiss": [MockFunction],
-          "dispatch": [MockFunction],
-          "getParam": [MockFunction],
-          "goBack": [MockFunction],
-          "isFocused": [MockFunction],
-          "navigate": [MockFunction],
-          "openDrawer": [MockFunction],
-          "pop": [MockFunction] {
-            "calls": Array [
-              Array [],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
-          "popToTop": [MockFunction],
-          "push": [MockFunction],
-          "replace": [MockFunction],
-          "setOptions": [MockFunction],
-          "setParams": [MockFunction],
-          "state": Object {
-            "params": Object {},
-          },
-          "toggleDrawer": [MockFunction],
-        }
-      }
-    >
-      <View
-        style={
+  <SafeAreaProvider>
+    <ThemeContextProvider>
+      <ProfileHeader
+        navigation={
           Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "height": 50,
-            "justifyContent": "space-between",
-            "paddingHorizontal": 20,
+            "addListener": [Function],
+            "closeDrawer": [MockFunction],
+            "dismiss": [MockFunction],
+            "dispatch": [MockFunction],
+            "getParam": [MockFunction],
+            "goBack": [MockFunction],
+            "isFocused": [MockFunction],
+            "navigate": [MockFunction],
+            "openDrawer": [MockFunction],
+            "pop": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            },
+            "popToTop": [MockFunction],
+            "push": [MockFunction],
+            "replace": [MockFunction],
+            "setOptions": [MockFunction],
+            "setParams": [MockFunction],
+            "state": Object {
+              "params": Object {},
+            },
+            "toggleDrawer": [MockFunction],
           }
         }
       >
-        <View
+        <SafeAreaView
           style={
             Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "height": 50,
-              "justifyContent": "space-between",
-              "paddingHorizontal": 20,
+              "height": 100,
             }
           }
         >
-          <Button
-            onPress={[Function]}
-            textStyle={
-              Object {
-                "color": "#2932D3",
-                "fontFamily": "Lato-Bold",
-                "fontWeight": "normal",
-                "paddingBottom": 6,
-                "paddingTop": 4,
-              }
-            }
-            title="Go back"
-            type="highlight"
-          >
-            <TouchableHighlight
-              activeOpacity={0.85}
-              delayPressOut={100}
-              onPress={[Function]}
-              underlayColor="black"
-            >
-              <View
-                accessible={true}
-                focusable={true}
-                isTVSelectable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={null}
-              >
-                <View
-                  accessible={true}
-                  focusable={true}
-                  isTVSelectable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={null}
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#2932D3",
-                        "fontFamily": "Lato-Bold",
-                        "fontWeight": "normal",
-                        "paddingBottom": 6,
-                        "paddingTop": 4,
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#2932D3",
-                          "fontFamily": "Lato-Bold",
-                          "fontWeight": "normal",
-                          "paddingBottom": 6,
-                          "paddingTop": 4,
-                        }
-                      }
-                    >
-                      Go back
-                    </Text>
-                  </Text>
-                </View>
-              </View>
-            </TouchableHighlight>
-          </Button>
-          <Text
+          <View
             style={
               Object {
-                "color": "#F64F51",
-                "fontFamily": "Lato-Regular",
-                "fontWeight": "normal",
-                "paddingBottom": 6,
-                "paddingTop": 4,
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingHorizontal": 20,
               }
             }
           >
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#F64F51",
-                  "fontFamily": "Lato-Regular",
-                  "fontWeight": "normal",
-                  "paddingBottom": 6,
-                  "paddingTop": 4,
+                  "alignItems": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "paddingHorizontal": 20,
                 }
               }
             >
-              Profile Stack
-            </Text>
-          </Text>
-        </View>
-      </View>
-    </ProfileHeader>
-  </ThemeContextProvider>
+              <Button
+                onPress={[Function]}
+                textStyle={
+                  Object {
+                    "color": "#2932D3",
+                    "fontFamily": "Lato-Bold",
+                    "fontWeight": "normal",
+                    "paddingBottom": 6,
+                    "paddingTop": 4,
+                  }
+                }
+                title="Go back"
+                type="highlight"
+              >
+                <TouchableHighlight
+                  activeOpacity={0.85}
+                  delayPressOut={100}
+                  onPress={[Function]}
+                  underlayColor="black"
+                >
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={null}
+                  >
+                    <View
+                      accessible={true}
+                      focusable={true}
+                      isTVSelectable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={null}
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#2932D3",
+                            "fontFamily": "Lato-Bold",
+                            "fontWeight": "normal",
+                            "paddingBottom": 6,
+                            "paddingTop": 4,
+                          }
+                        }
+                      >
+                        <Text
+                          style={
+                            Object {
+                              "color": "#2932D3",
+                              "fontFamily": "Lato-Bold",
+                              "fontWeight": "normal",
+                              "paddingBottom": 6,
+                              "paddingTop": 4,
+                            }
+                          }
+                        >
+                          Go back
+                        </Text>
+                      </Text>
+                    </View>
+                  </View>
+                </TouchableHighlight>
+              </Button>
+              <Text
+                style={
+                  Object {
+                    "color": "#F64F51",
+                    "fontFamily": "Lato-Regular",
+                    "fontWeight": "normal",
+                    "paddingBottom": 6,
+                    "paddingTop": 4,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#F64F51",
+                      "fontFamily": "Lato-Regular",
+                      "fontWeight": "normal",
+                      "paddingBottom": 6,
+                      "paddingTop": 4,
+                    }
+                  }
+                >
+                  Profile Stack
+                </Text>
+              </Text>
+            </View>
+          </View>
+        </SafeAreaView>
+      </ProfileHeader>
+    </ThemeContextProvider>
+  </SafeAreaProvider>
 </AppTree>
 `;

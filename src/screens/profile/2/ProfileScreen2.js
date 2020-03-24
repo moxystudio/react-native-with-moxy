@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 import { useTheme } from '../../../shared/components';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import buildStyles from '../styles';
 
@@ -9,9 +10,9 @@ const ProfileScreen2 = () => {
     const styles = buildStyles(themeStyles);
 
     return (
-        <View style={ styles.container }>
+        <SafeAreaView style={ styles.container }>
             <Text>This is the ProfileScreen2</Text>
-        </View>
+        </SafeAreaView>
     );
 };
 

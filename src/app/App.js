@@ -3,13 +3,16 @@ import React from 'react';
 import { ThemeProvider } from '../shared/components';
 import AppStack, { rootNavigation } from '../navigation';
 import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const App = () => (
-    <ThemeProvider>
-        <NavigationContainer ref={ rootNavigation.navigationRef }>
-            <AppStack />
-        </NavigationContainer>
-    </ThemeProvider>
+    <SafeAreaProvider>
+        <ThemeProvider>
+            <NavigationContainer ref={ rootNavigation.navigationRef }>
+                <AppStack />
+            </NavigationContainer>
+        </ThemeProvider>
+    </SafeAreaProvider>
 );
 
 export default App;
