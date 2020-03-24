@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render correctly 1`] = `
-<ThemeContextProvider>
-  <ForwardRef(NavigationContainer)>
-    <AppStack />
-  </ForwardRef(NavigationContainer)>
-</ThemeContextProvider>
+<SafeAreaProvider>
+  <ThemeContextProvider>
+    <ForwardRef(NavigationContainer)>
+      <AppStack />
+    </ForwardRef(NavigationContainer)>
+  </ThemeContextProvider>
+</SafeAreaProvider>
 `;

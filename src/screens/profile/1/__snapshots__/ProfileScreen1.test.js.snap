@@ -2,18 +2,10 @@
 
 exports[`should render correctly 1`] = `
 <AppTree>
-  <ThemeContextProvider>
-    <ProfileScreen1>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <View
+  <SafeAreaProvider>
+    <ThemeContextProvider>
+      <ProfileScreen1>
+        <SafeAreaView
           style={
             Object {
               "alignItems": "center",
@@ -27,9 +19,9 @@ exports[`should render correctly 1`] = `
               This is the ProfileScreen1
             </Text>
           </Text>
-        </View>
-      </View>
-    </ProfileScreen1>
-  </ThemeContextProvider>
+        </SafeAreaView>
+      </ProfileScreen1>
+    </ThemeContextProvider>
+  </SafeAreaProvider>
 </AppTree>
 `;

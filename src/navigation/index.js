@@ -8,7 +8,7 @@ import HomeScreen from '../screens/home/HomeScreen';
 const Stack = createStackNavigator();
 
 const AppStack = () => (
-    <Stack.Navigator>
+    <Stack.Navigator headerMode="screen">
         <Stack.Screen name="Home" component={ HomeScreen } />
         <Stack.Screen name="Profile" component={ ProfileStack } options={ { header: () => null } } />
     </Stack.Navigator>

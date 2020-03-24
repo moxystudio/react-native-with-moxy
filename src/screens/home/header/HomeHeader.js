@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { View } from 'react-native';
 import { Logo } from '../../../shared/media/icons';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import buildStyles from './styles';
 
@@ -8,9 +8,9 @@ const HomeHeader = () => {
     const styles = useMemo(() => buildStyles(), []);
 
     return (
-        <View style={ styles.header }>
+        <SafeAreaView style={ styles.header }>
             <Logo width="120" height="50" />
-        </View>
+        </SafeAreaView>
     );
 };
 

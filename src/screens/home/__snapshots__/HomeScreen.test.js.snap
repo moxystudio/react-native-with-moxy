@@ -2,71 +2,63 @@
 
 exports[`should render correctly 1`] = `
 <AppTree>
-  <ThemeContextProvider>
-    <HomeScreen
-      navigation={
-        Object {
-          "addListener": [Function],
-          "closeDrawer": [MockFunction],
-          "dismiss": [MockFunction],
-          "dispatch": [MockFunction],
-          "getParam": [MockFunction],
-          "goBack": [MockFunction],
-          "isFocused": [MockFunction],
-          "navigate": [MockFunction] {
-            "calls": Array [
-              Array [
-                "Profile",
-                Object {
-                  "screen": "Profile2",
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
-          "openDrawer": [MockFunction],
-          "pop": [MockFunction],
-          "popToTop": [MockFunction],
-          "push": [MockFunction],
-          "replace": [MockFunction],
-          "setOptions": [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "header": [Function],
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          },
-          "setParams": [MockFunction],
-          "state": Object {
-            "params": Object {},
-          },
-          "toggleDrawer": [MockFunction],
-        }
-      }
-    >
-      <View
-        style={
+  <SafeAreaProvider>
+    <ThemeContextProvider>
+      <HomeScreen
+        navigation={
           Object {
-            "alignItems": "center",
-            "flex": 1,
-            "justifyContent": "center",
+            "addListener": [Function],
+            "closeDrawer": [MockFunction],
+            "dismiss": [MockFunction],
+            "dispatch": [MockFunction],
+            "getParam": [MockFunction],
+            "goBack": [MockFunction],
+            "isFocused": [MockFunction],
+            "navigate": [MockFunction] {
+              "calls": Array [
+                Array [
+                  "Profile",
+                  Object {
+                    "screen": "Profile2",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            },
+            "openDrawer": [MockFunction],
+            "pop": [MockFunction],
+            "popToTop": [MockFunction],
+            "push": [MockFunction],
+            "replace": [MockFunction],
+            "setOptions": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "header": [Function],
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            },
+            "setParams": [MockFunction],
+            "state": Object {
+              "params": Object {},
+            },
+            "toggleDrawer": [MockFunction],
           }
         }
       >
-        <View
+        <SafeAreaView
           style={
             Object {
               "alignItems": "center",
@@ -218,9 +210,9 @@ exports[`should render correctly 1`] = `
               </View>
             </TouchableHighlight>
           </Button>
-        </View>
-      </View>
-    </HomeScreen>
-  </ThemeContextProvider>
+        </SafeAreaView>
+      </HomeScreen>
+    </ThemeContextProvider>
+  </SafeAreaProvider>
 </AppTree>
 `;
