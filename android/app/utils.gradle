@@ -100,6 +100,24 @@ def getReleaseSigningConfigProperties() {
     return properties
 }
 
+def getVersionName() {
+    def major = project.ext.version['major']
+    def minor = project.ext.version['minor']
+    def patch = project.ext.version['patch']
+
+    return "${major}.${minor}.${patch}"
+}
+
+def getVersionCode() {
+    def major = project.ext.version['major']
+    def minor = project.ext.version['minor']
+    def patch = project.ext.version['patch']
+
+    return major * 10000 + minor * 100 + patch * 1
+}
+
 ext {
     getReleaseSigningConfigProperties = this.&getReleaseSigningConfigProperties
+    getVersionName = this.&getVersionName
+    getVersionCode = this.&getVersionCode
 }

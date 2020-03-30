@@ -86,6 +86,12 @@ project.ext.envConfigFiles = [
     stagingRelease: ".env.staging"
 ]
 
+project.ext.version = [
+    major: 0,
+    minor: 1,
+    patch: 0,
+]
+
 apply from: "../../node_modules/react-native/react.gradle"
 apply from: './utils.gradle'
 
@@ -126,6 +132,12 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
 
+/**
+ * App versioning
+ */
+def computedVersionCode = getVersionCode()
+def computedVersionName = getVersionName()
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
@@ -138,8 +150,8 @@ android {
         applicationId "studio.moxy.rnwm"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0.0"
+        versionCode computedVersionCode
+        versionName computedVersionName
     }
     splits {
         abi {
