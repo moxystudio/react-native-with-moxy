@@ -12,3 +12,6 @@ jest.mock('react-native/Libraries/Utilities/Platform', () => ({
     select: jest.fn((selector) => selector.ios),
     isTesting: true,
 }));
+
+jest.mock('react-native/Libraries/Components/StatusBar/StatusBar');
+

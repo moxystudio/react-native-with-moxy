@@ -3,13 +3,14 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { render } from '@testing-library/react-native';
 import localeConfig from '../../intl';
 import { rootNavigation } from '../navigation';
-import { AppConfigProvider, LocaleProvider, ThemeProvider } from '../shared/modules';
+import { AppConfigProvider, LocaleProvider, ThemeProvider, SplashScreen } from '../shared/modules';
 import App from './App';
 
 jest.mock('../shared/modules', () => ({
     AppConfigProvider: jest.fn(({ children }) => children),
     LocaleProvider: jest.fn(({ children }) => children),
     ThemeProvider: jest.fn(({ children }) => children),
+    SplashScreen: jest.fn(({ children }) => children),
 }));
 
 beforeEach(jest.clearAllMocks);
@@ -45,5 +46,11 @@ it('should render app config provider', () => {
     render(<App />);
 
     expect(AppConfigProvider).toHaveBeenCalledTimes(1);
+});
+
+it('should render splash screen', () => {
+    render(<App />);
+
+    expect(SplashScreen).toHaveBeenCalledTimes(1);
 });
 

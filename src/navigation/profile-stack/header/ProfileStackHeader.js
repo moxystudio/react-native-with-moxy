@@ -2,8 +2,7 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
 import { FormattedMessage } from 'react-intl';
-import SafeAreaView from 'react-native-safe-area-view';
-import { Button, useTheme } from '../../../shared/modules';
+import { Button, useTheme, SafeAreaHeader } from '../../../shared/modules';
 
 import createStyles from './styles';
 
@@ -16,7 +15,9 @@ const ProfileStackHeader = ({ navigation }) => {
     }, [navigation]);
 
     return (
-        <SafeAreaView>
+        <SafeAreaHeader
+            statusBarBackgroundColor={ themeStyles.colors.background }
+            statusBarStyle="dark-content">
             <View style={ styles.header }>
                 <Button
                     accessibilityLabel="back button"
@@ -29,7 +30,7 @@ const ProfileStackHeader = ({ navigation }) => {
                     <FormattedMessage id="profile.header.title" />
                 </Text>
             </View>
-        </SafeAreaView>
+        </SafeAreaHeader>
     );
 };
 

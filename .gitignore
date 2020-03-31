@@ -35,6 +35,7 @@ build/
 secrets.properties
 local.properties
 *.iml
+.project
 
 # Pods
 #
