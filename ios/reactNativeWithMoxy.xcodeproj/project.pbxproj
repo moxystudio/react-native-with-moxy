@@ -14,6 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2C5774C663FF42E89DE68962 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F35FE121987246A19C5567DD /* Lato-Bold.ttf */; };
 		9011242DF31F48CC8B52497F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65DDB238321548FC9B6E6E96 /* Lato-Thin.ttf */; };
+		A567246F24320D8500145E57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A567246E24320D8500145E57 /* AppDelegate.m */; };
+		A567247124320DA600145E57 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A567247024320DA600145E57 /* BootSplash.storyboard */; };
 		B8650FD3C5F1BC711EB3ECDF /* libPods-reactNativeWithMoxy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6762403B4ADAA866EEACF72 /* libPods-reactNativeWithMoxy.a */; };
 		CDC80F2F30E342D69FA1D3A1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69A5CB3980C8421584210BB0 /* Lato-Regular.ttf */; };
 		D5C05AB9B84E5606842C2264 /* libPods-reactNativeWithMoxyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0752B6A57A44881470BD44 /* libPods-reactNativeWithMoxyTests.a */; };
@@ -52,6 +54,8 @@
 		83BF14C948D89CFAAC12AE55 /* libPods-reactNativeWithMoxy-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeWithMoxy-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928C9E4F30B46B455196B37D /* Pods-reactNativeWithMoxyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeWithMoxyTests.release.xcconfig"; path = "Target Support Files/Pods-reactNativeWithMoxyTests/Pods-reactNativeWithMoxyTests.release.xcconfig"; sourceTree = "<group>"; };
 		A358263909E99303F2945FA6 /* Pods-reactNativeWithMoxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeWithMoxy.release.xcconfig"; path = "Target Support Files/Pods-reactNativeWithMoxy/Pods-reactNativeWithMoxy.release.xcconfig"; sourceTree = "<group>"; };
+		A567246E24320D8500145E57 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reactNativeWithMoxy/AppDelegate.m; sourceTree = "<group>"; };
+		A567247024320DA600145E57 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = reactNativeWithMoxy/BootSplash.storyboard; sourceTree = "<group>"; };
 		A6762403B4ADAA866EEACF72 /* libPods-reactNativeWithMoxy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeWithMoxy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6E86F4AEA37B7497C26F4A /* Pods-reactNativeWithMoxy-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeWithMoxy-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeWithMoxy-tvOSTests/Pods-reactNativeWithMoxy-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -101,11 +105,13 @@
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				A567246E24320D8500145E57 /* AppDelegate.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				A567247024320DA600145E57 /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = reactNativeWithMoxy;
@@ -277,6 +283,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				9011242DF31F48CC8B52497F /* Lato-Thin.ttf in Resources */,
+				A567247124320DA600145E57 /* BootSplash.storyboard in Resources */,
 				CDC80F2F30E342D69FA1D3A1 /* Lato-Regular.ttf in Resources */,
 				2C5774C663FF42E89DE68962 /* Lato-Bold.ttf in Resources */,
 			);
@@ -379,6 +386,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				A567246F24320D8500145E57 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

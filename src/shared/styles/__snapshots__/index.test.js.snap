@@ -3,6 +3,7 @@
 exports[`should export all named styles for Android 1`] = `
 Object {
   "colors": Object {
+    "background": "#FFFFFF",
     "primary": "#221240",
     "secondary": "#2932D3",
     "terciary": "#F64F51",
@@ -36,6 +37,7 @@ Object {
 exports[`should export all named styles for iOS 1`] = `
 Object {
   "colors": Object {
+    "background": "#FFFFFF",
     "primary": "#221240",
     "secondary": "#2932D3",
     "terciary": "#F64F51",

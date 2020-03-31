@@ -12,4 +12,6 @@ it('should export all named modules', () => {
     expect(modules).toHaveProperty('AppConfigConsumer');
     expect(modules).toHaveProperty('useAppConfig');
     expect(modules).toHaveProperty('withAppConfig');
+    expect(modules).toHaveProperty('SplashScreen');
+    expect(modules).toHaveProperty('SafeAreaHeader');
 });

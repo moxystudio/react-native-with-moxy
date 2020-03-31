@@ -13,6 +13,7 @@ module.exports = {
                     items: [
                         'welcome/instructions/project-setup',
                         'welcome/instructions/android-app-signing',
+                        'welcome/instructions/splash-screen',
                     ],
                 },
                 'welcome/conventions',

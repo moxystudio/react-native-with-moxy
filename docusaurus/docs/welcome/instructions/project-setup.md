@@ -21,6 +21,7 @@ TODO
 Follow the links in the order listed below to prepare your app for production:
 
 - [Configure app signing for Android release builds](android-app-signing.md)
+- [Create a splash screen](splash-screen.md)
 
 ## 2. Replace the root README.md
 
