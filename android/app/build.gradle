@@ -80,18 +80,13 @@ project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
 ]
 
-project.ext.envConfigFiles = [
-    devDebug: ".env.dev",
-    prodRelease: ".env.prod",
-    stagingRelease: ".env.staging"
-]
-
 project.ext.version = [
     major: 0,
     minor: 1,
     patch: 0,
 ]
 
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 apply from: "../../node_modules/react-native/react.gradle"
 apply from: './utils.gradle'
 
@@ -190,28 +185,6 @@ android {
             signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-        }
-    }
-
-    flavorDimensions "version"
-    productFlavors {
-        dev {
-            dimension "version"
-            versionNameSuffix "-dev"
-        }
-        prod {
-            dimension "version"
-            versionNameSuffix "-prod"
-        }
-        staging {
-            dimension "version"
-            versionNameSuffix "-staging"
-        }
-    }
-
-    variantFilter { variant ->
-        if (variant.name == "devRelease" || variant.name == "prodDebug") {
-          setIgnore(true)
         }
     }
 
