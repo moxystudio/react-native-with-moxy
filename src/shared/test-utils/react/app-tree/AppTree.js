@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../../../components';
+import { ThemeProvider } from '../../../react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const AppTree = ({ children }) => (

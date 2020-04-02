@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import HomeScreen from './HomeScreen';
-import { AppTree } from '../../shared/test-utils/components';
+import { AppTree } from '../../shared/test-utils/react';
 import createNavigation from '../../shared/test-utils/react-navigation-prop';
 
 const navigation = createNavigation();
