@@ -1,12 +1,12 @@
 import React, { useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import { FormattedMessage } from 'react-intl';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import SafeAreaView from 'react-native-safe-area-view';
 import { Button, useTheme, useLocale } from '../../shared/modules';
 import HomeHeader from './header';
 
-import buildStyles from './styles';
+import createStyles from './styles';
 
 const HomeScreen = ({ navigation }) => {
     navigation.setOptions({
@@ -14,9 +14,8 @@ const HomeScreen = ({ navigation }) => {
     });
 
     const { themeStyles } = useTheme();
-    const styles = useMemo(() => buildStyles(themeStyles), [themeStyles]);
+    const styles = useMemo(() => createStyles(themeStyles), [themeStyles]);
     const locale = useLocale();
-
     const handleNavigateToProfile = useCallback(() => {
         navigation.navigate('Profile', { screen: 'Profile2' });
     }, [navigation]);
@@ -25,28 +24,30 @@ const HomeScreen = ({ navigation }) => {
     }, [locale]);
 
     return (
-        <SafeAreaView style={ styles.container }>
-            <Text
-                accessibilityLabel="title"
-                style={ styles.text }>
-                <FormattedMessage id="home.title" />
-            </Text>
-            <Button
-                accessibilityLabel="navigate to profile button"
-                type="highlight"
-                title={ <FormattedMessage id="home.buttons.navigate-to-profile" /> }
-                style={ styles.button }
-                onPress={ handleNavigateToProfile }
-                textStyle={ styles.buttonText }
-                underlayColor={ themeStyles.colors.terciary } />
-            <Button
-                accessibilityLabel="switch language button"
-                type="highlight"
-                title={ <FormattedMessage id="home.buttons.switch-language" values={ { localeId: locale.id } } /> }
-                style={ styles.button }
-                onPress={ handleSwitchLanguage }
-                textStyle={ styles.buttonText }
-                underlayColor={ themeStyles.colors.terciary } />
+        <SafeAreaView style={ styles.safeArea }>
+            <View style={ styles.container }>
+                <Text
+                    accessibilityLabel="title"
+                    style={ styles.text }>
+                    <FormattedMessage id="home.title" />
+                </Text>
+                <Button
+                    accessibilityLabel="navigate to profile button"
+                    type="highlight"
+                    title={ <FormattedMessage id="home.buttons.navigate-to-profile" /> }
+                    style={ styles.button }
+                    onPress={ handleNavigateToProfile }
+                    textStyle={ styles.buttonText }
+                    underlayColor={ themeStyles.colors.terciary } />
+                <Button
+                    accessibilityLabel="switch language button"
+                    type="highlight"
+                    title={ <FormattedMessage id="home.buttons.switch-language" values={ { localeId: locale.id } } /> }
+                    style={ styles.button }
+                    onPress={ handleSwitchLanguage }
+                    textStyle={ styles.buttonText }
+                    underlayColor={ themeStyles.colors.terciary } />
+            </View>
         </SafeAreaView>
     );
 };

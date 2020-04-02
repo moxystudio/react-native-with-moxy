@@ -1,7 +1,18 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import ProfileScreen2 from './ProfileScreen2';
+import SafeAreaView from 'react-native-safe-area-view';
 import { AppTree } from '../../../shared/test-utils/modules';
+import ProfileScreen2 from './ProfileScreen2';
+
+it('should render a safe area view', () => {
+    const tree = mount(
+        <AppTree>
+            <ProfileScreen2 />
+        </AppTree>,
+    );
+
+    expect(tree.find(SafeAreaView).exists()).toBe(true);
+});
 
 it('should render screen title', () => {
     const tree = mount(

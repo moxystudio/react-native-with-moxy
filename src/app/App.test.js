@@ -1,9 +1,10 @@
 import React from 'react';
-import App from './App';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { mount } from 'enzyme';
+import localeConfig from '../../intl';
 import { rootNavigation } from '../navigation';
 import { LocaleProvider, ThemeProvider } from '../shared/modules';
-import localeConfig from '../../intl';
+import App from './App';
 
 it('should create navigation ref', () => {
     mount(<App />);
@@ -25,5 +26,11 @@ it('should render theme provider', () => {
     const tree = mount(<App />);
 
     expect(tree.find(ThemeProvider).exists()).toBe(true);
+});
+
+it('should render safe area provider', () => {
+    const tree = mount(<App />);
+
+    expect(tree.find(SafeAreaProvider).exists()).toBe(true);
 });
 

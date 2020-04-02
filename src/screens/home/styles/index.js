@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 export default ({ typography, colors, layout }) => StyleSheet.create({
+    safeArea: {
+        flex: 1,
+    },
     container: {
         flex: 1,
         alignItems: 'center',

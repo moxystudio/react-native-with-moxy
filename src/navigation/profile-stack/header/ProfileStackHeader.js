@@ -2,21 +2,21 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
 import { FormattedMessage } from 'react-intl';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import SafeAreaView from 'react-native-safe-area-view';
 import { Button, useTheme } from '../../../shared/modules';
 
-import buildStyles from './styles';
+import createStyles from './styles';
 
 const ProfileStackHeader = ({ navigation }) => {
     const { themeStyles } = useTheme();
-    const styles = buildStyles(themeStyles);
+    const styles = createStyles(themeStyles);
 
     const handlePress = useCallback(() => {
         navigation.pop();
     }, [navigation]);
 
     return (
-        <SafeAreaView style={ styles.safeAreaView }>
+        <SafeAreaView>
             <View style={ styles.header }>
                 <Button
                     accessibilityLabel="back button"

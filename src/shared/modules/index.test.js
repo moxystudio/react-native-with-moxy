@@ -8,4 +8,8 @@ it('should export all named modules', () => {
     expect(modules).toHaveProperty('LocaleConsumer');
     expect(modules).toHaveProperty('useLocale');
     expect(modules).toHaveProperty('withLocale');
+    expect(modules).toHaveProperty('AppConfigProvider');
+    expect(modules).toHaveProperty('AppConfigConsumer');
+    expect(modules).toHaveProperty('useAppConfig');
+    expect(modules).toHaveProperty('withAppConfig');
 });

@@ -1,14 +1,25 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import HomeHeader from './header';
-import HomeScreen from './HomeScreen';
+import SafeAreaView from 'react-native-safe-area-view';
 import { AppTree } from '../../shared/test-utils/modules';
 import { useLocale } from '../../shared/modules';
 import { createNavigationProp } from '../../shared/test-utils/react-navigation';
+import HomeHeader from './header';
+import HomeScreen from './HomeScreen';
 
 const navigation = createNavigationProp();
 
 beforeEach(jest.clearAllMocks);
+
+it('should render a safe area view', () => {
+    const tree = mount(
+        <AppTree>
+            <HomeScreen navigation={ navigation } />
+        </AppTree>,
+    );
+
+    expect(tree.find(SafeAreaView).exists()).toBe(true);
+});
 
 it('should render title', () => {
     const tree = mount(
