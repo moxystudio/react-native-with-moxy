@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 
-export { default as Button } from './react-button';
+export { default as Button } from './react-native-button';
 export {
     ThemeProvider,
     useTheme,
@@ -11,3 +11,9 @@ export {
     useLocale,
     withLocale,
 } from './react-native-locale';
+export {
+    AppConfigProvider,
+    AppConfigConsumer,
+    useAppConfig,
+    withAppConfig,
+} from './react-native-app-config';

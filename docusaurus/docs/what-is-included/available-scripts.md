@@ -12,13 +12,13 @@ You can run any of these commands using `npm run {script}` from the project's fo
 
 Runs the iOS app in debug mode.
 
-This script will launch the app on the first available simulator it is found. You can override this behavior by passing the argument `--simulator <simulator name>` where `simulator name` can be obtained from the output of `list:ios:simulators` script. If you wish to run the app on an actual device, make sure you have a device connected and execute the script as is.
+This script will launch the app on the first available simulator it is found. You can override this behavior by passing the argument `--simulator <simulator name>` where `simulator name` can be obtained from the output of `list:ios:simulators` script. If you wish to run the app on an actual device, make sure you have a device connected and execute the script passing the argument `--device`.
 
 ## `npm run start:ios:prod`
 
 Runs the iOS app in release mode.
 
-This script will launch the app on the first available simulator it is found. You can override this behavior by passing the argument `--simulator <simulator name>` where `simulator name` can be obtained from the output of `list:ios:simulators` script. If you wish to run the app on an actual device, make sure you have a device connected and execute the script as is.
+This script will launch the app on the first available simulator it is found. You can override this behavior by passing the argument `--simulator <simulator name>` where `simulator name` can be obtained from the output of `list:ios:simulators` script. If you wish to run the app on an actual device, make sure you have a device connected and execute the script passing the argument `--device`.
 
 ## `npm run start:android:dev`
 
@@ -46,15 +46,15 @@ You can find the bundle file in `android/app/src/main/assets/index.android.bundl
 
 ## `npm run build:android:aab:prod`
 
-This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle) configured for the staging environment. This is the binary that you should upload to the Google Play Developer Console to release the app.
+This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle) configured for the staging environment. This is the binary that you should upload to the Google Play Console to release the app.
 
-You can find the AAB file at `android/app/build/outputs/bundle/<flavor>/app-prod.aab`.
+You can find the AAB file at `android/app/build/outputs/bundle/<release|debug>/app.aab`.
 
 ## `npm run build:android:aab:staging`
 
-This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle) configured for the staging environment. This is the binary that you should upload to the Google Play Developer Console to release the app.
+This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle) configured for the staging environment. This is the binary that you should upload to the Google Play Console to release the app.
 
-You can find the AAB file at `android/app/build/outputs/bundle/<flavor>/app-staging.aab`.
+You can find the AAB file at `android/app/build/outputs/bundle/<release|debug>/app.aab`.
 
 ## `npm run list:ios:simulators`
 
@@ -94,12 +94,11 @@ To to so, please run `npm install --prefix docusaurus` first.
 
 ## `npm run release`
 
-This script updates your CHANGELOG.md file, following [Semantic Versioning](https://semver.org/) and [Conventional Commits](conventionalcommits.org) conventions and generates a new git tag (to read more about this process, you can read through the standard-version documentation).
+This script updates your CHANGELOG.md file, following [Semantic Versioning](https://semver.org/) and [Conventional Commits](conventionalcommits.org) conventions and generates a new Git tag (to read more about this process, you can read through the standard-version documentation).
 
 ## `npm run lint`
 
 This script lints your Javascript files.
-
 
 ### Note
 

@@ -15,7 +15,7 @@ const locales = [
     { id: 'ru-RU', name: 'русский', messages: messages['ru-RU'] },
 ];
 
-it('should inject the nextIntl prop with the current provider value', () => {
+it('should inject the reactNativeLocale prop with the current provider value', () => {
     expect.assertions(1);
 
     const MyComponent = withLocale(({ reactNativeLocale: locale }) => {

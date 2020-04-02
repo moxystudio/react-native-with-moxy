@@ -11,7 +11,6 @@ Keep in mind, part of adapting this boilerplate into a deliverable project is al
 
 TODO
 - How to update package name for Android, bundle identifier for iOS, project name, etc.
-- How to setup app environment (.env) configuration
 - Which files are unnecessary and should be deleted
 - App signing: How to create a team, iOS' provisioning profile and developer certificates and add setup them up in the project
 - How to update Android app icon

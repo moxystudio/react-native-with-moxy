@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import idObj from 'identity-obj-proxy';
-import { ThemeProvider, LocaleProvider } from '../../../modules';
+import { AppConfigProvider, ThemeProvider, LocaleProvider } from '../../../modules';
 
 const localeConfig = {
     locales: [
@@ -20,13 +20,15 @@ const localeConfig = {
 };
 
 const AppTree = ({ children }) => (
-    <SafeAreaProvider>
-        <ThemeProvider>
-            <LocaleProvider { ...localeConfig }>
-                { children }
-            </LocaleProvider>
-        </ThemeProvider>
-    </SafeAreaProvider>
+    <AppConfigProvider>
+        <SafeAreaProvider>
+            <ThemeProvider>
+                <LocaleProvider { ...localeConfig }>
+                    { children }
+                </LocaleProvider>
+            </ThemeProvider>
+        </SafeAreaProvider>
+    </AppConfigProvider>
 );
 
 AppTree.propTypes = {
