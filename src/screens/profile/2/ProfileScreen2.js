@@ -1,20 +1,22 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import { FormattedMessage } from 'react-intl';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import SafeAreaView from 'react-native-safe-area-view';
 import { useTheme } from '../../../shared/modules';
 
-import buildStyles from '../styles';
+import createStyles from '../styles';
 
 const ProfileScreen2 = () => {
     const { themeStyles } = useTheme();
-    const styles = buildStyles(themeStyles);
+    const styles = createStyles(themeStyles);
 
     return (
-        <SafeAreaView style={ styles.container }>
-            <Text accessibilityLabel="title">
-                <FormattedMessage id="profile2.title" />
-            </Text>
+        <SafeAreaView style={ styles.safeArea }>
+            <View style={ styles.container }>
+                <Text accessibilityLabel="title">
+                    <FormattedMessage id="profile2.title" />
+                </Text>
+            </View>
         </SafeAreaView>
     );
 };

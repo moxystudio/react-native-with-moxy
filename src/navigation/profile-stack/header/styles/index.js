@@ -1,11 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 export default ({ typography, colors, layout }) => StyleSheet.create({
-    safeAreaView: {
-        height: 100,
-    },
     header: {
-        flex: 1,
+        height: 50,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
