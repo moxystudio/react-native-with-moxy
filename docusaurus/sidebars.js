@@ -7,7 +7,14 @@ module.exports = {
             label: 'Welcome',
             items: [
                 'welcome/what-is-this',
-                'welcome/instructions',
+                {
+                    type: 'category',
+                    label: 'Instructions',
+                    items: [
+                        'welcome/instructions/project-setup',
+                        'welcome/instructions/android-app-signing',
+                    ],
+                },
                 'welcome/conventions',
             ],
         },
