@@ -4,7 +4,7 @@ exports[`should render correctly 1`] = `
 <AppTree>
   <SafeAreaProvider>
     <ThemeContextProvider>
-      <ProfileHeader
+      <ProfileStackHeader
         navigation={
           Object {
             "addListener": [Function],
@@ -171,7 +171,7 @@ exports[`should render correctly 1`] = `
             </View>
           </View>
         </SafeAreaView>
-      </ProfileHeader>
+      </ProfileStackHeader>
     </ThemeContextProvider>
   </SafeAreaProvider>
 </AppTree>

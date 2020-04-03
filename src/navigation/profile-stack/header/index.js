@@ -1,3 +1,3 @@
 /* istanbul ignore file */
 
-export { default } from './ProfileHeader';
+export { default } from './ProfileStackHeader';

@@ -1,6 +1,6 @@
 import Default from '.';
-import ProfileHeader from './ProfileHeader';
+import ProfileStackHeader from './ProfileStackHeader';
 
-it('should default export ProfileHeader', () => {
-    expect(ProfileHeader).toBe(Default);
+it('should default export ProfileStackHeader', () => {
+    expect(ProfileStackHeader).toBe(Default);
 });

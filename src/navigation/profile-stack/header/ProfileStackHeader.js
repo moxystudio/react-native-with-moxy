@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import buildStyles from './styles';
 
-const ProfileHeader = ({ navigation }) => {
+const ProfileStackHeader = ({ navigation }) => {
     const { themeStyles } = useTheme();
     const styles = buildStyles(themeStyles);
 
@@ -24,8 +24,8 @@ const ProfileHeader = ({ navigation }) => {
     );
 };
 
-ProfileHeader.propTypes = {
+ProfileStackHeader.propTypes = {
     navigation: PropTypes.object.isRequired,
 };
 
-export default ProfileHeader;
+export default ProfileStackHeader;
