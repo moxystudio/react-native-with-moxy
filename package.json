@@ -72,6 +72,6 @@
     "standard-version": "^7.1.0"
   },
   "optionalDependencies": {
-    "ios-deploy": "^1.9.4"
+    "ios-deploy": "^1.10.0"
   }
 }
