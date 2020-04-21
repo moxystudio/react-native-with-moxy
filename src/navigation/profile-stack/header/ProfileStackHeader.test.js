@@ -1,10 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import ProfileHeader from './';
-import { AppTree } from '../../../shared/test-utils/components';
-import createNavigation from '../../../shared/test-utils/react-navigation-prop';
+import { AppTree } from '../../../shared/test-utils/modules';
+import createNavigationProp from '../../../shared/test-utils/react-navigation-prop';
 
-const navigation = createNavigation();
+const navigation = createNavigationProp();
 
 beforeEach(() => {
     navigation.navigate.mockClear();

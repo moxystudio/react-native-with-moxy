@@ -2,14 +2,14 @@ import React, { useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Text } from 'react-native';
 import HomeHeader from './header';
-import { Button, useTheme } from '../../shared/components';
+import { Button, useTheme } from '../../shared/modules';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import buildStyles from './styles';
 
 const HomeScreen = ({ navigation }) => {
     navigation.setOptions({
-        header: () => <HomeHeader />,
+        header: HomeHeader,
     });
 
     const { themeStyles } = useTheme();
