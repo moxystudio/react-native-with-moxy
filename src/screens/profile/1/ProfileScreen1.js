@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { useTheme } from '../../../shared/components';
+import { useTheme } from '../../../shared/modules';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import buildStyles from '../styles';

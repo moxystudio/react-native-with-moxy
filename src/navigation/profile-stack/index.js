@@ -1,8 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import ProfileHeader from './header';
-
 import ProfileScreen1 from '../../screens/profile/1/ProfileScreen1';
 import ProfileScreen2 from '../../screens/profile/2/ProfileScreen2';
 

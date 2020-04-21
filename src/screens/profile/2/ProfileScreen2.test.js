@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import ProfileScreen2 from './ProfileScreen2';
-import { AppTree } from '../../../shared/test-utils/components';
+import { AppTree } from '../../../shared/test-utils/modules';
 
 it('should render correctly', () => {
     const tree = mount(

@@ -1,10 +1,11 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import HomeHeader from './header';
 import HomeScreen from './HomeScreen';
-import { AppTree } from '../../shared/test-utils/components';
-import createNavigation from '../../shared/test-utils/react-navigation-prop';
+import { AppTree } from '../../shared/test-utils/modules';
+import createNavigationProp from '../../shared/test-utils/react-navigation-prop';
 
-const navigation = createNavigation();
+const navigation = createNavigationProp();
 
 beforeEach(() => {
     navigation.navigate.mockClear();
@@ -21,6 +22,8 @@ it('should render correctly', () => {
 
     Button.props().onPress();
 
+    expect(navigation.navigate).toHaveBeenNthCalledWith(1, 'Profile', { screen: 'Profile2' });
+    expect(navigation.setOptions).toHaveBeenNthCalledWith(1, { header: HomeHeader });
+
     expect(tree).toMatchSnapshot();
-    expect(navigation.navigate).toHaveBeenCalled();
 });
