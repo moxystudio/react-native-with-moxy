@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should export locale config 1`] = `
+Object {
+  "locales": Array [
+    Object {
+      "id": "en-US",
+      "messages": Object {
+        "home.buttons.navigate-to-profile": "Go to profile",
+        "home.buttons.switch-language": "Switch language ({localeId})",
+        "home.title": "This is the home screen",
+        "profile.header.buttons.back": "Go back",
+        "profile.header.title": "Profile Stack",
+        "profile1.title": "This is ProfileScreen1",
+        "profile2.title": "This is ProfileScreen2",
+      },
+      "name": "English",
+    },
+    Object {
+      "id": "pt-PT",
+      "messages": Object {
+        "home.buttons.navigate-to-profile": "Ir para o perfil",
+        "home.buttons.switch-language": "Trocar língua ({localeId})",
+        "home.title": "Este é o ecrã principal",
+        "profile.header.buttons.back": "Voltar",
+        "profile.header.title": "Stack de Perfil",
+        "profile1.title": "Este é o ProfileScreen1",
+        "profile2.title": "Este é o ProfileScreen2",
+      },
+      "name": "Português",
+    },
+  ],
+}
+`;

@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as themeStyles from '../../styles';
+import ThemeContext from './context';
 
-export const ThemeContext = React.createContext();
+const Provider = ThemeContext.Provider;
 
-const ThemeContextProvider = ({ children }) => (
-    <ThemeContext.Provider value={ { themeStyles } }>
+const ThemeProvider = ({ children }) => (
+    <Provider value={ { themeStyles } }>
         { children }
-    </ThemeContext.Provider>
+    </Provider>
 );
 
-ThemeContextProvider.propTypes = {
+ThemeProvider.propTypes = {
     children: PropTypes.element.isRequired,
 };
 
-export default ThemeContextProvider;
+export default ThemeProvider;

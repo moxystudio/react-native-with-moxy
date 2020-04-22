@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should export all named styles 1`] = `
+exports[`should export all named styles for Android 1`] = `
 Object {
   "colors": Object {
     "primary": "#221240",
@@ -25,6 +25,39 @@ Object {
     },
     "thin": Object {
       "fontFamily": "Lato-Thin",
+      "fontWeight": "normal",
+      "paddingBottom": 6,
+      "paddingTop": 4,
+    },
+  },
+}
+`;
+
+exports[`should export all named styles for iOS 1`] = `
+Object {
+  "colors": Object {
+    "primary": "#221240",
+    "secondary": "#2932D3",
+    "terciary": "#F64F51",
+  },
+  "layout": Object {
+    "gutter": 20,
+  },
+  "typography": Object {
+    "bold": Object {
+      "fontFamily": "Lato-Bold",
+      "fontWeight": "normal",
+      "paddingBottom": 6,
+      "paddingTop": 4,
+    },
+    "regular": Object {
+      "fontFamily": "Lato-Regular",
+      "fontWeight": "normal",
+      "paddingBottom": 6,
+      "paddingTop": 4,
+    },
+    "thin": Object {
+      "fontFamily": "Lato-Hairline",
       "fontWeight": "normal",
       "paddingBottom": 6,
       "paddingTop": 4,

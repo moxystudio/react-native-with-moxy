@@ -1,7 +1,8 @@
+/* eslint-env jest */
+
 // Reference documentation: https://reactnavigation.org/docs/navigation-prop/
 
-/* eslint-disable no-undef */
-export default () => ({
+export const createNavigationProp = () => ({
     state: { params: {} },
     dispatch: jest.fn(),
     goBack: jest.fn(),
@@ -20,4 +21,3 @@ export default () => ({
     setOptions: jest.fn(),
     isFocused: jest.fn(() => false),
 });
-/* eslint-enable no-undef */

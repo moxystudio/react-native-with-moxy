@@ -37,6 +37,7 @@ target 'reactNativeWithMoxy' do
 
 
 
+
   target 'reactNativeWithMoxyTests' do
     inherit! :search_paths
     # Pods for testing
