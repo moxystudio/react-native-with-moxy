@@ -1,8 +1,8 @@
 import { navigationRef, navigate } from './';
-import createNavigation from '../../shared/test-utils/react-navigation-prop';
+import { createNavigationProp } from '../../shared/test-utils/react-navigation';
 
 beforeEach(() => {
-    navigationRef.current = createNavigation();
+    navigationRef.current = createNavigationProp();
 });
 
 it('should call navigate with the correct arguments', () => {

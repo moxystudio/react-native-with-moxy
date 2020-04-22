@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
-import { Button, useTheme } from '../../../shared/modules';
+import { FormattedMessage } from 'react-intl';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Button, useTheme } from '../../../shared/modules';
 
 import buildStyles from './styles';
 
@@ -17,8 +18,16 @@ const ProfileStackHeader = ({ navigation }) => {
     return (
         <SafeAreaView style={ styles.safeAreaView }>
             <View style={ styles.header }>
-                <Button title="Go back" textStyle={ styles.goBack } onPress={ handlePress } />
-                <Text style={ styles.title }>Profile Stack</Text>
+                <Button
+                    accessibilityLabel="back button"
+                    title={ <FormattedMessage id="profile.header.buttons.back" /> }
+                    textStyle={ styles.goBack }
+                    onPress={ handlePress } />
+                <Text
+                    accessibilityLabel="title"
+                    style={ styles.title }>
+                    <FormattedMessage id="profile.header.title" />
+                </Text>
             </View>
         </SafeAreaView>
     );

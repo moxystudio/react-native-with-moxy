@@ -225,6 +225,8 @@ PODS:
     - React
   - RNGestureHandler (1.6.1):
     - React
+  - RNLocalize (1.4.0):
+    - React
   - RNReanimated (1.7.1):
     - React
   - RNScreens (2.4.0):
@@ -265,6 +267,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNLocalize (from `../node_modules/react-native-localize`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
@@ -331,6 +334,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/masked-view"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNLocalize:
+    :path: "../node_modules/react-native-localize"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
@@ -370,11 +375,12 @@ SPEC CHECKSUMS:
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   RNCMaskedView: 90dd32f5b786bd562e876e1421ea77c700cbf71e
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
+  RNLocalize: fc27ee5878ce5a3af73873fb2d8e866e0d1e6d84
   RNReanimated: 4e102df74a9674fa943e05f97f3362b6e44d0b48
   RNScreens: b5c0e1b2b04512919e78bd3898e144a157ce2363
   RNSVG: 7e16ddfc6e00d5aa69c9eb83e699bcce5dcb85d4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: c32312e4835b8e904b2e4f8aa12db7858bbdd90a
+PODFILE CHECKSUM: d90c882b384ab7605101d6269f1e11f5ec6cf082
 
 COCOAPODS: 1.9.1

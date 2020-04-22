@@ -1,0 +1,9 @@
+{
+    "home.title": "Este é o ecrã principal",
+    "home.buttons.navigate-to-profile": "Ir para o perfil",
+    "home.buttons.switch-language": "Trocar língua ({localeId})",
+    "profile1.title": "Este é o ProfileScreen1",
+    "profile2.title": "Este é o ProfileScreen2",
+    "profile.header.buttons.back": "Voltar",
+    "profile.header.title": "Stack de Perfil"
+}

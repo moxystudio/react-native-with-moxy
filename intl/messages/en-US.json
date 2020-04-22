@@ -1,0 +1,9 @@
+{
+    "home.title": "This is the home screen",
+    "home.buttons.navigate-to-profile": "Go to profile",
+    "home.buttons.switch-language": "Switch language ({localeId})",
+    "profile1.title": "This is ProfileScreen1",
+    "profile2.title": "This is ProfileScreen2",
+    "profile.header.buttons.back": "Go back",
+    "profile.header.title": "Profile Stack"
+}

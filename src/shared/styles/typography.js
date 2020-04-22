@@ -10,7 +10,10 @@ export default {
         paddingBottom: 6,
     },
     thin: {
-        fontFamily: Platform.isIOS ? 'Lato-Hairline' : 'Lato-Thin',
+        fontFamily: Platform.select({
+            ios: 'Lato-Hairline',
+            android: 'Lato-Thin',
+        }),
         fontWeight: 'normal',
         paddingTop: 4,
         paddingBottom: 6,

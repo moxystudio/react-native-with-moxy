@@ -1,13 +1,9 @@
 import React from 'react';
 import App from './App';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { rootNavigation } from '../navigation';
-
-it('should render correctly', () => {
-    const tree = shallow(<App />);
-
-    expect(tree).toMatchSnapshot();
-});
+import { LocaleProvider, ThemeProvider } from '../shared/modules';
+import localeConfig from '../../intl';
 
 it('should create navigation ref', () => {
     mount(<App />);
@@ -15,5 +11,19 @@ it('should create navigation ref', () => {
     expect(rootNavigation.navigationRef.current).toEqual(expect.objectContaining({
         navigate: expect.any(Function),
     }));
+});
+
+it('should render locale provider', () => {
+    const tree = mount(<App />);
+    const provider = tree.find(LocaleProvider);
+
+    expect(provider.exists()).toBe(true);
+    expect(provider.props()).toEqual(expect.objectContaining(localeConfig));
+});
+
+it('should render theme provider', () => {
+    const tree = mount(<App />);
+
+    expect(tree.find(ThemeProvider).exists()).toBe(true);
 });
 

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Text, TouchableOpacity, TouchableHighlight } from 'react-native';
 
 const Button = ({ type, style, title, onPress, textStyle, ...props }) => {
-    const Component = type === 'highlight' ? TouchableHighlight : TouchableOpacity;
+    const Touchable = type === 'highlight' ? TouchableHighlight : TouchableOpacity;
 
     return (
-        <Component style={ style } onPress={ onPress } { ...props }>
+        <Touchable style={ style } onPress={ onPress } { ...props }>
             <Text style={ textStyle }>{ title }</Text>
-        </Component>
+        </Touchable>
     );
 };
 
@@ -18,8 +18,14 @@ Button.propTypes = {
         PropTypes.object,
         PropTypes.arrayOf(PropTypes.object),
     ]),
-    title: PropTypes.string.isRequired,
-    textStyle: PropTypes.object,
+    title: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+    ]).isRequired,
+    textStyle: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.arrayOf(PropTypes.object),
+    ]),
     onPress: PropTypes.func.isRequired,
 };
 

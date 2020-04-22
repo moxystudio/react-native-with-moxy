@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { useTheme } from '../../../shared/modules';
+import { FormattedMessage } from 'react-intl';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTheme } from '../../../shared/modules';
 
 import buildStyles from '../styles';
 
@@ -11,7 +12,9 @@ const ProfileScreen1 = () => {
 
     return (
         <SafeAreaView style={ styles.container }>
-            <Text>This is the ProfileScreen1</Text>
+            <Text accessibilityLabel="title">
+                <FormattedMessage id="profile1.title" />
+            </Text>
         </SafeAreaView>
     );
 };
