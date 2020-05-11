@@ -2,7 +2,7 @@ import React from 'react';
 import App from './App';
 import { mount } from 'enzyme';
 import { rootNavigation } from '../navigation';
-import { LocaleProvider, ThemeProvider } from '../shared/modules';
+import { LocaleProvider, ThemeProvider, StoreProvider } from '../shared/modules';
 import localeConfig from '../../intl';
 
 it('should create navigation ref', () => {
@@ -25,5 +25,11 @@ it('should render theme provider', () => {
     const tree = mount(<App />);
 
     expect(tree.find(ThemeProvider).exists()).toBe(true);
+});
+
+it('should render store provider', () => {
+    const tree = mount(<App />);
+
+    expect(tree.find(StoreProvider).exists()).toBe(true);
 });
 

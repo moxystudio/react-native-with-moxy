@@ -8,5 +8,8 @@
         "@moxy/eslint-config-babel",
         "@moxy/eslint-config-jest",
         "@moxy/eslint-config-react"
-    ]
+    ],
+    "globals": {
+        "__DEV__": true
+    }
 }

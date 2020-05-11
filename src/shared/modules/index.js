@@ -17,3 +17,4 @@ export {
     useAppConfig,
     withAppConfig,
 } from './react-native-app-config';
+export { default as StoreProvider } from './react-native-store';
