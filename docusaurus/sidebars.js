@@ -34,6 +34,7 @@ module.exports = {
             type: 'category',
             label: 'Recipes',
             items: [
+                'recipes/redux',
             ],
         },
         {

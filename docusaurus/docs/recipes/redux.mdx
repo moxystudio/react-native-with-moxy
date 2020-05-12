@@ -1,0 +1,407 @@
+---
+id: redux
+title: Setting up Redux
+sidebar_label: Redux
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<img src={ useBaseUrl('recipes-assets/setting-up-redux/redux-logo.svg') } alt="Redux" width="300" />
+
+In this recipe, you will be guided through the process of setting up a disk persistence-enabled Redux store in your React Native app.
+
+> ℹ️ It is assumed you have an understanding of Redux concepts, how it works, and knowledge of the most common tools revolving Redux's ecosystem. In case you don't, first please go through the [official introductory document](https://redux.js.org/basics/basic-tutorial) before proceeding. We also recommend you read the Advanced Tutorial material, otherwise, it might be difficult for you to follow this recipe.
+
+## 1. Install dependencies
+
+Install the following packages:
+- `redux`
+- `react-redux`
+- `redux-devtools-extension`
+- `redux-thunk`
+- `redux-persist`
+- `@react-native-community/async-storage`
+
+```sh
+$ npm i redux react-redux redux-devtools-extension redux-thunk redux-persist @react-native-community/async-storage
+```
+
+## 2. Configuring your store
+
+This section demonstrates how to create your Redux store. The store is wired up with the following functionality:
+- Dispatch (asynchronous) action creators with `redux-thunk` middleware.
+- Debug, while in development, what's going on in the store with [Redux DevTools](https://github.com/reduxjs/redux-devtools) by activating `redux-devtools-extension`.
+- Manage state persisted in disk with `redux-persist` backed by `@react-native-community/async-storage` as storage engine. The state is rehydrated back automatically to the point where it was left off when the app was closed.
+
+Create the files as shown in the sections below.
+
+#### `src/shared/state/buildStore.js`
+
+```js
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import { createPersistReducer, createStorePersistor } from './persist';
+
+const reducers = {
+    app: (state = {}) => state,
+};
+
+const initialState = {};
+
+const modules = {};
+
+const buildStore = (reducerFn = combineReducers) => {
+    const middlewares = [
+        thunkMiddleware.withExtraArgument(modules),
+    ];
+    const enhancer = composeWithDevTools(
+        applyMiddleware(...middlewares),
+    );
+    const rootReducer = reducerFn(reducers);
+    const store = createStore(rootReducer, initialState, enhancer);
+
+    return store;
+};
+
+const buildPersistStore = () => {
+    const store = buildStore(createPersistReducer);
+
+    return {
+        ...store,
+        persistor: createStorePersistor(store),
+    };
+};
+
+export default buildPersistStore;
+```
+
+How to use your store and tweak it further:
+- Add your own reducers to the `reducers` object. The `app` reducer above is just a sample reducer.
+- Add your own middlewares to the `middleware` array.
+- The `modules` object allows you to pass arbitrary data to your action creators and middlewares. An API client module is a good example of what `modules` can be used for. Feel free to rename this variable to better suit your needs.
+
+#### `src/shared/state/persist/index.js`
+
+```js
+import { combineReducers } from 'redux';
+import { persistReducer, persistStore } from 'redux-persist';
+import AsyncStorage from '@react-native-community/async-storage';
+import config from './config';
+
+export const createPersistReducer = (reducers) => persistReducer(
+    { key: 'root', storage: AsyncStorage, ...config.root },
+    combineReducers(
+        Object.entries(reducers).reduce((reducers, [key, reducer]) => ({
+            ...reducers,
+            [key]: config[key] ?
+                persistReducer({ ...config[key], key, storage: AsyncStorage }, reducer) :
+                reducer,
+        }), {}),
+    ),
+);
+
+export const createStorePersistor = (store) => persistStore(store);
+```
+
+#### `src/shared/state/persist/config.js`
+
+```js
+import { createMigrate } from 'redux-persist';
+import migrations from './migrations';
+
+export default {
+    root: {
+        debug: __DEV__,
+        version: Object.keys(migrations).pop() || 0,
+        blacklist: [],
+        transforms: [],
+        migrate: createMigrate(migrations, { debug: __DEV__ }),
+    },
+};
+```
+
+#### `src/shared/state/persist/migrations.js`
+
+```js
+export default {};
+```
+
+Persistence allows you to:
+- Select, through blacklists, whitelists and transforms, which parts of the state get to be serialized to disk and deserialized (rehydrated) back to the app.
+- Maintain different versions of the state and move from an older version to a newer one with migrations.
+
+By default, the whole state tree is persisted. Head to [`redux-persist`](https://github.com/rt2zz/redux-persist) repository to learn more about how Redux store persistence works and how it can be configured and customized.
+
+## 3. Create `StoreProvider`
+
+The next step is to put together Redux's `Provider` and `redux-persist`'s `PersistGate`.
+
+Create the files as shown in the sections below.
+
+#### `src/shared/modules/react-native-store/StoreProvider.js`
+
+```js
+import React, { useEffect, useState, useRef } from 'react';
+import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+
+const StoreProvider = ({ children, ...props }) => {
+    const { current: { store, purge, persist } } = useRef(props);
+    const [isPurging, setPurging] = useState(purge && !!store.persistor);
+    const childrenFn = (storeReady) => children({ storeReady });
+
+    useEffect(() => {
+        if (!persist) {
+            store.persistor?.pause();
+        }
+
+        if (purge) {
+            store.persistor?.purge()
+                .catch(() => null)
+                .finally(() => setPurging(false));
+        }
+    }, []); /* eslint-disable-line react-hooks/exhaustive-deps */
+
+    if (isPurging) {
+        return childrenFn(false);
+    }
+
+    if (!store.persistor) {
+        return (
+            <Provider store={ store }>
+                { childrenFn(true) }
+            </Provider>
+        );
+    }
+
+    return (
+        <Provider store={ store }>
+            <PersistGate persistor={ store.persistor }>
+                { childrenFn }
+            </PersistGate>
+        </Provider>
+    );
+};
+
+StoreProvider.propTypes = {
+    children: PropTypes.func.isRequired,
+    persist: PropTypes.bool,
+    purge: PropTypes.bool,
+    store: PropTypes.shape({
+        dispatch: PropTypes.func.isRequired,
+        getState: PropTypes.func.isRequired,
+        persistor: PropTypes.shape({
+            purge: PropTypes.func.isRequired,
+            pause: PropTypes.func.isRequired,
+        }),
+    }).isRequired,
+};
+
+StoreProvider.defaultProps = {
+    persist: true,
+    purge: false,
+};
+
+export default StoreProvider;
+```
+
+How `StoreProvider` works:
+- Persistence is enabled by default. You can choose to disable persistence by setting `persist` prop to `false`. `StoreProvider` does not listen to changes to `persist` after mounting.
+- You can choose to purge the persisted state by setting `purge` prop to `true`. `StoreProvider` does not listen to changes to `purge` after mounting.
+- The `children` render prop is called with `storeReady` set to `false` while the store is rehydrating. Once rehydrated, `storeReady` changes to `true`.
+
+## 3. Wrap navigation with `StoreProvider`
+
+Finally, all that is left to do is render `StoreProvider` on top of your app's navigation.
+
+> ❗️Note that if you have other components that require access to the Redux store, make sure `StoreProvider` is rendered before them.
+
+#### src/app/App.js
+
+```js
+// ...
+import buildStore from '../shared/state/buildStore';
+// ...
+
+const App = () => {
+    // ...
+    <StoreProvider store={ buildStore() }>
+        { ({ storeReady }) => (
+            <NavigationContainer ref={ rootNavigation.navigationRef }>
+                <AppStack />
+            </NavigationContainer>
+        ) }
+    </StoreProvider>
+    // ...
+}
+// ...
+```
+
+>❗️Do not render your app's navigation before the store is rehydrated! Use `storeReady` to determine when the navigation should be rendered. You should render a splash screen while the store is being rehydrated and then hide it when it's done rehydrating.
+
+## 4. State directory tree
+
+We recommend the following structure to organize Redux's concerns: actions, action types, reducers, selectors and middlewares. In the simplistic and contrived example below, the `app` directory represents a slice of the global state your app manages. As your app's state grows, this approach scales really well as it enables you to split up concerns by domains. Suppose you need state to manage user-related information: all you have to do is create a `user` directory, at the same level as `app`'s, and replicate the file structure.
+
+```
+.
+└── app
+    ├── actionTypes.js
+    ├── actions.js
+    ├── index.js
+    ├── reducer.js
+    └── selectors.js
+```
+
+#### `src/shared/state/app/index.js`
+
+```js
+import reducer from './reducer';
+import * as actionTypes from './actionTypes';
+import * as actions from './actions';
+import * as selectors from './selectors';
+import * as middlewares from './middlewares';
+
+export {
+    actionTypes,
+    actions,
+    reducer,
+    selectors,
+    middlewares,
+};
+```
+
+#### `src/shared/state/app/actionTypes.js`
+
+```js
+export const SET_APP_VERSION = 'app/SET_APP_VERSION';
+```
+
+#### `src/shared/state/app/actions.js`
+
+```js
+import * as actionTypes from './actionTypes';
+
+const setAppVersion = (version) => ({
+    type: actionTypes.SET_APP_VERSION,
+    payload: version,
+});
+
+export {
+    setAppVersion,
+};
+```
+
+#### `src/shared/state/app/reducer.js`
+
+```js
+import * as actionTypes from './actionTypes';
+
+const initialState = {
+    version: null,
+};
+
+export default (state, action) => {
+    if (action.type !== actionTypes.SET_APP_VERSION) {
+        return state;
+    }
+
+    return {
+        ...state,
+        version: action.payload,
+    }
+}
+```
+
+#### `src/shared/state/app/selectors.js`
+
+```js
+const getAppVersion = (state) => state.app.version;
+
+export {
+    getAppVersion,
+};
+```
+
+#### `src/shared/state/app/middlewares.js`
+
+```js
+import * as actionTypes from './actionTypes';
+import * as selectors from './selectors';
+
+const logVersionChangeMiddleware = (store) => (next) => (action) => {
+    if (action.type !== actionTypes.SET_APP_VERSION) {
+        return next(action);
+    }
+
+    const previousAppVersion = selectors.getAppVersion(store.getState());
+
+    console.log(`Previous app version: ${previousAppVersion}`);
+
+    const result = next(action);
+    const currentAppVersion = selectors.getAppVersion(store.getState());
+
+    console.log(`Current app version: ${currentAppVersion}`);
+
+    return result;
+};
+
+export {
+    logVersionChangeMiddleware,
+};
+```
+
+## 5. Complete store configuration
+
+Following through the example [above](#4-state-directory-tree), the store setup needs to be concluded by adding `app`'s reducer and middleware(s):
+
+#### `src/shared/state/buildStore.js`
+
+```js
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import { createPersistReducer, createStorePersistor } from './persist';
+import { reducer as appReducer, middlewares as appMiddlewares } from './app';
+
+const reducers = {
+    app: appReducer,
+};
+
+const initialState = {};
+
+const modules = {};
+
+const buildStore = (reducerFn = combineReducers) => {
+    const middlewares = [
+        thunkMiddleware.withExtraArgument(modules),
+        appMiddlewares.logVersionChangeMiddleware,
+    ];
+    const enhancer = composeWithDevTools(
+        applyMiddleware(...middlewares),
+    );
+    const rootReducer = reducerFn(reducers);
+    const store = createStore(rootReducer, initialState, enhancer);
+
+    return store;
+};
+
+const buildPersistStore = () => {
+    const store = buildStore(createPersistReducer);
+
+    return {
+        ...store,
+        persistor: createStorePersistor(store),
+    };
+};
+
+export default buildPersistStore;
+```
+
+## 6. Source code
+
+If'd like, feel free to checkout the [branch](https://github.com/moxystudio/react-native-with-moxy/tree/feat/add-store-provider) from the boilerplate's repository to see the persistence-enabled Redux store working on both Android and iOS. You can also find tests for [`StoreProvider`](https://github.com/moxystudio/react-native-with-moxy/blob/feat/add-store-provider/src/shared/modules/react-native-store/StoreProvider.test.js).
+
+**Full diff:** https://github.com/moxystudio/react-native-with-moxy/compare/master...feat/add-store-provider
