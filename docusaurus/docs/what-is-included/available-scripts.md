@@ -36,13 +36,13 @@ This script will launch the app on the first available connected device it is fo
 
 This script will create a non-optimized JavaScript bundle targeted for debugging purposes targeted to the Android platform.
 
-You can find the bundle file in `android/app/src/main/assets/index.android.bundle`.
+You can find the bundle file, `index.android.bundle`, in the project's root directory.
 
 ## `npm run build:android:js:prod`
 
 This script will create an optimized, production-ready JavaScript bundle targeted to the Android platform.
 
-You can find the bundle file in `android/app/src/main/assets/index.android.bundle`.
+You can find the bundle file, `index.android.bundle`, in the project's root directory.
 
 ## `npm run build:android:aab:prod`
 
@@ -98,7 +98,11 @@ This script updates your CHANGELOG.md file, following [Semantic Versioning](http
 
 ## `npm run lint`
 
-This script lints your Javascript files.
+This script lints your JavaScript files.
+
+## `npm run test`
+
+This script will run your tests. Our configuration shows coverage reports for all tests. Please refer to the `jest.config.js` file for more configuration details.
 
 ### Note
 
