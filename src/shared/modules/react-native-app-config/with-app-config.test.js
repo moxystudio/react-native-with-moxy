@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import AppConfigProvider from './AppConfigProvider';
 import withAppConfig from './with-app-config';
 
@@ -17,7 +17,7 @@ it('should inject the appConfig prop with the current provider value', () => {
         return null;
     });
 
-    mount(
+    render(
         <AppConfigProvider>
             <MyComponent />
         </AppConfigProvider>,
@@ -36,7 +36,7 @@ it('should forward refs', () => {
     const EnhancedMyComponent = withAppConfig(MyComponent);
     const ref = createRef();
 
-    mount(
+    render(
         <AppConfigProvider>
             <EnhancedMyComponent ref={ ref } />
         </AppConfigProvider>,

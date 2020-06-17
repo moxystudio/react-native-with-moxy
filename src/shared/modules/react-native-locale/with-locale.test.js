@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import LocaleProvider from './LocaleProvider';
 import withLocale from './with-locale';
 
@@ -32,7 +32,7 @@ it('should inject the reactNativeLocale prop with the current provider value', (
         return null;
     });
 
-    mount(
+    render(
         <LocaleProvider locales={ locales }>
             <MyComponent />
         </LocaleProvider>,
@@ -51,7 +51,7 @@ it('should forward refs', () => {
     const EnhancedMyComponent = withLocale(MyComponent);
     const ref = createRef();
 
-    mount(
+    render(
         <LocaleProvider locales={ locales }>
             <EnhancedMyComponent ref={ ref } />
         </LocaleProvider>,

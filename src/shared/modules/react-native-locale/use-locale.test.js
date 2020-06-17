@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import LocaleProvider from './LocaleProvider';
 import useLocale from './use-locale';
 
@@ -34,7 +34,7 @@ it('should return the current provider value', () => {
         return null;
     };
 
-    mount(
+    render(
         <LocaleProvider locales={ locales }>
             <MyComponent />
         </LocaleProvider>,

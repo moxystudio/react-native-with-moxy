@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import AppConfigProvider from './AppConfigProvider';
 import useAppConfig from './use-app-config';
 
@@ -19,7 +19,7 @@ it('should return the current provider value', () => {
         return null;
     };
 
-    mount(
+    render(
         <AppConfigProvider>
             <MyComponent />
         </AppConfigProvider>,

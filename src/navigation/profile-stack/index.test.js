@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ProfileScreen1 from '../../screens/profile/1/ProfileScreen1';
 import ProfileScreen2 from '../../screens/profile/2/ProfileScreen2';
@@ -7,7 +7,7 @@ import ProfileHeader from './header';
 import ProfileStack from './';
 
 it('should create navigation correctly', () => {
-    mount(<ProfileStack />);
+    render(<ProfileStack />);
 
     const STACK_NAVIGATOR = createStackNavigator();
     const context = expect.any(Object);
