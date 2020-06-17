@@ -1,13 +1,15 @@
 'use strict';
 
-const { compose, baseConfig, withReactNative, withEnzymeReactNative } = require('@moxy/jest-config');
+const { compose, baseConfig } = require('@moxy/jest-config-base');
+const withReactNative = require('@moxy/jest-config-react-native');
+const { withNTL } = require('@moxy/jest-config-testing-library');
 
 module.exports = compose(
-    baseConfig(),
-    withEnzymeReactNative('enzyme-adapter-react-16'),
+    baseConfig('node'),
     withReactNative({
         transformModules: (patterns) => [...patterns, '@react-navigation/'],
     }),
+    withNTL(),
     (config) => ({
         ...config,
         moduleNameMapper: {

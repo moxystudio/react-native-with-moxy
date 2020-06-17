@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import { Logo } from '../../../shared/media/icons';
 import HomeHeader from '.';
@@ -9,13 +9,13 @@ beforeEach(() => {
 });
 
 it('should render a safe area view', () => {
-    const tree = mount(<HomeHeader />);
+    render(<HomeHeader />);
 
-    expect(tree.find(SafeAreaView).exists()).toBe(true);
+    expect(SafeAreaView).toHaveBeenCalledTimes(1);
 });
 
 it('should render the logo', () => {
-    mount(<HomeHeader />);
+    render(<HomeHeader />);
 
     const context = expect.any(Object);
 

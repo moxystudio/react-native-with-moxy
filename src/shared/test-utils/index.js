@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { render } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import idObj from 'identity-obj-proxy';
-import { AppConfigProvider, ThemeProvider, LocaleProvider } from '../../../modules';
+import { AppConfigProvider, ThemeProvider, LocaleProvider } from '../modules';
 
 const localeConfig = {
     locales: [
@@ -19,7 +20,7 @@ const localeConfig = {
     ],
 };
 
-const AppTree = ({ children }) => (
+const Providers = ({ children }) => (
     <AppConfigProvider>
         <SafeAreaProvider>
             <ThemeProvider>
@@ -31,8 +32,14 @@ const AppTree = ({ children }) => (
     </AppConfigProvider>
 );
 
-AppTree.propTypes = {
+Providers.propTypes = {
     children: PropTypes.element.isRequired,
 };
 
-export default AppTree;
+const customRender = (ui, options) => render(ui, { wrapper: Providers, ...options });
+
+// re-export everything
+export * from '@testing-library/react-native';
+
+// Override render method
+export { customRender as render };

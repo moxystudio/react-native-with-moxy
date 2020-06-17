@@ -1,7 +1,6 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import SafeAreaView from 'react-native-safe-area-view';
-import { AppTree } from '../../shared/test-utils/modules';
+import { fireEvent, render } from '../../shared/test-utils';
 import { useLocale } from '../../shared/modules';
 import { createNavigationProp } from '../../shared/test-utils/react-navigation';
 import HomeHeader from './header';
@@ -12,52 +11,37 @@ const navigation = createNavigationProp();
 beforeEach(jest.clearAllMocks);
 
 it('should render a safe area view', () => {
-    const tree = mount(
-        <AppTree>
-            <HomeScreen navigation={ navigation } />
-        </AppTree>,
-    );
+    render(<HomeScreen navigation={ navigation } />);
 
-    expect(tree.find(SafeAreaView).exists()).toBe(true);
+    expect(SafeAreaView).toHaveBeenCalledTimes(1);
 });
 
 it('should render title', () => {
-    const tree = mount(
-        <AppTree>
-            <HomeScreen navigation={ navigation } />
-        </AppTree>,
-    );
+    const { queryByLabelText, queryByText } = render(<HomeScreen navigation={ navigation } />);
 
-    const title = tree.find("[accessibilityLabel='title']").first().text();
-
-    expect(title).toBe('home.title');
+    expect(queryByLabelText('title')).not.toBeNull();
+    expect(queryByText('home.title')).not.toBeNull();
 });
 
 it('should call specify the header via navigation options', () => {
-    mount(
-        <AppTree>
-            <HomeScreen navigation={ navigation } />
-        </AppTree>,
-    );
+    render(<HomeScreen navigation={ navigation } />);
 
     expect(navigation.setOptions).toHaveBeenNthCalledWith(1, expect.objectContaining({ header: HomeHeader }));
 });
 
 it('should navigate to profile screen on button press', () => {
-    const tree = mount(
-        <AppTree>
-            <HomeScreen navigation={ navigation } />
-        </AppTree>,
-    );
+    const { getByLabelText } = render(<HomeScreen navigation={ navigation } />);
 
-    const button = tree.find("[accessibilityLabel='navigate to profile button']").first();
+    const button = getByLabelText('navigate to profile button');
 
-    button.props().onPress();
+    fireEvent.press(button);
 
     expect(navigation.navigate).toHaveBeenNthCalledWith(1, 'Profile', { screen: 'Profile2' });
 });
 
-it('should switch language on button press', (done) => {
+it('should switch language to pt-PT on button press', () => {
+    expect.assertions(3);
+
     const LocaleChangeAsserter = () => {
         const { id: localeId } = useLocale();
 
@@ -66,25 +50,22 @@ it('should switch language on button press', (done) => {
         }
 
         expect(localeId).toBe('pt-PT');
-        done();
 
         return null;
     };
 
-    const tree = mount(
-        <AppTree>
-            <>
-                <HomeScreen navigation={ navigation } />
-                <LocaleChangeAsserter />
-            </>
-        </AppTree>,
+    const { queryByLabelText, queryByText } = render(
+        <>
+            <HomeScreen navigation={ navigation } />
+            <LocaleChangeAsserter />
+        </>,
     );
 
-    const button = tree.find("[accessibilityLabel='switch language button']").first();
+    const button = queryByLabelText('switch language button');
 
-    expect(button.exists()).toBe(true);
-    expect(button.text()).toBe('home.buttons.switch-language');
+    expect(button).not.toBeNull();
+    expect(queryByText('home.buttons.switch-language')).not.toBeNull();
 
-    button.props().onPress();
+    fireEvent.press(button);
 });
 

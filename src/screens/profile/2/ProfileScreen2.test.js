@@ -1,27 +1,17 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import SafeAreaView from 'react-native-safe-area-view';
-import { AppTree } from '../../../shared/test-utils/modules';
+import { render } from '../../../shared/test-utils';
 import ProfileScreen2 from './ProfileScreen2';
 
 it('should render a safe area view', () => {
-    const tree = mount(
-        <AppTree>
-            <ProfileScreen2 />
-        </AppTree>,
-    );
+    render(<ProfileScreen2 />);
 
-    expect(tree.find(SafeAreaView).exists()).toBe(true);
+    expect(SafeAreaView).toHaveBeenCalledTimes(1);
 });
 
 it('should render screen title', () => {
-    const tree = mount(
-        <AppTree>
-            <ProfileScreen2 />
-        </AppTree>,
-    );
+    const { queryByLabelText, queryByText } = render(<ProfileScreen2 />);
 
-    const title = tree.find("[accessibilityLabel='title']").first().text();
-
-    expect(title).toBe('profile2.title');
+    expect(queryByLabelText('title')).not.toBeNull();
+    expect(queryByText('profile2.title')).not.toBeNull();
 });

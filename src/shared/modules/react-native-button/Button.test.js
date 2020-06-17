@@ -1,22 +1,22 @@
 import React from 'react';
-import { TouchableHighlight, TouchableOpacity } from 'react-native';
-import { mount } from 'enzyme';
+import { fireEvent, render } from '@testing-library/react-native';
 import Button from './Button';
 
 it('should render a TouchableHighlight when no type is supplied', () => {
-    const tree = mount(
+    const { getByLabelText } = render(
         <Button
             accessibilityLabel="button"
             title="button"
             onPress={ () => null } />,
     );
 
-    expect(tree.find("[accessibilityLabel='button']").exists()).toBe(true);
-    expect(tree.children().first().type()).toBe(TouchableHighlight);
+    const pressable = getByLabelText('button');
+
+    expect(pressable.type).toBe('TouchableHighlight');
 });
 
 it('should render a TouchableOpacity when type is opacity', () => {
-    const tree = mount(
+    const { getByLabelText } = render(
         <Button
             accessibilityLabel="button"
             title="button"
@@ -24,12 +24,13 @@ it('should render a TouchableOpacity when type is opacity', () => {
             type="opacity" />,
     );
 
-    expect(tree.find("[accessibilityLabel='button']").exists()).toBe(true);
-    expect(tree.children().first().type()).toBe(TouchableOpacity);
+    const pressable = getByLabelText('button');
+
+    expect(pressable.type).toBe('TouchableOpacity');
 });
 
 it('should render title', () => {
-    const tree = mount(
+    const { queryByText } = render(
         <Button
             accessibilityLabel="button"
             title="button"
@@ -37,12 +38,12 @@ it('should render title', () => {
             type="opacity" />,
     );
 
-    expect(tree.find("[accessibilityLabel='button']").first().text()).toBe('button');
+    expect(queryByText('button')).not.toBeNull();
 });
 
 it('should call onPress callback', () => {
     const onPress = jest.fn();
-    const tree = mount(
+    const { getByLabelText } = render(
         <Button
             accessibilityLabel="button"
             title="button"
@@ -50,7 +51,9 @@ it('should call onPress callback', () => {
             type="opacity" />,
     );
 
-    tree.find("[accessibilityLabel='button']").first().props().onPress();
+    const pressable = getByLabelText('button');
+
+    fireEvent.press(pressable);
 
     expect(onPress).toHaveBeenCalledTimes(1);
 });

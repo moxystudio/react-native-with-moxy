@@ -1,14 +1,17 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/home/HomeScreen';
 import ProfileStack from './profile-stack';
 import Navigation from './';
 
-it('should create navigation correctly', () => {
-    mount(<Navigation />);
+beforeEach(jest.clearAllMocks);
 
-    const STACK_NAVIGATOR = createStackNavigator();
+const STACK_NAVIGATOR = createStackNavigator();
+
+it('should create navigation', () => {
+    render(<Navigation />);
+
     const context = expect.any(Object);
 
     expect(STACK_NAVIGATOR.Navigator).toHaveBeenNthCalledWith(
@@ -40,9 +43,14 @@ it('should create navigation correctly', () => {
         }),
         context,
     );
+});
+
+it('should render an empty header for profile stack', () => {
+    render(<Navigation />);
 
     const ProfileStackHeader = STACK_NAVIGATOR.Screen.mock.calls[1][0].options.header;
-    const tree = mount(<ProfileStackHeader />);
+    const { container } = render(<ProfileStackHeader />);
 
-    expect(tree.isEmptyRender()).toBe(true);
+    // Should render nothing
+    expect(container.children[0]).toBeUndefined();
 });

@@ -1,7 +1,6 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render, fireEvent } from '../../../shared/test-utils';
 import SafeAreaView from 'react-native-safe-area-view';
-import { AppTree } from '../../../shared/test-utils/modules';
 import { createNavigationProp } from '../../../shared/test-utils/react-navigation';
 import ProfileHeader from './';
 
@@ -12,49 +11,30 @@ beforeEach(() => {
 });
 
 it('should render a safe area view', () => {
-    const tree = mount(
-        <AppTree>
-            <ProfileHeader navigation={ navigation } />
-        </AppTree>,
-    );
+    render(<ProfileHeader navigation={ navigation } />);
 
-    expect(tree.find(SafeAreaView).exists()).toBe(true);
+    expect(SafeAreaView).toHaveBeenCalledTimes(1);
 });
 
 it('should pop the navigation stack when the back button is pressed', () => {
-    const tree = mount(
-        <AppTree>
-            <ProfileHeader navigation={ navigation } />
-        </AppTree>,
-    );
+    const { getByLabelText } = render(<ProfileHeader navigation={ navigation } />);
+    const backButton = getByLabelText('back button');
 
-    const button = tree.find("[accessibilityLabel='back button']").first();
-
-    button.props().onPress();
+    fireEvent.press(backButton);
 
     expect(navigation.pop).toHaveBeenCalledTimes(1);
 });
 
 it('should have back button', () => {
-    const tree = mount(
-        <AppTree>
-            <ProfileHeader navigation={ navigation } />
-        </AppTree>,
-    );
+    const { queryByLabelText, queryByText } = render(<ProfileHeader navigation={ navigation } />);
 
-    const title = tree.find("[accessibilityLabel='back button']").first().text();
-
-    expect(title).toBe('profile.header.buttons.back');
+    expect(queryByLabelText('back button')).toBeTruthy();
+    expect(queryByText('profile.header.buttons.back')).toBeTruthy();
 });
 
 it('should display the screen title', () => {
-    const tree = mount(
-        <AppTree>
-            <ProfileHeader navigation={ navigation } />
-        </AppTree>,
-    );
+    const { queryByLabelText, queryByText } = render(<ProfileHeader navigation={ navigation } />);
 
-    const title = tree.find("[accessibilityLabel='title']").first().text();
-
-    expect(title).toBe('profile.header.title');
+    expect(queryByLabelText('title')).toBeTruthy();
+    expect(queryByText('profile.header.title')).toBeTruthy();
 });

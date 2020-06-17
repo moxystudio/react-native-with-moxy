@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
-import { mount } from 'enzyme';
+import { fireEvent, render } from '@testing-library/react-native';
 import { FormattedMessage } from 'react-intl';
 import { findBestAvailableLanguage } from 'react-native-localize';
 import LocaleProvider from './LocaleProvider';
@@ -29,17 +29,15 @@ it("should load matching user's device preferred locale", () => {
         isRTL: false,
     }));
 
-    const tree = mount(
+    const { queryByText } = render(
         <LocaleProvider locales={ locales }>
-            <Text accessibilityLabel="message">
+            <Text>
                 <FormattedMessage id="apple" />
             </Text>
         </LocaleProvider>,
     );
 
-    const message = tree.find("[accessibilityLabel='message']").first().text();
-
-    expect(message).toBe(messages['ru-RU'].apple);
+    expect(queryByText(messages['ru-RU'].apple)).not.toBeNull();
 });
 
 it("should load default locale if there is no matching user's device preferred locale", () => {
@@ -48,40 +46,36 @@ it("should load default locale if there is no matching user's device preferred l
         isRTL: false,
     }));
 
-    const tree = mount(
+    const { queryByText } = render(
         <LocaleProvider locales={ locales }>
-            <Text accessibilityLabel="message">
+            <Text>
                 <FormattedMessage id="apple" />
             </Text>
         </LocaleProvider>,
     );
 
-    const message = tree.find("[accessibilityLabel='message']").first().text();
-
-    expect(message).toBe(messages['en-US'].apple);
+    expect(queryByText(messages['en-US'].apple)).not.toBeNull();
 });
 
 it('should load initial locale by id if it exists', () => {
-    const tree = mount(
+    const { queryByText } = render(
         <LocaleProvider locales={ locales } initialLocaleId="pt-PT">
-            <Text accessibilityLabel="message">
+            <Text>
                 <FormattedMessage id="apple" />
             </Text>
         </LocaleProvider>,
     );
 
-    const message = tree.find("[accessibilityLabel='message']").first().text();
-
-    expect(message).toBe(messages['pt-PT'].apple);
+    expect(queryByText(messages['pt-PT'].apple)).not.toBeNull();
 });
 
 it('should throw if initial locale id does not exist', () => {
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
     expect(() =>
-        mount(
+        render(
             <LocaleProvider locales={ locales } initialLocaleId="es-ES">
-                <Text accessibilityLabel="message">
+                <Text>
                     <FormattedMessage id="apple" />
                 </Text>
             </LocaleProvider>,
@@ -93,9 +87,9 @@ it('should throw if locales array is empty', () => {
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
     expect(() =>
-        mount(
+        render(
             <LocaleProvider locales={ [] }>
-                <Text accessibilityLabel="message">
+                <Text>
                     <FormattedMessage id="apple" />
                 </Text>
             </LocaleProvider>,
@@ -111,32 +105,28 @@ it('should change locale when requested by a consumer', () => {
 
         return (
             <View>
-                <TouchableOpacity accessibilityLabel="button-pt-pt" onPress={ changeLocaleToPtPt } />
-                <TouchableOpacity accessibilityLabel="button-ru-ru" onPress={ changeLocaleToRuRu } />
-                <Text accessibilityLabel="message">
+                <TouchableOpacity testID="button-pt-pt" onPress={ changeLocaleToPtPt } />
+                <TouchableOpacity testID="button-ru-ru" onPress={ changeLocaleToRuRu } />
+                <Text>
                     <FormattedMessage id="apple" />
                 </Text>
             </View>
         );
     };
 
-    const tree = mount(
+    const { getByTestId, getByText } = render(
         <LocaleProvider locales={ locales } initialLocaleId="en-US">
             <MyComponent />
         </LocaleProvider>,
     );
 
-    const buttonPtPt = tree.find("[accessibilityLabel='button-pt-pt']").first();
-    const buttonRuRu = tree.find("[accessibilityLabel='button-ru-ru']").first();
-    const getMessage = () => tree.find("[accessibilityLabel='message']").first().text();
+    expect(getByText(messages['en-US'].apple)).not.toBeNull();
 
-    expect(getMessage()).toBe(messages['en-US'].apple);
+    fireEvent.press(getByTestId('button-pt-pt'));
+    expect(getByText(messages['pt-PT'].apple)).not.toBeNull();
 
-    buttonPtPt.props().onPress();
-    expect(getMessage()).toBe(messages['pt-PT'].apple);
-
-    buttonRuRu.props().onPress();
-    expect(getMessage()).toBe(messages['ru-RU'].apple);
+    fireEvent.press(getByTestId('button-ru-ru'));
+    expect(getByText(messages['ru-RU'].apple)).not.toBeNull();
 });
 
 it('should not change locale when a consumer requests an unknown locale', () => {
@@ -146,27 +136,24 @@ it('should not change locale when a consumer requests an unknown locale', () => 
 
         return (
             <View>
-                <TouchableOpacity accessibilityLabel="button-es-es" onPress={ changeLocaleToEsEs } />
-                <Text accessibilityLabel="message">
+                <TouchableOpacity testID="button-es-es" onPress={ changeLocaleToEsEs } />
+                <Text>
                     <FormattedMessage id="apple" />
                 </Text>
             </View>
         );
     };
 
-    const tree = mount(
+    const { getByTestId, getByText } = render(
         <LocaleProvider locales={ locales } initialLocaleId="en-US">
             <MyComponent />
         </LocaleProvider>,
     );
 
-    const buttonEsEs = tree.find("[accessibilityLabel='button-es-es']").first();
-    const getMessage = () => tree.find("[accessibilityLabel='message']").first().text();
+    expect(getByText(messages['en-US'].apple)).not.toBeNull();
 
-    expect(getMessage()).toBe(messages['en-US'].apple);
-
-    buttonEsEs.props().onPress();
-    expect(getMessage()).toBe(messages['en-US'].apple);
+    fireEvent.press(getByTestId('button-es-es'));
+    expect(getByText(messages['en-US'].apple)).not.toBeNull();
 });
 
 it('should callback when locale changes', () => {
@@ -177,11 +164,11 @@ it('should callback when locale changes', () => {
         const changeLocale = () => locale.changeLocale('ru-RU');
 
         return (
-            <TouchableOpacity accessibilityLabel="button" onPress={ changeLocale } />
+            <TouchableOpacity testID="button" onPress={ changeLocale } />
         );
     };
 
-    const tree = mount(
+    const { getByTestId } = render(
         <LocaleProvider
             locales={ locales }
             initialLocaleId="en-US"
@@ -190,23 +177,19 @@ it('should callback when locale changes', () => {
         </LocaleProvider>,
     );
 
-    const buttonRuRu = tree.find("[accessibilityLabel='button']").first();
-
     expect(onLocalChange).not.toHaveBeenCalled();
 
-    buttonRuRu.props().onPress();
+    fireEvent.press(getByTestId('button'));
     expect(onLocalChange).toHaveBeenNthCalledWith(1, 'ru-RU');
 });
 
 it('should fail if locales change but current locale does not exist', () => {
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    const tree = mount(
-        <LocaleProvider locales={ locales } />,
-    );
+    const { rerender } = render(<LocaleProvider locales={ locales } />);
 
     expect(() => {
-        tree.setProps({ locales: locales.slice(1) });
+        rerender(<LocaleProvider locales={ locales.slice(1) } />);
     }).toThrow(/Locales array changed. However, the current locale does not exist anymore./);
 });
 

@@ -1,13 +1,21 @@
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import localeConfig from '../../intl';
 import { rootNavigation } from '../navigation';
-import { LocaleProvider, ThemeProvider } from '../shared/modules';
+import { AppConfigProvider, LocaleProvider, ThemeProvider } from '../shared/modules';
 import App from './App';
 
+jest.mock('../shared/modules', () => ({
+    AppConfigProvider: jest.fn(({ children }) => children),
+    LocaleProvider: jest.fn(({ children }) => children),
+    ThemeProvider: jest.fn(({ children }) => children),
+}));
+
+beforeEach(jest.clearAllMocks);
+
 it('should create navigation ref', () => {
-    mount(<App />);
+    render(<App />);
 
     expect(rootNavigation.navigationRef.current).toEqual(expect.objectContaining({
         navigate: expect.any(Function),
@@ -15,22 +23,27 @@ it('should create navigation ref', () => {
 });
 
 it('should render locale provider', () => {
-    const tree = mount(<App />);
-    const provider = tree.find(LocaleProvider);
+    render(<App />);
 
-    expect(provider.exists()).toBe(true);
-    expect(provider.props()).toEqual(expect.objectContaining(localeConfig));
+    expect(LocaleProvider).toHaveBeenCalledTimes(1);
+    expect(LocaleProvider).toHaveBeenCalledWith(expect.objectContaining({ ...localeConfig }), {});
 });
 
 it('should render theme provider', () => {
-    const tree = mount(<App />);
+    render(<App />);
 
-    expect(tree.find(ThemeProvider).exists()).toBe(true);
+    expect(ThemeProvider).toHaveBeenCalledTimes(1);
 });
 
 it('should render safe area provider', () => {
-    const tree = mount(<App />);
+    render(<App />);
 
-    expect(tree.find(SafeAreaProvider).exists()).toBe(true);
+    expect(SafeAreaProvider).toHaveBeenCalledTimes(1);
+});
+
+it('should render app config provider', () => {
+    render(<App />);
+
+    expect(AppConfigProvider).toHaveBeenCalledTimes(1);
 });
 

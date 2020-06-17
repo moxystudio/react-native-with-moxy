@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react-native';
 import AppConfigProvider from './AppConfigProvider';
 import useAppConfig from './use-app-config';
 
@@ -17,7 +17,7 @@ it('should pass the app config through the component tree', () => {
         return null;
     };
 
-    mount(
+    render(
         <AppConfigProvider>
             <MyComponent />
         </AppConfigProvider>,
