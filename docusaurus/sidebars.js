@@ -27,7 +27,7 @@ module.exports = {
                 'what-is-included/react-navigation',
                 'what-is-included/eslint',
                 'what-is-included/internationalization',
-                'what-is-included/testing-with-jest-enzyme',
+                'what-is-included/testing-with-jest-native-testing-library',
                 'what-is-included/environment-variables',
             ],
         },
