@@ -649,7 +649,7 @@ var path_to_regexp = __webpack_require__(115);
 var path_to_regexp_default = /*#__PURE__*/__webpack_require__.n(path_to_regexp);
 
 // EXTERNAL MODULE: ./node_modules/react-is/index.js
-var react_is = __webpack_require__(152);
+var react_is = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
 var objectWithoutPropertiesLoose = __webpack_require__(36);
@@ -14388,7 +14388,7 @@ webpackContext.id = 112;
 // For browser users, this will be mapped to src/browser/builds/algoliasearchLite.js
 // when used through browserify or webpack (see package.json browser field)
 // This is done to ease universal applications (https://github.com/algolia/algoliasearch-client-js/issues/283)
-module.exports = __webpack_require__(153);
+module.exports = __webpack_require__(152);
 
 
 /***/ }),
@@ -17062,29 +17062,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'testing-with-jest-enzyme',title:'Testing with Jest and Enzyme',sidebar_label:'Testing with Jest and Enzyme'};const metadata={"id":"what-is-included/testing-with-jest-enzyme","title":"Testing with Jest and Enzyme","description":"For testing, this boilerplate is configured to use Jest and Enzyme, providing strong options for testing varied types of code.","source":"@site/docs/what-is-included/jest-enzyme.md","permalink":"/docs/what-is-included/testing-with-jest-enzyme","sidebar_label":"Testing with Jest and Enzyme","sidebar":"docs","previous":{"title":"Internationalization","permalink":"/docs/what-is-included/internationalization"},"next":{"title":"Environment Variables","permalink":"/docs/what-is-included/environment-variables"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`For testing, this boilerplate is configured to use `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://jestjs.io/"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"a"},`Jest`)),` and `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/enzymejs/enzyme"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"a"},`Enzyme`)),`, providing strong options for testing varied types of code.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can find more details about our implementation of Jest in its configuration file, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`jest.config.js`),`, which uses our own `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/moxystudio/jest-config"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`@moxy/jest-config`)),`.`));};MDXContent.isMDXComponent=true;
-
-/***/ }),
-/* 150 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "frontMatter", function() { return frontMatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "metadata", function() { return metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rightToc", function() { return rightToc; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MDXContent; });
-/* harmony import */ var _home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 const frontMatter={id:'this-document',title:'This document',sidebar_label:'This document'};const metadata={"id":"this-document","title":"This document","description":"This document is the default documentation for react-native-with-moxy projects.","source":"@site/docs/this-document.md","permalink":"/docs/this-document","sidebar_label":"This document","sidebar":"docs","previous":{"title":"Setting up Redux","permalink":"/docs/recipes/redux"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`This document is the default documentation for `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/moxystudio/react-native-with-moxy"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`react-native-with-moxy`)),` projects.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"p"},`Keep in mind`),`, if you have received a project developed with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/moxystudio/react-native-with-moxy"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`react-native-with-moxy`)),`, you have received a version of this documentation tailored to your project.
 Though much of the information in this document is shared between projects, we recommend you always check the documentation sent with your project for more accurate and tailored instructions.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The first time you do this, you must install the dependencies of the documentation. From the folder of the project, run:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-bash"}),`npm install --prefix docusaurus
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Afterwards, and every time you need to access the documentation again, you can run:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-bash"}),`npm run docs
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`This script will automatically open your documentation in your default browser.`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17143,7 +17127,7 @@ const frontMatter={id:'conventions',title:'Conventions',sidebar_label:'Conventio
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`...where:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`src`),`: Where the code for your application will be.`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`app`),`: Where your App component will be.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`navigation`),`: Where you can define your navigators and corresponding routes for your application.`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`index.js`),`: This file is where the root stack is defined and other navigators are imported in.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`profile-stack`),`: This is an example of a navigator that you'll reference in the root stack and the structure you'll find inside it. The folder must always be sufixed with the type of navigator it refers to (in this case, it is a stack navigator). Commonly, you'll find the following files / folders here:`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`index.js`),`: This is your navigator file.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`index.test.js`),`: This is the test file corresponding to this navigator.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`header`),`: Sometimes a navigator may have an header different from the rest of the app. Default headers are set at navigator creation via options.`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`ProfileStackHeader.js`),` - This is your header component file.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`ProfileStackHeader.index.js`),` - This is the test file corresponding to this component.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`index.js`),` - This file will simply export your header file.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`styles`),` - This is where you'll have styles that are only used in this component. As in React Native we do not have CSS, the folder contains a single `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`index.js`),` file which exports the styles.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`modules`),`: If you have abstracted parts of this component into smaller components, use this folder to co-locate them.`))))))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`screens`),`: Where you can store the source code of your screens. The screens are referenced in the navigator so you will be getting the screen files to the navigation route component from here.`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`home`),`: This an example of a component and the structure you'll find inside. Commonly, you'll find the following files here:`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`index.js`),`: This file will simply export your component file.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Home.js`),`: This is your component file.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`Home.test.js`),`: This is the test file corresponding to this component.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`header`),`: Similar to what happens in navigation this folder is where we define a custom header for this screen. The structure is the same as the one specified for navigator-level headers. Custom screen headers are configured in the render function through the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`navigation`),` prop as follows: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`navigation.setOptions({ header: () => <HomeHeader /> })`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`styles`),`: This is where you'll have styles that are only used in this component. As in React Native there is no CSS, the folder contains a single `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`index.js`),` file which exports the styles.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`modules`),`: If you have abstracted parts of this component into smaller components or modules, use this folder to co-locate them.`))))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`shared`),`: Where you can put content that is shared between pages and cannot be directly co-located with its interested parties.`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`modules`),`: The folder for modules or components that are shared between screens. You can find an example just above of what files each component is expected to have.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`media`),`: The folder for media (images, fonts, etc.) that is shared between many components.`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`fonts`),`: This is where you can store your font files.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`images`),`: This is where you can store image files.`))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`styles`),`:  The folder for `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`.js`),` files that will passed down through the components tree using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`ThemeContext`),`. This contains mostly what we usually have on web projects: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`mixins`),`, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`typography`),`, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`colors`),` with a slight twist on its definitions as it is JavaScript only.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`services`),`: This is where you can store your web API clients.`)))))));};MDXContent.isMDXComponent=true;
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17155,7 +17139,7 @@ if (true) {
 
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17168,7 +17152,7 @@ module.exports = __webpack_require__(347);
 
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -17376,7 +17360,7 @@ function coerce(val) {
 
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports) {
 
 exports = module.exports = SemVer
@@ -18865,7 +18849,7 @@ function coerce (version) {
 
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = buildSearchMethod;
@@ -18938,10 +18922,10 @@ function buildSearchMethod(queryParam, url) {
 
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var buildSearchMethod = __webpack_require__(156);
+var buildSearchMethod = __webpack_require__(155);
 var deprecate = __webpack_require__(104);
 var deprecatedMessage = __webpack_require__(105);
 
@@ -19101,7 +19085,7 @@ IndexCore.prototype.similarSearch = deprecate(
 * @see {@link https://www.algolia.com/doc/rest_api#Browse|Algolia REST API Documentation}
 */
 IndexCore.prototype.browse = function(query, queryParameters, callback) {
-  var merge = __webpack_require__(158);
+  var merge = __webpack_require__(157);
 
   var indexObj = this;
 
@@ -19197,7 +19181,7 @@ IndexCore.prototype.browseFrom = function(cursor, callback) {
 */
 IndexCore.prototype.searchForFacetValues = function(params, callback) {
   var clone = __webpack_require__(31);
-  var omit = __webpack_require__(159);
+  var omit = __webpack_require__(158);
   var usage = 'Usage: index.searchForFacetValues({facetName, facetQuery, ...params}[, callback])';
 
   if (params.facetName === undefined || params.facetQuery === undefined) {
@@ -19333,7 +19317,7 @@ IndexCore.prototype.typeAheadValueOption = null;
 
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var foreach = __webpack_require__(43);
@@ -19358,11 +19342,11 @@ module.exports = function merge(destination/* , sources */) {
 
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function omit(obj, test) {
-  var keys = __webpack_require__(160);
+  var keys = __webpack_require__(159);
   var foreach = __webpack_require__(43);
 
   var filtered = {};
@@ -19378,14 +19362,14 @@ module.exports = function omit(obj, test) {
 
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var slice = Array.prototype.slice;
-var isArgs = __webpack_require__(161);
+var isArgs = __webpack_require__(160);
 
 var origKeys = Object.keys;
 var keysShim = origKeys ? function keys(o) { return origKeys(o); } : __webpack_require__(362);
@@ -19417,7 +19401,7 @@ module.exports = keysShim;
 
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19441,7 +19425,7 @@ module.exports = function isArguments(value) {
 
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports) {
 
 // Parse cloud does not supports setTimeout
@@ -19454,15 +19438,15 @@ module.exports = function exitPromise(fn, _setTimeout) {
 
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(164);
+module.exports = __webpack_require__(163);
 module.exports.HttpsAgent = __webpack_require__(371);
 
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19566,7 +19550,7 @@ function inspect(obj) {
 
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports) {
 
 /* istanbul ignore next */
@@ -20889,7 +20873,7 @@ function inspect(obj) {
 
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20929,7 +20913,7 @@ module.exports = EventBus;
 
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20945,14 +20929,14 @@ module.exports = {
 
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports) {
 
 module.exports = "0.36.0";
 
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20965,7 +20949,7 @@ module.exports = function parseAlgoliaClientVersion(agent) {
 
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20975,7 +20959,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _zepto = __webpack_require__(165);
+var _zepto = __webpack_require__(164);
 
 var _zepto2 = _interopRequireDefault(_zepto);
 
@@ -20984,7 +20968,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _zepto2.default;
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20996,10 +20980,26 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = '2.6.3';
 
 /***/ }),
-/* 172 */
+/* 171 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"docsSidebars\":{\"docs\":[{\"type\":\"category\",\"label\":\"Welcome\",\"items\":[{\"type\":\"link\",\"label\":\"What is this\",\"href\":\"/docs/welcome/what-is-this\"},{\"type\":\"category\",\"label\":\"Instructions\",\"items\":[{\"type\":\"link\",\"label\":\"Project setup\",\"href\":\"/docs/welcome/instructions/project-setup\"},{\"type\":\"link\",\"label\":\"Android app signing\",\"href\":\"/docs/welcome/instructions/android-app-signing\"},{\"type\":\"link\",\"label\":\"Splash screen\",\"href\":\"/docs/welcome/instructions/splash-screen\"}]},{\"type\":\"link\",\"label\":\"Conventions\",\"href\":\"/docs/welcome/conventions\"}]},{\"type\":\"category\",\"label\":\"What's included\",\"items\":[{\"type\":\"link\",\"label\":\"Available Scripts\",\"href\":\"/docs/what-is-included/available-scripts\"},{\"type\":\"link\",\"label\":\"React Navigation\",\"href\":\"/docs/what-is-included/react-navigation\"},{\"type\":\"link\",\"label\":\"ESLint\",\"href\":\"/docs/what-is-included/eslint\"},{\"type\":\"link\",\"label\":\"Internationalization\",\"href\":\"/docs/what-is-included/internationalization\"},{\"type\":\"link\",\"label\":\"Testing with Jest and Enzyme\",\"href\":\"/docs/what-is-included/testing-with-jest-enzyme\"},{\"type\":\"link\",\"label\":\"Environment Variables\",\"href\":\"/docs/what-is-included/environment-variables\"}]},{\"type\":\"category\",\"label\":\"Recipes\",\"items\":[{\"type\":\"link\",\"label\":\"Redux\",\"href\":\"/docs/recipes/redux\"}]},{\"type\":\"link\",\"label\":\"This document\",\"href\":\"/docs/this-document\"}]},\"permalinkToSidebar\":{\"/docs/recipes/redux\":\"docs\",\"/docs/this-document\":\"docs\",\"/docs/welcome/conventions\":\"docs\",\"/docs/welcome/instructions/android-app-signing\":\"docs\",\"/docs/welcome/instructions/project-setup\":\"docs\",\"/docs/welcome/instructions/splash-screen\":\"docs\",\"/docs/welcome/what-is-this\":\"docs\",\"/docs/what-is-included/available-scripts\":\"docs\",\"/docs/what-is-included/environment-variables\":\"docs\",\"/docs/what-is-included/eslint\":\"docs\",\"/docs/what-is-included/internationalization\":\"docs\",\"/docs/what-is-included/react-navigation\":\"docs\",\"/docs/what-is-included/testing-with-jest-enzyme\":\"docs\"}}");
+module.exports = JSON.parse("{\"docsSidebars\":{\"docs\":[{\"type\":\"category\",\"label\":\"Welcome\",\"items\":[{\"type\":\"link\",\"label\":\"What is this\",\"href\":\"/docs/welcome/what-is-this\"},{\"type\":\"category\",\"label\":\"Instructions\",\"items\":[{\"type\":\"link\",\"label\":\"Project setup\",\"href\":\"/docs/welcome/instructions/project-setup\"},{\"type\":\"link\",\"label\":\"Android app signing\",\"href\":\"/docs/welcome/instructions/android-app-signing\"},{\"type\":\"link\",\"label\":\"Splash screen\",\"href\":\"/docs/welcome/instructions/splash-screen\"}]},{\"type\":\"link\",\"label\":\"Conventions\",\"href\":\"/docs/welcome/conventions\"}]},{\"type\":\"category\",\"label\":\"What's included\",\"items\":[{\"type\":\"link\",\"label\":\"Available Scripts\",\"href\":\"/docs/what-is-included/available-scripts\"},{\"type\":\"link\",\"label\":\"React Navigation\",\"href\":\"/docs/what-is-included/react-navigation\"},{\"type\":\"link\",\"label\":\"ESLint\",\"href\":\"/docs/what-is-included/eslint\"},{\"type\":\"link\",\"label\":\"Internationalization\",\"href\":\"/docs/what-is-included/internationalization\"},{\"type\":\"link\",\"label\":\"Testing with Jest & NTL\",\"href\":\"/docs/what-is-included/testing-with-jest-native-testing-library\"},{\"type\":\"link\",\"label\":\"Environment Variables\",\"href\":\"/docs/what-is-included/environment-variables\"}]},{\"type\":\"category\",\"label\":\"Recipes\",\"items\":[{\"type\":\"link\",\"label\":\"Redux\",\"href\":\"/docs/recipes/redux\"}]},{\"type\":\"link\",\"label\":\"This document\",\"href\":\"/docs/this-document\"}]},\"permalinkToSidebar\":{\"/docs/recipes/redux\":\"docs\",\"/docs/this-document\":\"docs\",\"/docs/welcome/conventions\":\"docs\",\"/docs/welcome/instructions/android-app-signing\":\"docs\",\"/docs/welcome/instructions/project-setup\":\"docs\",\"/docs/welcome/instructions/splash-screen\":\"docs\",\"/docs/welcome/what-is-this\":\"docs\",\"/docs/what-is-included/available-scripts\":\"docs\",\"/docs/what-is-included/environment-variables\":\"docs\",\"/docs/what-is-included/eslint\":\"docs\",\"/docs/what-is-included/internationalization\":\"docs\",\"/docs/what-is-included/react-navigation\":\"docs\",\"/docs/what-is-included/testing-with-jest-native-testing-library\":\"docs\"}}");
+
+/***/ }),
+/* 172 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "frontMatter", function() { return frontMatter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "metadata", function() { return metadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rightToc", function() { return rightToc; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MDXContent; });
+/* harmony import */ var _home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
+const frontMatter={id:'testing-with-jest-native-testing-library',title:'Testing with Jest and Native Testing Library',sidebar_label:'Testing with Jest & NTL'};const metadata={"id":"what-is-included/testing-with-jest-native-testing-library","title":"Testing with Jest and Native Testing Library","description":"For testing, this boilerplate is configured to use Jest and Native Testing Library, providing strong options for testing varied types of code.","source":"@site/docs/what-is-included/jest-react-native-testing-library.md","permalink":"/docs/what-is-included/testing-with-jest-native-testing-library","sidebar_label":"Testing with Jest & NTL","sidebar":"docs","previous":{"title":"Internationalization","permalink":"/docs/what-is-included/internationalization"},"next":{"title":"Environment Variables","permalink":"/docs/what-is-included/environment-variables"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`For testing, this boilerplate is configured to use `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://jestjs.io/"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"a"},`Jest`)),` and `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/testing-library/native-testing-library"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("strong",{parentName:"a"},`Native Testing Library`)),`, providing strong options for testing varied types of code.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can find more details about our implementation of Jest in its configuration file, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`jest.config.js`),`, which uses our own `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/moxystudio/jest-config"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`@moxy/jest-config`)),`.`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 173 */
@@ -24000,7 +24000,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'environment-variables',title:'Environment Variables',sidebar_label:'Environment Variables'};const metadata={"id":"what-is-included/environment-variables","title":"Environment Variables","description":"The boilerplate uses react-native-config to setup environment variables and expose them to javascript code. You can then access those variables and use them at any time when coding. It goes without saying that support for both iOS and Android platforms is available.","source":"@site/docs/what-is-included/environment-variables.md","permalink":"/docs/what-is-included/environment-variables","sidebar_label":"Environment Variables","sidebar":"docs","previous":{"title":"Testing with Jest and Enzyme","permalink":"/docs/what-is-included/testing-with-jest-enzyme"},"next":{"title":"Setting up Redux","permalink":"/docs/recipes/redux"}};/* @jsx mdx */const rightToc=[{value:'Multiple environments',id:'multiple-environments',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The boilerplate uses `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/luggit/react-native-config"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`react-native-config`)),` to setup environment variables and expose them to javascript code. You can then access those variables and use them at any time when coding. It goes without saying that support for both iOS and Android platforms is available.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`By default, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`react-native-config`),` will look for a `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`.env`),` file in the root of the project. An example file is already provided in `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`.env.sample`),`, with two commented variables: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`API_KEY`),` AND `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`API_URL`),`. Go check that out to get a feel of how variable declaration works. Then, just rename that same file to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`.env`),` and setup as many variables as you want, following the examples provided. Remember to uncomment the lines, by removing the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`#`),` at the beginning. You can then run your project, in either platform, and you should be able to access the variables you just set. Check the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`Basic Usage`),` section of the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/luggit/react-native-config#basic-usage"}),`official documentation`),` to see how.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"multiple-environments"},`Multiple environments`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Sometimes, there will be a need to have multiple environment files. For this, you can make use of the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`ENVFILE`),` environment variable, as explained in the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`react-native-config`),` `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/luggit/react-native-config#different-environments"}),`docs`),`. If you don't feel like using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`ENVFILE`),`, that section of the docs also contain some more specific setups for each platform, so feel free to check them out.`));};MDXContent.isMDXComponent=true;
+const frontMatter={id:'environment-variables',title:'Environment Variables',sidebar_label:'Environment Variables'};const metadata={"id":"what-is-included/environment-variables","title":"Environment Variables","description":"The boilerplate uses react-native-config to setup environment variables and expose them to javascript code. You can then access those variables and use them at any time when coding. It goes without saying that support for both iOS and Android platforms is available.","source":"@site/docs/what-is-included/environment-variables.md","permalink":"/docs/what-is-included/environment-variables","sidebar_label":"Environment Variables","sidebar":"docs","previous":{"title":"Testing with Jest and Native Testing Library","permalink":"/docs/what-is-included/testing-with-jest-native-testing-library"},"next":{"title":"Setting up Redux","permalink":"/docs/recipes/redux"}};/* @jsx mdx */const rightToc=[{value:'Multiple environments',id:'multiple-environments',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The boilerplate uses `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/luggit/react-native-config"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`react-native-config`)),` to setup environment variables and expose them to javascript code. You can then access those variables and use them at any time when coding. It goes without saying that support for both iOS and Android platforms is available.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`By default, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`react-native-config`),` will look for a `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`.env`),` file in the root of the project. An example file is already provided in `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`.env.sample`),`, with two commented variables: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`API_KEY`),` AND `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`API_URL`),`. Go check that out to get a feel of how variable declaration works. Then, just rename that same file to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`.env`),` and setup as many variables as you want, following the examples provided. Remember to uncomment the lines, by removing the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`#`),` at the beginning. You can then run your project, in either platform, and you should be able to access the variables you just set. Check the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`Basic Usage`),` section of the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/luggit/react-native-config#basic-usage"}),`official documentation`),` to see how.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h3",{"id":"multiple-environments"},`Multiple environments`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Sometimes, there will be a need to have multiple environment files. For this, you can make use of the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`ENVFILE`),` environment variable, as explained in the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`react-native-config`),` `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/luggit/react-native-config#different-environments"}),`docs`),`. If you don't feel like using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`ENVFILE`),`, that section of the docs also contain some more specific setups for each platform, so feel free to check them out.`));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 188 */
@@ -24051,7 +24051,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'internationalization',title:'Internationalization',sidebar_label:'Internationalization'};const metadata={"id":"what-is-included/internationalization","title":"Internationalization","description":"All of our projects have i18n support built-in, even if there's no need to initially have more than one locale. By having i18n support from the very beginning, the project itself is built with that in mind, making it very easy to add new locales in the future without having to refactor a good portion of your app.","source":"@site/docs/what-is-included/internationalization.md","permalink":"/docs/what-is-included/internationalization","sidebar_label":"Internationalization","sidebar":"docs","previous":{"title":"ESLint","permalink":"/docs/what-is-included/eslint"},"next":{"title":"Testing with Jest and Enzyme","permalink":"/docs/what-is-included/testing-with-jest-enzyme"}};/* @jsx mdx */const rightToc=[{value:'How to use',id:'how-to-use',children:[]},{value:'Locale resolution',id:'locale-resolution',children:[]},{value:'Adding a new locale',id:'adding-a-new-locale',children:[]},{value:'Removing this feature',id:'removing-this-feature',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`All of our projects have i18n support built-in, even if there's no need to initially have more than one locale. By having i18n support from the very beginning, the project itself is built with that in mind, making it very easy to add new locales in the future without having to refactor a good portion of your app.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`We have chosen `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/formatjs/react-intl/"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`react-intl`)),` for internationalization and localization because:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`It has a large community and is being actively maintained.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Built on the standard `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"}),`Intl`),` API.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`It can localize strings, numbers, dates and relative dates.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Runs in the browser, Node.js and React Native.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Additionally, we also make use of `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/react-native-community/react-native-localize"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`react-native-localize`)),` to get hold of locale settings from the device's operating system.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"how-to-use"},`How to use`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The boilerplate ships with a few modules which you can use to format and translate your app's messages:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`LocaleProvider`),` - React context provider. Wraps your app's navigation in `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`src/app/App.js`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`LocaleConsumer`),` - React context consumer.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`useLocale`),` - React hook.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`withLocale`),` - React HOC (high-order component).`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`All four modules above belong to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`src/shared/modules/react-native-locale`),` package. In the Home screen of the app, you can find an example of how to use `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`useLocale`),` and how to create a handler to switch the selected language between English and Portuguese when a button is pressed. The value returned by `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`useLocale`),` is exactly the same one injected by `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`withLocale`),` and rendered by `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`LocaleConsumer`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"locale-resolution"},`Locale resolution`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`When the app is launched, if `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`initialLocaleId`),` is not defined, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`LocaleProvider`),` attempts to find the best possible match between the preferred locales defined in the device's operating system and the locales defined for the app. If a match is found, the translations for the matched locale are loaded. Otherwise, the translations for the default locale, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`en-US`),`, are loaded. If your app offers an in-app locale picker and persists the user's choice, i.e. with Redux, make sure to pass it to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`initialLocaleId`),` when `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`LocaleProvider`),` is first rendered.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"adding-a-new-locale"},`Adding a new locale`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ol",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Add the locale to the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`intl/index.js`),` file, following the default `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`en-US`),` locale.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Add the messages file to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`intl/messages/<locale>.json`),`.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"removing-this-feature"},`Removing this feature`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If you are really sure internationalization is not needed in your project, you'll want to remove all the unnecessary `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`intl`),` related code. Be sure to follow these steps in order to clean your project properly:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ol",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Uninstall `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`react-intl`),`, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`react-native-localize`),` and `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`full-icu`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Remove the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`NODE_ICU_DATA`),` environment variable from `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`test`),` script, found in `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`package.json`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Remove the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`intl`),` folder.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Search globally for `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`react-intl`),` and remove the corresponding code across the project.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Update your unit tests if necessary so that they all pass!`)));};MDXContent.isMDXComponent=true;
+const frontMatter={id:'internationalization',title:'Internationalization',sidebar_label:'Internationalization'};const metadata={"id":"what-is-included/internationalization","title":"Internationalization","description":"All of our projects have i18n support built-in, even if there's no need to initially have more than one locale. By having i18n support from the very beginning, the project itself is built with that in mind, making it very easy to add new locales in the future without having to refactor a good portion of your app.","source":"@site/docs/what-is-included/internationalization.md","permalink":"/docs/what-is-included/internationalization","sidebar_label":"Internationalization","sidebar":"docs","previous":{"title":"ESLint","permalink":"/docs/what-is-included/eslint"},"next":{"title":"Testing with Jest and Native Testing Library","permalink":"/docs/what-is-included/testing-with-jest-native-testing-library"}};/* @jsx mdx */const rightToc=[{value:'How to use',id:'how-to-use',children:[]},{value:'Locale resolution',id:'locale-resolution',children:[]},{value:'Adding a new locale',id:'adding-a-new-locale',children:[]},{value:'Removing this feature',id:'removing-this-feature',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`All of our projects have i18n support built-in, even if there's no need to initially have more than one locale. By having i18n support from the very beginning, the project itself is built with that in mind, making it very easy to add new locales in the future without having to refactor a good portion of your app.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`We have chosen `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/formatjs/react-intl/"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`react-intl`)),` for internationalization and localization because:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`It has a large community and is being actively maintained.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Built on the standard `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"}),`Intl`),` API.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`It can localize strings, numbers, dates and relative dates.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`Runs in the browser, Node.js and React Native.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Additionally, we also make use of `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_runner_work_react_native_with_moxy_react_native_with_moxy_docusaurus_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/react-native-community/react-native-localize"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"a"},`react-native-localize`)),` to get hold of locale settings from the device's operating system.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"how-to-use"},`How to use`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The boilerplate ships with a few modules which you can use to format and translate your app's messages:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`LocaleProvider`),` - React context provider. Wraps your app's navigation in `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`src/app/App.js`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`LocaleConsumer`),` - React context consumer.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`useLocale`),` - React hook.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`withLocale`),` - React HOC (high-order component).`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`All four modules above belong to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`src/shared/modules/react-native-locale`),` package. In the Home screen of the app, you can find an example of how to use `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`useLocale`),` and how to create a handler to switch the selected language between English and Portuguese when a button is pressed. The value returned by `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`useLocale`),` is exactly the same one injected by `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`withLocale`),` and rendered by `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`LocaleConsumer`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"locale-resolution"},`Locale resolution`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`When the app is launched, if `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`initialLocaleId`),` is not defined, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`LocaleProvider`),` attempts to find the best possible match between the preferred locales defined in the device's operating system and the locales defined for the app. If a match is found, the translations for the matched locale are loaded. Otherwise, the translations for the default locale, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`en-US`),`, are loaded. If your app offers an in-app locale picker and persists the user's choice, i.e. with Redux, make sure to pass it to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`initialLocaleId`),` when `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`LocaleProvider`),` is first rendered.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"adding-a-new-locale"},`Adding a new locale`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ol",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Add the locale to the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`intl/index.js`),` file, following the default `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`en-US`),` locale.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Add the messages file to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`intl/messages/<locale>.json`),`.`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"removing-this-feature"},`Removing this feature`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If you are really sure internationalization is not needed in your project, you'll want to remove all the unnecessary `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`intl`),` related code. Be sure to follow these steps in order to clean your project properly:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ol",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Uninstall `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`react-intl`),`, `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`react-native-localize`),` and `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`full-icu`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Remove the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`NODE_ICU_DATA`),` environment variable from `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`test`),` script, found in `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`package.json`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Remove the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`intl`),` folder.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Search globally for `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`react-intl`),` and remove the corresponding code across the project.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ol"},`Update your unit tests if necessary so that they all pass!`)));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 191 */
@@ -26409,7 +26409,7 @@ if (Object.getOwnPropertyDescriptor(fs, 'promises')) {
 /* 199 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"/\":{\"component\":\"c4f5d8e4\"},\"/search\":{\"component\":\"55fb7f26\"},\"/docs/:route\":{\"component\":\"1be78505\",\"docsMetadata\":\"20ac7829\"},\"/docs/recipes/redux\":{\"component\":\"17896441\",\"content\":\"97efceb2\"},\"/docs/this-document\":{\"component\":\"17896441\",\"content\":\"08e389bb\"},\"/docs/welcome/conventions\":{\"component\":\"17896441\",\"content\":\"0fbd43f2\"},\"/docs/welcome/instructions/android-app-signing\":{\"component\":\"17896441\",\"content\":\"e1d1a079\"},\"/docs/welcome/instructions/project-setup\":{\"component\":\"17896441\",\"content\":\"c9b05f40\"},\"/docs/welcome/instructions/splash-screen\":{\"component\":\"17896441\",\"content\":\"8fb7e470\"},\"/docs/welcome/what-is-this\":{\"component\":\"17896441\",\"content\":\"d5ae6139\"},\"/docs/what-is-included/available-scripts\":{\"component\":\"17896441\",\"content\":\"8d4fd0b1\"},\"/docs/what-is-included/environment-variables\":{\"component\":\"17896441\",\"content\":\"d346fccd\"},\"/docs/what-is-included/eslint\":{\"component\":\"17896441\",\"content\":\"c24ac451\"},\"/docs/what-is-included/internationalization\":{\"component\":\"17896441\",\"content\":\"fe6a41ab\"},\"/docs/what-is-included/react-navigation\":{\"component\":\"17896441\",\"content\":\"009c7705\"},\"/docs/what-is-included/testing-with-jest-enzyme\":{\"component\":\"17896441\",\"content\":\"01d51d66\"}}");
+module.exports = JSON.parse("{\"/\":{\"component\":\"c4f5d8e4\"},\"/search\":{\"component\":\"55fb7f26\"},\"/docs/:route\":{\"component\":\"1be78505\",\"docsMetadata\":\"20ac7829\"},\"/docs/recipes/redux\":{\"component\":\"17896441\",\"content\":\"97efceb2\"},\"/docs/this-document\":{\"component\":\"17896441\",\"content\":\"08e389bb\"},\"/docs/welcome/conventions\":{\"component\":\"17896441\",\"content\":\"0fbd43f2\"},\"/docs/welcome/instructions/android-app-signing\":{\"component\":\"17896441\",\"content\":\"e1d1a079\"},\"/docs/welcome/instructions/project-setup\":{\"component\":\"17896441\",\"content\":\"c9b05f40\"},\"/docs/welcome/instructions/splash-screen\":{\"component\":\"17896441\",\"content\":\"8fb7e470\"},\"/docs/welcome/what-is-this\":{\"component\":\"17896441\",\"content\":\"d5ae6139\"},\"/docs/what-is-included/available-scripts\":{\"component\":\"17896441\",\"content\":\"8d4fd0b1\"},\"/docs/what-is-included/environment-variables\":{\"component\":\"17896441\",\"content\":\"d346fccd\"},\"/docs/what-is-included/eslint\":{\"component\":\"17896441\",\"content\":\"c24ac451\"},\"/docs/what-is-included/internationalization\":{\"component\":\"17896441\",\"content\":\"fe6a41ab\"},\"/docs/what-is-included/react-navigation\":{\"component\":\"17896441\",\"content\":\"009c7705\"},\"/docs/what-is-included/testing-with-jest-native-testing-library\":{\"component\":\"17896441\",\"content\":\"4836948d\"}}");
 
 /***/ }),
 /* 200 */
@@ -26418,7 +26418,7 @@ module.exports = JSON.parse("{\"/\":{\"component\":\"c4f5d8e4\"},\"/search\":{\"
 "use strict";
 
 
-var reactIs = __webpack_require__(152);
+var reactIs = __webpack_require__(151);
 
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -44846,7 +44846,7 @@ var _DocSearch = __webpack_require__(343);
 
 var _DocSearch2 = _interopRequireDefault(_DocSearch);
 
-var _version = __webpack_require__(171);
+var _version = __webpack_require__(170);
 
 var _version2 = _interopRequireDefault(_version);
 
@@ -44917,11 +44917,11 @@ var _utils = __webpack_require__(393);
 
 var _utils2 = _interopRequireDefault(_utils);
 
-var _version = __webpack_require__(171);
+var _version = __webpack_require__(170);
 
 var _version2 = _interopRequireDefault(_version);
 
-var _zepto = __webpack_require__(170);
+var _zepto = __webpack_require__(169);
 
 var _zepto2 = _interopRequireDefault(_zepto);
 
@@ -46093,7 +46093,7 @@ var zlib = __webpack_require__(352);
 
 var inherits = __webpack_require__(42);
 var Promise = global.Promise || __webpack_require__(354).Promise;
-var semver = __webpack_require__(155);
+var semver = __webpack_require__(154);
 var isNotSupported = semver.satisfies(process.version, '<0.10');
 var isNode010 = semver.satisfies(process.version, '=0.10');
 var places = __webpack_require__(355);
@@ -46430,7 +46430,7 @@ AlgoliaSearchNodeJS.prototype.getSecuredApiKeyRemainingValidity = function getSe
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(154);
+exports = module.exports = __webpack_require__(153);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -46786,7 +46786,7 @@ var util = __webpack_require__(41);
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(154);
+exports = module.exports = __webpack_require__(153);
 exports.init = init;
 exports.log = log;
 exports.formatArgs = formatArgs;
@@ -48254,7 +48254,7 @@ return Promise$1;
 module.exports = createPlacesClient;
 
 var qs3 = __webpack_require__(356);
-var buildSearchMethod = __webpack_require__(156);
+var buildSearchMethod = __webpack_require__(155);
 
 function createPlacesClient(algoliasearch) {
   return function places(appID, apiKey, opts) {
@@ -49359,10 +49359,10 @@ function notImplemented() {
 /***/ (function(module, exports, __webpack_require__) {
 
 var inherits = __webpack_require__(42);
-var IndexCore = __webpack_require__(157);
+var IndexCore = __webpack_require__(156);
 var deprecate = __webpack_require__(104);
 var deprecatedMessage = __webpack_require__(105);
-var exitPromise = __webpack_require__(162);
+var exitPromise = __webpack_require__(161);
 var errors = __webpack_require__(53);
 
 var deprecateForwardToSlaves = deprecate(
@@ -49790,7 +49790,7 @@ Index.prototype.browseAll = function(query, queryParameters) {
     query = undefined;
   }
 
-  var merge = __webpack_require__(158);
+  var merge = __webpack_require__(157);
 
   var IndexBrowser = __webpack_require__(363);
 
@@ -50706,7 +50706,7 @@ if (!Object.keys) {
 	// modified from https://github.com/es-shims/es5-shim
 	var has = Object.prototype.hasOwnProperty;
 	var toStr = Object.prototype.toString;
-	var isArgs = __webpack_require__(161); // eslint-disable-line global-require
+	var isArgs = __webpack_require__(160); // eslint-disable-line global-require
 	var isEnumerable = Object.prototype.propertyIsEnumerable;
 	var hasDontEnumBug = !isEnumerable.call({ toString: null }, 'toString');
 	var hasProtoEnumBug = isEnumerable.call(function () {}, 'prototype');
@@ -50876,8 +50876,8 @@ IndexBrowser.prototype._clean = function() {
 module.exports = AlgoliaSearchCore;
 
 var errors = __webpack_require__(53);
-var exitPromise = __webpack_require__(162);
-var IndexCore = __webpack_require__(157);
+var exitPromise = __webpack_require__(161);
+var IndexCore = __webpack_require__(156);
 var store = __webpack_require__(365);
 
 // We will always put the API KEY in the JSON body in case of too long API KEY,
@@ -51597,7 +51597,7 @@ AlgoliaSearchCore.prototype.searchForFacetValues = function(queries) {
     }
 
     var clone = __webpack_require__(31);
-    var omit = __webpack_require__(159);
+    var omit = __webpack_require__(158);
 
     var indexName = query.indexName;
     var params = query.params;
@@ -51941,7 +51941,7 @@ function cleanup() {
 
 module.exports = createAnalyticsClient;
 
-var algoliasearch = __webpack_require__(153);
+var algoliasearch = __webpack_require__(152);
 
 function createAnalyticsClient(appId, apiKey, opts) {
   var analytics = {};
@@ -52033,7 +52033,7 @@ function createAnalyticsClient(appId, apiKey, opts) {
 "use strict";
 
 
-var objectKeys = __webpack_require__(160);
+var objectKeys = __webpack_require__(159);
 
 module.exports = function reduce(list, iterator) {
     var keys = objectKeys(list);
@@ -52118,9 +52118,9 @@ function getKeepaliveAgent(protocol) {
   var http = __webpack_require__(65);
   var https = __webpack_require__(40);
 
-  var HttpsAgent = __webpack_require__(163).HttpsAgent;
-  var HttpAgent = __webpack_require__(163);
-  var semver = __webpack_require__(155);
+  var HttpsAgent = __webpack_require__(162).HttpsAgent;
+  var HttpAgent = __webpack_require__(162);
+  var semver = __webpack_require__(154);
 
   var keepAliveAgent;
 
@@ -52549,7 +52549,7 @@ exports.globalAgent = new Agent();
 
 var https = __webpack_require__(40);
 var utils = __webpack_require__(106);
-var HttpAgent = __webpack_require__(164);
+var HttpAgent = __webpack_require__(163);
 var OriginalHttpsAgent = https.Agent;
 
 var HttpsAgent;
@@ -52977,7 +52977,7 @@ module.exports = __webpack_require__(377);
 
 
 // this will inject Zepto in window, unfortunately no easy commonJS zepto build
-var zepto = __webpack_require__(165);
+var zepto = __webpack_require__(164);
 
 // setup DOM element
 var DOM = __webpack_require__(34);
@@ -53002,7 +53002,7 @@ _.Event = zepto.Event;
 
 var typeaheadKey = 'aaAutocomplete';
 var Typeahead = __webpack_require__(378);
-var EventBus = __webpack_require__(166);
+var EventBus = __webpack_require__(165);
 
 function autocomplete(selector, options, datasets, typeaheadObject) {
   datasets = _.isArray(datasets) ? datasets : [].slice.call(arguments, 2);
@@ -53078,10 +53078,10 @@ var attrsKey = 'aaAttrs';
 
 var _ = __webpack_require__(27);
 var DOM = __webpack_require__(34);
-var EventBus = __webpack_require__(166);
+var EventBus = __webpack_require__(165);
 var Input = __webpack_require__(379);
 var Dropdown = __webpack_require__(387);
-var html = __webpack_require__(167);
+var html = __webpack_require__(166);
 var css = __webpack_require__(108);
 
 // constructor
@@ -54727,7 +54727,7 @@ var datumKey = 'aaDatum';
 
 var _ = __webpack_require__(27);
 var DOM = __webpack_require__(34);
-var html = __webpack_require__(167);
+var html = __webpack_require__(166);
 var css = __webpack_require__(108);
 var EventEmitter = __webpack_require__(107);
 
@@ -55047,8 +55047,8 @@ module.exports = {
 
 
 var _ = __webpack_require__(27);
-var version = __webpack_require__(168);
-var parseAlgoliaClientVersion = __webpack_require__(169);
+var version = __webpack_require__(167);
+var parseAlgoliaClientVersion = __webpack_require__(168);
 
 module.exports = function search(index, params) {
   var algoliaVersion = parseAlgoliaClientVersion(index.as._ua);
@@ -55078,8 +55078,8 @@ module.exports = function search(index, params) {
 
 
 var _ = __webpack_require__(27);
-var version = __webpack_require__(168);
-var parseAlgoliaClientVersion = __webpack_require__(169);
+var version = __webpack_require__(167);
+var parseAlgoliaClientVersion = __webpack_require__(168);
 
 module.exports = function popularIn(index, params, details, options) {
   var algoliaVersion = parseAlgoliaClientVersion(index.as._ua);
@@ -55201,7 +55201,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _zepto = __webpack_require__(170);
+var _zepto = __webpack_require__(169);
 
 var _zepto2 = _interopRequireDefault(_zepto);
 
@@ -59131,7 +59131,7 @@ var interopRequireWildcard = __webpack_require__(9);
 var routesChunkNames = __webpack_require__(199);
 
 // CONCATENATED MODULE: ./.docusaurus/registry.js
-/* harmony default export */ var registry = ({'009c7705':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(148))),"@site/docs/what-is-included/react-navigation.md",/*require.resolve*/(148)],'01d51d66':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(149))),"@site/docs/what-is-included/jest-enzyme.md",/*require.resolve*/(149)],'08e389bb':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(150))),"@site/docs/this-document.md",/*require.resolve*/(150)],'0fbd43f2':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(151))),"@site/docs/welcome/conventions.md",/*require.resolve*/(151)],'17896441':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(72))),"@theme/DocItem",/*require.resolve*/(72)],'1be78505':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(192))),"@theme/DocPage",/*require.resolve*/(192)],'20ac7829':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(172))),"~docs/docs-route-ff2.json",/*require.resolve*/(172)],'55fb7f26':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(173))),"/home/runner/work/react-native-with-moxy/react-native-with-moxy/docusaurus/node_modules/@docusaurus/theme-search-algolia/src/pages/search/index.js",/*require.resolve*/(173)],'8d4fd0b1':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(181))),"@site/docs/what-is-included/available-scripts.md",/*require.resolve*/(181)],'8fb7e470':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(182))),"@site/docs/welcome/instructions/splash-screen.md",/*require.resolve*/(182)],'97efceb2':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(183))),"@site/docs/recipes/redux.mdx",/*require.resolve*/(183)],'c24ac451':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(184))),"@site/docs/what-is-included/eslint.md",/*require.resolve*/(184)],'c4f5d8e4':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(185))),"@site/src/pages/index.js",/*require.resolve*/(185)],'c9b05f40':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(186))),"@site/docs/welcome/instructions/project-setup.md",/*require.resolve*/(186)],'d346fccd':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(187))),"@site/docs/what-is-included/environment-variables.md",/*require.resolve*/(187)],'d5ae6139':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(188))),"@site/docs/welcome/what-is-this.md",/*require.resolve*/(188)],'e1d1a079':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(189))),"@site/docs/welcome/instructions/android-app-signing.md",/*require.resolve*/(189)],'fe6a41ab':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(190))),"@site/docs/what-is-included/internationalization.md",/*require.resolve*/(190)]});
+/* harmony default export */ var registry = ({'009c7705':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(148))),"@site/docs/what-is-included/react-navigation.md",/*require.resolve*/(148)],'08e389bb':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(149))),"@site/docs/this-document.md",/*require.resolve*/(149)],'0fbd43f2':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(150))),"@site/docs/welcome/conventions.md",/*require.resolve*/(150)],'17896441':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(72))),"@theme/DocItem",/*require.resolve*/(72)],'1be78505':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(192))),"@theme/DocPage",/*require.resolve*/(192)],'20ac7829':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(171))),"~docs/docs-route-ff2.json",/*require.resolve*/(171)],'4836948d':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(172))),"@site/docs/what-is-included/jest-react-native-testing-library.md",/*require.resolve*/(172)],'55fb7f26':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(173))),"/home/runner/work/react-native-with-moxy/react-native-with-moxy/docusaurus/node_modules/@docusaurus/theme-search-algolia/src/pages/search/index.js",/*require.resolve*/(173)],'8d4fd0b1':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(181))),"@site/docs/what-is-included/available-scripts.md",/*require.resolve*/(181)],'8fb7e470':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(182))),"@site/docs/welcome/instructions/splash-screen.md",/*require.resolve*/(182)],'97efceb2':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(183))),"@site/docs/recipes/redux.mdx",/*require.resolve*/(183)],'c24ac451':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(184))),"@site/docs/what-is-included/eslint.md",/*require.resolve*/(184)],'c4f5d8e4':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(185))),"@site/src/pages/index.js",/*require.resolve*/(185)],'c9b05f40':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(186))),"@site/docs/welcome/instructions/project-setup.md",/*require.resolve*/(186)],'d346fccd':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(187))),"@site/docs/what-is-included/environment-variables.md",/*require.resolve*/(187)],'d5ae6139':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(188))),"@site/docs/welcome/what-is-this.md",/*require.resolve*/(188)],'e1d1a079':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(189))),"@site/docs/welcome/instructions/android-app-signing.md",/*require.resolve*/(189)],'fe6a41ab':[()=>Promise.resolve().then(()=>Object(interopRequireWildcard["a" /* default */])(__webpack_require__(190))),"@site/docs/what-is-included/internationalization.md",/*require.resolve*/(190)]});
 // CONCATENATED MODULE: ./node_modules/@docusaurus/core/lib/client/flat.js
 /**
  * Copyright (c) 2017-present, Facebook, Inc.
@@ -59159,7 +59159,7 @@ if(path==='*'){return react_loadable_lib_default()({loading:Loading,loader:()=>P
   */const flatChunkNames=client_flat(chunkNames);Object.keys(flatChunkNames).forEach(key=>{const chunkRegistry=registry[flatChunkNames[key]];if(chunkRegistry){/* eslint-disable prefer-destructuring */optsLoader[key]=chunkRegistry[0];optsModules.push(chunkRegistry[1]);optsWebpack.push(chunkRegistry[2]);/* eslint-enable prefer-destructuring */}});return react_loadable_lib_default.a.Map({loading:Loading,loader:optsLoader,modules:optsModules,webpack:()=>optsWebpack,render:(loaded,props)=>{// clone the original object since we don't want to alter the original.
 const loadedModules=JSON.parse(JSON.stringify(chunkNames));Object.keys(loaded).forEach(key=>{let val=loadedModules;const keyPath=key.split('.');for(let i=0;i<keyPath.length-1;i+=1){val=val[keyPath[i]];}val[keyPath[keyPath.length-1]]=loaded[key].default;const nonDefaultKeys=Object.keys(loaded[key]).filter(k=>k!=='default');if(nonDefaultKeys&&nonDefaultKeys.length){nonDefaultKeys.forEach(nonDefaultKey=>{val[keyPath[keyPath.length-1]][nonDefaultKey]=loaded[key][nonDefaultKey];});}});const Component=loadedModules.component;delete loadedModules.component;return/*#__PURE__*/react_default.a.createElement(Component,Object(esm_extends["a" /* default */])({},loadedModules,props));}});}/* harmony default export */ var exports_ComponentCreator = (ComponentCreator);
 // CONCATENATED MODULE: ./.docusaurus/routes.js
-/* harmony default export */ var _docusaurus_routes = ([{path:'/',component:exports_ComponentCreator('/'),exact:true},{path:'/search',component:exports_ComponentCreator('/search'),exact:true},{path:'/docs/:route',component:exports_ComponentCreator('/docs/:route'),routes:[{path:'/docs/recipes/redux',component:exports_ComponentCreator('/docs/recipes/redux'),exact:true},{path:'/docs/this-document',component:exports_ComponentCreator('/docs/this-document'),exact:true},{path:'/docs/welcome/conventions',component:exports_ComponentCreator('/docs/welcome/conventions'),exact:true},{path:'/docs/welcome/instructions/android-app-signing',component:exports_ComponentCreator('/docs/welcome/instructions/android-app-signing'),exact:true},{path:'/docs/welcome/instructions/project-setup',component:exports_ComponentCreator('/docs/welcome/instructions/project-setup'),exact:true},{path:'/docs/welcome/instructions/splash-screen',component:exports_ComponentCreator('/docs/welcome/instructions/splash-screen'),exact:true},{path:'/docs/welcome/what-is-this',component:exports_ComponentCreator('/docs/welcome/what-is-this'),exact:true},{path:'/docs/what-is-included/available-scripts',component:exports_ComponentCreator('/docs/what-is-included/available-scripts'),exact:true},{path:'/docs/what-is-included/environment-variables',component:exports_ComponentCreator('/docs/what-is-included/environment-variables'),exact:true},{path:'/docs/what-is-included/eslint',component:exports_ComponentCreator('/docs/what-is-included/eslint'),exact:true},{path:'/docs/what-is-included/internationalization',component:exports_ComponentCreator('/docs/what-is-included/internationalization'),exact:true},{path:'/docs/what-is-included/react-navigation',component:exports_ComponentCreator('/docs/what-is-included/react-navigation'),exact:true},{path:'/docs/what-is-included/testing-with-jest-enzyme',component:exports_ComponentCreator('/docs/what-is-included/testing-with-jest-enzyme'),exact:true}]},{path:'*',component:exports_ComponentCreator('*')}]);
+/* harmony default export */ var _docusaurus_routes = ([{path:'/',component:exports_ComponentCreator('/'),exact:true},{path:'/search',component:exports_ComponentCreator('/search'),exact:true},{path:'/docs/:route',component:exports_ComponentCreator('/docs/:route'),routes:[{path:'/docs/recipes/redux',component:exports_ComponentCreator('/docs/recipes/redux'),exact:true},{path:'/docs/this-document',component:exports_ComponentCreator('/docs/this-document'),exact:true},{path:'/docs/welcome/conventions',component:exports_ComponentCreator('/docs/welcome/conventions'),exact:true},{path:'/docs/welcome/instructions/android-app-signing',component:exports_ComponentCreator('/docs/welcome/instructions/android-app-signing'),exact:true},{path:'/docs/welcome/instructions/project-setup',component:exports_ComponentCreator('/docs/welcome/instructions/project-setup'),exact:true},{path:'/docs/welcome/instructions/splash-screen',component:exports_ComponentCreator('/docs/welcome/instructions/splash-screen'),exact:true},{path:'/docs/welcome/what-is-this',component:exports_ComponentCreator('/docs/welcome/what-is-this'),exact:true},{path:'/docs/what-is-included/available-scripts',component:exports_ComponentCreator('/docs/what-is-included/available-scripts'),exact:true},{path:'/docs/what-is-included/environment-variables',component:exports_ComponentCreator('/docs/what-is-included/environment-variables'),exact:true},{path:'/docs/what-is-included/eslint',component:exports_ComponentCreator('/docs/what-is-included/eslint'),exact:true},{path:'/docs/what-is-included/internationalization',component:exports_ComponentCreator('/docs/what-is-included/internationalization'),exact:true},{path:'/docs/what-is-included/react-navigation',component:exports_ComponentCreator('/docs/what-is-included/react-navigation'),exact:true},{path:'/docs/what-is-included/testing-with-jest-native-testing-library',component:exports_ComponentCreator('/docs/what-is-included/testing-with-jest-native-testing-library'),exact:true}]},{path:'*',component:exports_ComponentCreator('*')}]);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/package.json
 var core_package = __webpack_require__(208);
 
