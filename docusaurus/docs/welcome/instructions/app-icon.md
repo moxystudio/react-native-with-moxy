@@ -3,7 +3,8 @@ id: app-icon
 title: App icon
 sidebar_label: App icon
 ---
-Every app should have an impactul icon that stands out from all the others apps available on the user's device. 
+
+Every app should have an impactul icon that stands out from all the others apps available on the user's device.
 
 An app icon is a graphic that represents your app to users. It can:
 
@@ -11,7 +12,7 @@ An app icon is a graphic that represents your app to users. It can:
 -   Represent shortcuts into your app (for example, a contact shortcut icon that opens detail information for a contact).
 -   Help users find your app on Google Play and App Store.
 
-> ℹ️  An app icon is mandatory to publish the app to TestFlight/App Store and Google Play
+> ℹ️ An app icon is mandatory to publish the app to TestFlight/App Store and Google Play
 
 ### How to generate the assets
 
@@ -27,6 +28,8 @@ The tool from the Android Asset Studio that generates the assets is the [Launche
 There are some options which you can tweak as much as you like, but the only ones we care about are the "Shape" and "Name".
 You should create two versions of the app icon. The first one should have the "Square" shape and its "Name" should be "app_icon".
 The second's version shape should be the "Circle" and its "Name" should be "app_icon_round".
+
+> ℹ️ Although [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio) was also considered, it isn't as intuitive and straightforward as the [Android Asset Studio](https://github.com/romannurik/AndroidAssetStudio).
 
 #### iOS
 
