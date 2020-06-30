@@ -3,6 +3,15 @@ id: app-icon
 title: App icon
 sidebar_label: App icon
 ---
+Every app should have an impactul icon that stands out from all the others apps available on the user's device. 
+
+An app icon is a graphic that represents your app to users. It can:
+
+-   Appear in the list of apps installed on a device and on the Home screen.
+-   Represent shortcuts into your app (for example, a contact shortcut icon that opens detail information for a contact).
+-   Help users find your app on Google Play and App Store.
+
+> ℹ️  An app icon is mandatory to publish the app to TestFlight/App Store and Google Play
 
 ### How to generate the assets
 
