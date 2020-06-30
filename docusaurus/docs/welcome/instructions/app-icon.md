@@ -20,6 +20,8 @@ First and foremost, we need to take into consideration that automatic generation
 Sometimes, small adjustments to an icon may be necessary and that should probably be done manually so it looks exactly how it is supposed to.
 Nonetheless, automatic generation should always be the first step.
 
+> ❗️ The raw app icon asset's resolution should be 1024x1024px or bigger, so it can be used to generate both Android and iOS icons through the recommended generators.
+
 #### Android
 
 The Android assets can be generated using [Android Asset Studio](https://github.com/romannurik/AndroidAssetStudio).
