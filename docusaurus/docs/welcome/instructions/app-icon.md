@@ -15,6 +15,10 @@ An app icon is a graphic that represents your app to users. It can:
 
 ### How to generate the assets
 
+First and foremost, we need to take into consideration that automatic generation won't work everytime.
+Sometimes, small adjustments to an icon may be necessary and that should probably be done manually so it looks exactly how it is supposed to.
+Nonetheless, automatic generation should always be the first step.
+
 #### Android
 
 The Android assets can be generated using [Android Asset Studio](https://github.com/romannurik/AndroidAssetStudio).
