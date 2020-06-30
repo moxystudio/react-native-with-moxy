@@ -30,7 +30,7 @@ Note that the filenames of the generated assets should be renamed according to t
 After moving the assets to the following locations, there is nothing more to do.
 Both "Square" and "Circle" shapes should work.
 
-##### Square shape icons:
+##### Square icons:
 
 -   **mdpi:** `android/app/src/main/res/mipmap-mdpi/app_icon.png`
 -   **hdpi:** `android/app/src/main/res/mipmap-hdpi/app_icon.png`
@@ -38,7 +38,7 @@ Both "Square" and "Circle" shapes should work.
 -   **xxhdpi:** `android/app/src/main/res/mipmap-xxhdpi/app_icon.png`
 -   **xxxhdpi:** `android/app/src/main/res/mipmap-xxxhdpi/app_icon.png`
 
-##### Circle shape icons:
+##### Round icons:
 
 -   **mdpi:** `android/app/src/main/res/mipmap-mdpi/app_icon_round.png`
 -   **hdpi:** `android/app/src/main/res/mipmap-hdpi/app_icon_round.png`
