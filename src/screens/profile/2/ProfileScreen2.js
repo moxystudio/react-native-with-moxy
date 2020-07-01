@@ -13,7 +13,7 @@ const ProfileScreen2 = () => {
     return (
         <SafeAreaView style={ styles.safeArea }>
             <View style={ styles.container }>
-                <Text accessibilityLabel="title">
+                <Text accessibilityLabel="title" accessibilityHint="title">
                     <FormattedMessage id="profile2.title" />
                 </Text>
             </View>

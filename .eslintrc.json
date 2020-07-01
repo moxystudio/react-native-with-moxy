@@ -7,6 +7,8 @@
         "@moxy/eslint-config-base/esm",
         "@moxy/eslint-config-babel",
         "@moxy/eslint-config-jest",
-        "@moxy/eslint-config-react"
+        "@moxy/eslint-config-react",
+        "@moxy/eslint-config-react-native",
+        "@moxy/eslint-config-react-native-a11y/rn-061"
     ]
 }

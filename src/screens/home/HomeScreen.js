@@ -28,11 +28,13 @@ const HomeScreen = ({ navigation }) => {
             <View style={ styles.container }>
                 <Text
                     accessibilityLabel="title"
+                    accessibilityHint="title"
                     style={ styles.text }>
                     <FormattedMessage id="home.title" />
                 </Text>
                 <Button
-                    accessibilityLabel="navigate to profile button"
+                    accessibilityLabel="navigate to profile screen"
+                    accessibilityHint="navigate to profile screen"
                     type="highlight"
                     title={ <FormattedMessage id="home.buttons.navigate-to-profile" /> }
                     style={ styles.button }
@@ -41,6 +43,7 @@ const HomeScreen = ({ navigation }) => {
                     underlayColor={ themeStyles.colors.terciary } />
                 <Button
                     accessibilityLabel="switch language button"
+                    accessibilityHint="switch language button"
                     type="highlight"
                     title={ <FormattedMessage id="home.buttons.switch-language" values={ { localeId: locale.id } } /> }
                     style={ styles.button }

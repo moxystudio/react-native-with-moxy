@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
-import { render, fireEvent } from '../../../shared/test-utils';
 import SafeAreaView from 'react-native-safe-area-view';
+import { render, fireEvent } from '../../../shared/test-utils';
 import { createNavigationProp } from '../../../shared/test-utils/react-navigation';
 import ProfileHeader from './';
 

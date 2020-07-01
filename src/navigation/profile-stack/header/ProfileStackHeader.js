@@ -21,11 +21,13 @@ const ProfileStackHeader = ({ navigation }) => {
             <View style={ styles.header }>
                 <Button
                     accessibilityLabel="back button"
+                    accessibilityHint="back button"
                     title={ <FormattedMessage id="profile.header.buttons.back" /> }
                     textStyle={ styles.goBack }
                     onPress={ handlePress } />
                 <Text
                     accessibilityLabel="title"
+                    accessibilityHint="title"
                     style={ styles.title }>
                     <FormattedMessage id="profile.header.title" />
                 </Text>

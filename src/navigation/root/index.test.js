@@ -1,5 +1,5 @@
-import { navigationRef, navigate } from './';
 import { createNavigationProp } from '../../shared/test-utils/react-navigation';
+import { navigationRef, navigate } from './';
 
 beforeEach(() => {
     navigationRef.current = createNavigationProp();

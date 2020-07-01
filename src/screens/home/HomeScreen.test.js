@@ -32,7 +32,7 @@ it('should call specify the header via navigation options', () => {
 it('should navigate to profile screen on button press', () => {
     const { getByLabelText } = render(<HomeScreen navigation={ navigation } />);
 
-    const button = getByLabelText('navigate to profile button');
+    const button = getByLabelText('navigate to profile screen');
 
     fireEvent.press(button);
 
