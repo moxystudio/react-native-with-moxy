@@ -24,14 +24,42 @@ Nonetheless, automatic generation should always be the first step.
 
 #### Android
 
-The Android assets can be generated using [Android Asset Studio](https://github.com/romannurik/AndroidAssetStudio).
+The Android assets can be generated using [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio).
 
-The tool from the Android Asset Studio that generates the assets is the [Launcher icon generator](<https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=square&effects=none&name=ic_launcher>).
-There are some options which you can tweak as much as you like, but the only ones we care about are the "Shape" and "Name".
-You should create two versions of the app icon. The first one should have the "Square" shape and its "Name" should be "app_icon".
-The second's version shape should be the "Circle" and its "Name" should be "app_icon_round".
+To start the Asset Studio, follow these steps:
 
-> ℹ️ Although [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio) was also considered, it isn't as intuitive and straightforward as the [Android Asset Studio](https://github.com/romannurik/AndroidAssetStudio).
+1. Open the project on Android Studio.
+2. In the **Project** window, select the [Android view](https://developer.android.com/studio/projects#ProjectFiles).
+3. Right-click the **res** folder and select **New > Image Asset**.
+
+![Image Asset Studio](/img/image-asset-studio.png)
+
+The app icon should have both a square and a round version.
+There tool offers a few options which you can tweak as much as you like, but we will only cover the necessary ones.
+
+##### Square icons:
+
+-   **Icon Type** should be the **Launcher Icons (Legacy only)** option.
+-   **Name** should be renamed from `ic_launcher` to `app_icon`.
+-   **Asset Type** should be **Image** and the raw app icon path should be given.
+-   **Shape** should be **Square**.
+
+![Image Asset Studio - Launcher Icons (Legacy only) with Square shape](/img/image-asset-studio-launcher-icons-legacy-only-square.png)
+
+After that you should click on **Next** and finally on the **Finish** button.
+
+##### Round icons:
+
+-   **Icon Type** should be the **Launcher Icons (Legacy only)** option.
+-   **Name** should be renamed from `ic_launcher` to `app_icon_round`.
+-   **Asset Type** should be **Image** and the raw app icon path should be given.
+-   **Shape** should be **Circle**.
+
+![Image Asset Studio - Launcher Icons (Legacy only) with Circle shape](/img/image-asset-studio-launcher-icons-legacy-only-circle.png)
+
+After that you should click on **Next** and finally on the **Finish** button.
+
+> ℹ️ Although [Android Asset Studio](https://github.com/romannurik/AndroidAssetStudio) was also considered, we decided to adopt [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio) because it's the official tool from Google, it's built in into Android Studio and it not only generates the assets but it also places them in the correct folders.
 
 #### iOS
 
@@ -45,24 +73,26 @@ Note that the filenames of the generated assets should be renamed according to t
 
 #### Android
 
-After moving the assets to the following locations, there is nothing more to do.
-Both "Square" and "Circle" shapes should work.
+> 💡 Note that if you used [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio), you won't have to bother about this, because the tool automatically places the assets into the correct locations.
 
 ##### Square icons:
 
--   **mdpi:** `android/app/src/main/res/mipmap-mdpi/app_icon.png`
--   **hdpi:** `android/app/src/main/res/mipmap-hdpi/app_icon.png`
--   **xhdpi:** `android/app/src/main/res/mipmap-xhdpi/app_icon.png`
--   **xxhdpi:** `android/app/src/main/res/mipmap-xxhdpi/app_icon.png`
--   **xxxhdpi:** `android/app/src/main/res/mipmap-xxxhdpi/app_icon.png`
+-   **mdpi (48x48@1x):** `android/app/src/main/res/mipmap-mdpi/app_icon.png`
+-   **hdpi (72x72@1\.5x):** `android/app/src/main/res/mipmap-hdpi/app_icon.png`
+-   **xhdpi (96x96@2x):** `android/app/src/main/res/mipmap-xhdpi/app_icon.png`
+-   **xxhdpi (144x144@3x):** `android/app/src/main/res/mipmap-xxhdpi/app_icon.png`
+-   **xxxhdpi (192x192@4x):** `android/app/src/main/res/mipmap-xxxhdpi/app_icon.png`
 
 ##### Round icons:
 
--   **mdpi:** `android/app/src/main/res/mipmap-mdpi/app_icon_round.png`
--   **hdpi:** `android/app/src/main/res/mipmap-hdpi/app_icon_round.png`
--   **xhdpi:** `android/app/src/main/res/mipmap-xhdpi/app_icon_round.png`
--   **xxhdpi:** `android/app/src/main/res/mipmap-xxhdpi/app_icon_round.png`
--   **xxxhdpi:** `android/app/src/main/res/mipmap-xxxhdpi/app_icon_round.png`
+-   **mdpi (48x48@1x):** `android/app/src/main/res/mipmap-mdpi/app_icon_round.png`
+-   **hdpi (72x72@1\.5x):** `android/app/src/main/res/mipmap-hdpi/app_icon_round.png`
+-   **xhdpi (96x96@2x):** `android/app/src/main/res/mipmap-xhdpi/app_icon_round.png`
+-   **xxhdpi (144x144@3x):** `android/app/src/main/res/mipmap-xxhdpi/app_icon_round.png`
+-   **xxxhdpi (192x192@4x):** `android/app/src/main/res/mipmap-xxxhdpi/app_icon_round.png`
+
+After moving the assets to the following locations, there is nothing more to do.
+Both "Square" and "Circle" shapes should work.
 
 #### iOS
 
