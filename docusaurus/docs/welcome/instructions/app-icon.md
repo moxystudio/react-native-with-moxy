@@ -62,8 +62,6 @@ After that you should click on **Next** and finally on the **Finish** button.
 
 After that you should click on **Next** and finally on the **Finish** button.
 
-> ℹ️ Although [Android Asset Studio](https://github.com/romannurik/AndroidAssetStudio) was also considered, we decided to adopt [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio) because it's the official tool from Google, it's built in into Android Studio and it not only generates the assets but it also places them in the correct folders.
-
 #### iOS
 
 The iOS assets can be generated using [App Icon Generator](https://appicon.co/).
