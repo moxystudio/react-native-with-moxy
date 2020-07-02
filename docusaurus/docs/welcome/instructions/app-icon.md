@@ -26,7 +26,7 @@ Nonetheless, automatic generation should always be the first step.
 
 The Android assets can be generated using [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio).
 
-To start the Asset Studio, follow these steps:
+To start Image Asset Studio, follow these steps:
 
 1. Open the project on Android Studio.
 2. In the **Project** window, select the [Android view](https://developer.android.com/studio/projects#ProjectFiles).
