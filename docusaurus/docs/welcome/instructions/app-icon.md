@@ -68,7 +68,9 @@ The iOS assets can be generated using [App Icon Generator](https://appicon.co/).
 On the "iOS and macOS" section, only `iPhone` and `iPad` should be selected.
 It is possible to either click and browse the image source or simply drag and drop it.
 After selecting the image, click on the "Generate" button to download the assets.
-Note that the filenames of the generated assets should be renamed according to the following pattern: `<resolution>@x<multiplier>`
+
+> ℹ️  Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`..
+This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name. 
 
 > ℹ️  Unfortunately there isn't an official tool for app icon generation on iOS.
 Even though there are Design related tools that solves this problem, there aren't similar ones which are non-designers friendly and significantly better than the recommended tool.
