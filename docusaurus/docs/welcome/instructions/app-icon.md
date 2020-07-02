@@ -35,7 +35,7 @@ To start Image Asset Studio, follow these steps:
 ![Image Asset Studio](/img/image-asset-studio.png)
 
 The app icon should have both a square and a round version.
-There tool offers a few options which you can tweak as much as you like, but we will only cover the necessary ones.
+The tool offers a few options which you can tweak as much as you like, but we only cover the necessary ones.
 
 > ℹ️  The following instructions won't cover how to generate [adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive), which are icons that can display a variety of shapes across different device models.
 > However it isn't much different, actually. To generate those, you should use the **Launcher Icons (Adaptive and Legacy)** option for the **Icon Type**.
