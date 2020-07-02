@@ -79,7 +79,7 @@ Even though there are Design related tools that solves this problem, there aren'
 
 #### Android
 
-> 💡 Note that if you used [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio), you won't have to bother about this, because the tool automatically places the assets into the correct locations.
+> 💡 Note that if you used Image Asset Studio, you won't have to bother about this, because the tool automatically places the assets into the correct locations.
 
 ##### Square icons:
 
