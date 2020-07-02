@@ -96,7 +96,6 @@ Even though there are Design related tools that solves this problem, there aren'
 -   **xxxhdpi (192x192@4x):** `android/app/src/main/res/mipmap-xxxhdpi/app_icon_round.png`
 
 After moving the assets to the following locations, there is nothing more to do.
-Both "Square" and "Circle" shapes should work.
 
 #### iOS
 
