@@ -37,7 +37,7 @@ To start Image Asset Studio, follow these steps:
 The app icon should have both a square and a round version.
 The tool offers a few options which you can tweak as much as you like, but we only cover the necessary ones.
 
-> ℹ️  The following instructions won't cover how to generate [adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive), which are icons that can display a variety of shapes across different device models.
+> ℹ️ The following instructions won't cover how to generate [adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive), which are icons that can display a variety of shapes across different device models.
 > However it isn't much different, actually. To generate those, you should use the **Launcher Icons (Adaptive and Legacy)** option for the **Icon Type**.
 
 ##### Square icons:
@@ -69,11 +69,11 @@ On the "iOS and macOS" section, only `iPhone` and `iPad` should be selected.
 It is possible to either click and browse the image source or simply drag and drop it.
 After selecting the image, click on the "Generate" button to download the assets.
 
-> ℹ️  Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`..
-This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name. 
+> ℹ️ Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`..
+> This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name.
 
-> ℹ️  Unfortunately there isn't an official tool for app icon generation on iOS.
-Even though there are Design related tools that solves this problem, there aren't similar ones which are non-designers friendly and significantly better than the recommended tool.
+> ℹ️ Unfortunately there isn't an official tool for app icon generation on iOS.
+> Even though there are Design related tools that solves this problem, there aren't similar ones which are non-designers friendly and significantly better than the recommended tool.
 
 ### Output assets location
 
@@ -112,7 +112,9 @@ On the project tree, navigate to `reactNativeWithMoxy > Images.xcassets`.
 
 Now you should be able to drag and drop each asset to its correct location.
 
-![XCode AppIcon Drag and Drop](/img/xcode-app-icon-drag-n-drop.png)
+|                               Before                                |                                          After                                          |
+| :-----------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
+| ![XCode AppIcon Drag and Drop](/img/xcode-app-icon-drag-n-drop.png) | ![XCode AppIcon Drag and Drop Completed](/img/xcode-app-icon-drag-n-drop-completed.png) |
 
 ##### iPhone Notifications (iOS 7-13 20pt)
 
