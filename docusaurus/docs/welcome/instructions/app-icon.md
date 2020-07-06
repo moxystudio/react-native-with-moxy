@@ -76,7 +76,7 @@ After selecting the image, click on the "Generate" button to download the assets
 Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`.
 This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name.
 
-> ℹ️  Unfortunately, there isn't an official tool to generate app icons for iOS. 
+> ℹ️ Unfortunately, there isn't an official tool to generate app icons for iOS.
 > Even though there are design tools that solve this problem, e.g. Sketch and Adobe Illustrator, there aren't any suitable and up-to-date open source CLI tools which automatically generate all the necessary icons.
 
 ### Output assets location
@@ -115,6 +115,9 @@ On the project tree, navigate to `reactNativeWithMoxy > Images.xcassets`.
 ![XCode AppIcon](/img/xcode-app-icon.png)
 
 Now you should be able to drag and drop each asset to its correct location.
+
+> ❗️ When the drag and drop approach is used, XCode will change a file's name if it's already being used for another purpose.
+> Be sure to manually rename it to its original name on `Contents.json`.
 
 |                               Before                                |                                          After                                          |
 | :-----------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
