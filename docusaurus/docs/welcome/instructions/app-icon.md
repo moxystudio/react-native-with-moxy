@@ -73,7 +73,7 @@ On the "iOS and macOS" section, only `iPhone` and `iPad` should be selected.
 It is possible to either click and browse the image source or simply drag and drop it.
 After selecting the image, click on the "Generate" button to download the assets.
 
-Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`..
+Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`.
 This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name.
 
 > ℹ️ Unfortunately there isn't an official tool for app icon generation on iOS.
