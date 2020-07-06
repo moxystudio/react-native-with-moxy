@@ -76,8 +76,8 @@ After selecting the image, click on the "Generate" button to download the assets
 Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`.
 This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name.
 
-> ℹ️ Unfortunately there isn't an official tool for app icon generation on iOS.
-> Even though there are Design related tools that solves this problem, there aren't similar ones which are non-designers friendly and significantly better than the recommended tool.
+> ℹ️  Unfortunately, there isn't an official tool to generate app icons for iOS. 
+> Even though there are design tools that solve this problem, e.g. Sketch and Adobe Illustrator, there aren't any suitable and up-to-date open source CLI tools which automatically generate all the necessary icons.
 
 ### Output assets location
 
