@@ -14,6 +14,7 @@ module.exports = {
                         'welcome/instructions/project-setup',
                         'welcome/instructions/android-app-signing',
                         'welcome/instructions/splash-screen',
+                        'welcome/instructions/app-icon',
                     ],
                 },
                 'welcome/conventions',
