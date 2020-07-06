@@ -18,7 +18,8 @@ An app icon is a graphic that represents your app to users. It can:
 
 First and foremost, we need to take into consideration that automatic generation won't work everytime.
 Sometimes, small adjustments to an icon may be necessary and that should probably be done manually so it looks exactly how it is supposed to.
-There are design tools that solve this problem, e.g. Sketch and Adobe Illustrator, and they can provide automatic exportation under the Designer's control and customization. Nonetheless, automatic generation should always be the first step.
+There are design tools that solve this problem, e.g. Sketch and Adobe Illustrator, which allow further customization and can assist designers in automatically exporting the icons.
+Nonetheless, automatic generation from a single asset should always be the first step to take as it is the most efficient and effective for most use cases.
 
 > ❗️ The raw app icon asset's resolution should be 1024x1024px or bigger, so it can be used to generate both Android and iOS icons through the recommended generators.
 
