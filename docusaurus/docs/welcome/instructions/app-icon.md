@@ -18,7 +18,7 @@ An app icon is a graphic that represents your app to users. It can:
 
 First and foremost, we need to take into consideration that automatic generation won't work everytime.
 Sometimes, small adjustments to an icon may be necessary and that should probably be done manually so it looks exactly how it is supposed to.
-Nonetheless, automatic generation should always be the first step.
+There are design tools that solve this problem, e.g. Sketch and Adobe Illustrator, and they can provide automatic exportation under the Designer's control and customization. Nonetheless, automatic generation should always be the first step.
 
 > ❗️ The raw app icon asset's resolution should be 1024x1024px or bigger, so it can be used to generate both Android and iOS icons through the recommended generators.
 
@@ -86,11 +86,10 @@ On the "iOS and macOS" section, only `iPhone` and `iPad` should be selected.
 It is possible to either click and browse the image source or simply drag and drop it.
 After selecting the image, click on the "Generate" button to download the assets.
 
+We can also recommend the [Fueled/ios-icon-generator](https://github.com/Fueled/ios-icon-generator) tool, which is a command line interface (CLI) that generates the icons.
+
 Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`.
 This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name.
-
-> ℹ️ Unfortunately, there isn't an official tool to generate app icons for iOS.
-> Even though there are design tools that solve this problem, e.g. Sketch and Adobe Illustrator, there aren't any suitable and up-to-date open source CLI tools which automatically generate all the necessary icons.
 
 ### Output assets location
 
