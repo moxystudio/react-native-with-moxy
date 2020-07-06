@@ -24,6 +24,8 @@ Nonetheless, automatic generation should always be the first step.
 
 #### Android
 
+> ❗️Android 8.0 Oreo introduced adaptive icons and apps running on it or later versions are ought to support them.
+
 The Android assets can be generated using [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio).
 
 To start Image Asset Studio, follow these steps:
@@ -39,8 +41,6 @@ The tool offers a few options which you can tweak as much as you like, but we on
 
 > ℹ️ The following instructions won't cover how to generate [adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive), which are icons that can display a variety of shapes across different device models.
 > However it isn't much different, actually. To generate those, you should use the **Launcher Icons (Adaptive and Legacy)** option for the **Icon Type**.
-
-> ❗️Android 8.0 Oreo introduced the adaptive icons and apps running on it or later versions should support them.
 
 ##### Square icons:
 
