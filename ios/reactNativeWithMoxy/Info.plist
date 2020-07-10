@@ -37,13 +37,23 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Jitsi Meet permission</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera Permission</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone Permission</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Lato-Thin.ttf</string>
 		<string>Lato-Regular.ttf</string>
 		<string>Lato-Bold.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>voip</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>BootSplash</string>

@@ -1,8 +1,9 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Text, View } from 'react-native';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import SafeAreaView from 'react-native-safe-area-view';
+import JitsiMeet, { JitsiMeetView } from 'react-native-jitsi-meet';
 import { Button, useTheme, useLocale } from '../../shared/modules';
 import HomeHeader from './header';
 
@@ -15,33 +16,57 @@ const HomeScreen = ({ navigation }) => {
 
     const { themeStyles } = useTheme();
     const styles = useMemo(() => createStyles(themeStyles), [themeStyles]);
-    const locale = useLocale();
-    const handleNavigateToProfile = useCallback(() => {
-        navigation.navigate('Profile', { screen: 'Profile2' });
-    }, [navigation]);
-    const handleSwitchLanguage = useCallback(() => {
-        locale.changeLocale(locale.id === 'pt-PT' ? 'en-US' : 'pt-PT');
-    }, [locale]);
+    const [isConferenceInProgress, setConferenceInProgress] = useState(false);
+    // const locale = useLocale();
+    // const handleNavigateToProfile = useCallback(() => {
+    //     navigation.navigate('Profile', { screen: 'Profile2' });
+    // }, [navigation]);
+    // const handleSwitchLanguage = useCallback(() => {
+    //     locale.changeLocale(locale.id === 'pt-PT' ? 'en-US' : 'pt-PT');
+    // }, [locale]);
+
+    const onConferenceTerminated = (nativeEvent) => {
+        console.log('onConferenceTerminated', { nativeEvent });
+        setConferenceInProgress(false);
+    };
+
+    const onConferenceJoined = (nativeEvent) => {
+        console.log('onConferenceJoined', { nativeEvent });
+    };
+
+    const onConferenceWillJoin = (nativeEvent) => {
+        console.log('onConferenceWillJoin', { nativeEvent });
+    };
+
+    const handleConferenceStartPress = () => {
+        setConferenceInProgress(true);
+    };
+
+    useEffect(() => {
+        if (isConferenceInProgress) {
+            setTimeout(() => JitsiMeet.call('https://meet.jit.si/RNWMJitsi'), 1000);
+        }
+    }, [isConferenceInProgress]);
 
     return (
         <SafeAreaView style={ styles.safeArea }>
             <View style={ styles.container }>
-                <Text
+                {/* <Text
                     accessibilityLabel="title"
                     accessibilityHint="title"
                     style={ styles.text }>
                     <FormattedMessage id="home.title" />
-                </Text>
-                <Button
+                </Text> */}
+                { !isConferenceInProgress && <Button
                     accessibilityLabel="navigate to profile screen"
                     accessibilityHint="navigate to profile screen"
                     type="highlight"
-                    title={ <FormattedMessage id="home.buttons.navigate-to-profile" /> }
+                    title="Join conference"
                     style={ styles.button }
-                    onPress={ handleNavigateToProfile }
+                    onPress={ handleConferenceStartPress }
                     textStyle={ styles.buttonText }
-                    underlayColor={ themeStyles.colors.terciary } />
-                <Button
+                    underlayColor={ themeStyles.colors.terciary } /> }
+                {/* <Button
                     accessibilityLabel="switch language button"
                     accessibilityHint="switch language button"
                     type="highlight"
@@ -49,7 +74,12 @@ const HomeScreen = ({ navigation }) => {
                     style={ styles.button }
                     onPress={ handleSwitchLanguage }
                     textStyle={ styles.buttonText }
-                    underlayColor={ themeStyles.colors.terciary } />
+                    underlayColor={ themeStyles.colors.terciary } /> */}
+                { isConferenceInProgress && <JitsiMeetView
+                    style={ styles.jitsi }
+                    onConferenceWillJoin={ onConferenceWillJoin }
+                    onConferenceTerminated={ onConferenceTerminated }
+                    onConferenceJoined={ onConferenceJoined } /> }
             </View>
         </SafeAreaView>
     );

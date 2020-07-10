@@ -10,13 +10,13 @@ const App = () => (
     <AppConfigProvider>
         <SafeAreaProvider>
             <ThemeProvider>
-                <LocaleProvider { ...localeConfig }>
-                    <SplashScreen>
-                        <NavigationContainer ref={ rootNavigation.navigationRef }>
-                            <Navigation />
-                        </NavigationContainer>
-                    </SplashScreen>
-                </LocaleProvider>
+                {/* <LocaleProvider { ...localeConfig }> */}
+                <SplashScreen>
+                    <NavigationContainer ref={ rootNavigation.navigationRef }>
+                        <Navigation />
+                    </NavigationContainer>
+                </SplashScreen>
+                {/* </LocaleProvider> */}
             </ThemeProvider>
         </SafeAreaProvider>
     </AppConfigProvider>

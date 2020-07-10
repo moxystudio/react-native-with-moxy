@@ -20,6 +20,10 @@ export default ({ typography, colors, layout }) => StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
     },
+    jitsi: {
+        height: '100%',
+        width: '100%',
+    },
     safeArea: {
         backgroundColor: colors.background,
         flex: 1,

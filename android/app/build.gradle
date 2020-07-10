@@ -78,11 +78,14 @@ import com.android.build.OutputFile
 project.ext.react = [
     entryFile: "index.js",
     enableHermes: false,  // clean and rebuild if changing
+    // Override bundle name to avoid conflicts with react-native-jitsi-meet
+    // Source: https://github.com/skrafft/react-native-jitsi-meet/issues/67#issuecomment-656736385
+    bundleAssetName: "app.bundle",
 ]
 
 project.ext.version = [
     major: 0,
-    minor: 1,
+    minor: 2,
     patch: 0,
 ]
 
@@ -116,8 +119,8 @@ def enableProguardInReleaseBuilds = false
  * give correct results when using with locales other than en-US.  Note that
  * this variant is about 6MiB larger per architecture than default.
  */
-// def jscFlavor = 'org.webkit:android-jsc:+'
-def jscFlavor = 'org.webkit:android-jsc-intl:+'
+def jscFlavor = 'org.webkit:android-jsc:+'
+// def jscFlavor = 'org.webkit:android-jsc-intl:+'
 
 /**
  * Whether to enable the Hermes VM.
@@ -217,7 +220,16 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    // implementation ('org.jitsi.react:jitsi-meet-sdk:2.+') { transitive = true }
+
+    implementation(project(':react-native-jitsi-meet')) {
+        // exclude group: 'com.facebook', module: 'hermes'
+        exclude group: 'com.facebook.react', module: 'react-native-svg'
+        // exclude group: 'org.webkit', module: 'android-jsc-intl'
+    }
 }
+
 
 // Run this once to be able to run the application with BUCK
 // puts all compile dependencies into folder libs for BUCK to use
