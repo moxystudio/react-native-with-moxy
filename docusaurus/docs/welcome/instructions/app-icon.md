@@ -8,11 +8,11 @@ Every app should have an impactul icon that stands out from all the others apps 
 
 An app icon is a graphic that represents your app to users. It can:
 
-- Appear in the list of apps installed on a device and on the Home screen.
-- Represent shortcuts into your app (for example, a contact shortcut icon that opens detail information for a contact).
-- Help users find your app on Google Play and App Store.
+-   Appear in the list of apps installed on a device and on the Home screen.
+-   Represent shortcuts into your app (for example, a contact shortcut icon that opens detail information for a contact).
+-   Help users find your app on Google Play and App Store.
 
-> ℹ️  An app icon is mandatory to publish the app to TestFlight/App Store and Google Play.
+> ℹ️ An app icon is mandatory to publish the app to TestFlight/App Store and Google Play.
 
 ### How to generate the assets
 
@@ -40,7 +40,7 @@ To start Image Asset Studio, follow these steps:
 The app icon should have both a square and a round version.
 The tool offers a few options which you can tweak as much as you like, but we only cover the necessary ones.
 
-> ℹ️  The following instructions don't cover how to generate [adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive), which are icons that can display a variety of shapes across different device models.
+> ℹ️ The following instructions don't cover how to generate [adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive), which are icons that can display a variety of shapes across different device models.
 > However it isn't much different, actually. To generate those, you should use the **Launcher Icons (Adaptive and Legacy)** option for the **Icon Type**.
 
 ##### Square icons
@@ -85,6 +85,7 @@ How to upload the icon:
 iOS assets can be generated using [App Icon Generator](https://appicon.co/).
 In the "iOS and macOS" section, only `iPhone` and `iPad` should be selected.
 It is possible to either click and browse the image source or simply drag and drop it.
+Note that the file extension must be `.png`.
 After selecting the image, click on the "Generate" button to download the assets.
 
 > ℹ️ An alternative to the App Icon Generator could be [MakeAppIcon](https://makeappicon.com/).
