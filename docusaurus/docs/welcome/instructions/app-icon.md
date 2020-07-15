@@ -87,6 +87,8 @@ In the "iOS and macOS" section, only `iPhone` and `iPad` should be selected.
 It is possible to either click and browse the image source or simply drag and drop it.
 After selecting the image, click on the "Generate" button to download the assets.
 
+> ℹ️ An alternative to the App Icon Generator could be [MakeAppIcon](https://makeappicon.com/).
+
 We can also recommend the [Fueled/ios-icon-generator](https://github.com/Fueled/ios-icon-generator) tool, which is a command line interface (CLI) that generates the icons.
 
 Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`.
@@ -187,6 +189,7 @@ Now you should be able to drag and drop each asset to its correct location.
 ### References
 
 -   [App Icon - Icons and Images - iOS - Human Interface guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)
+-   [App Icons on iPhone, iPad and Apple Watch](https://developer.apple.com/library/archive/qa/qa1686/_index.html)
 -   [Google Play icon design specifications](https://developer.android.com/google-play/resources/icon-design-specifications)
 -   [Understanding Android Adaptive Icons - Google Design](https://medium.com/google-design/understanding-android-adaptive-icons-cee8a9de93e2)
 -   [Designing Adaptive Icons - Google Design](https://medium.com/google-design/designing-adaptive-icons-515af294c783)
