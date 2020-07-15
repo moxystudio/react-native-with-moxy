@@ -141,47 +141,47 @@ Now you should be able to drag and drop each asset to its correct location.
 
 ##### iPhone Notifications (iOS 7-13 20pt)
 
--   **40x40@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@2x.png`
--   **60x60@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/60x60@3x.png`
+-   **20x20@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/20x20@2x.png`
+-   **20x20@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/20x20@3x.png`
 
 ##### iPhone Settings (iOS 7-13 29pt)
 
--   **58x58@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/58x58@2x.png`
--   **87x87@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/87x87@3x.png`
+-   **29x29@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/29x29@2x.png`
+-   **29x29@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/29x29@3x.png`
 
 ##### iPhone Spotlight (iOS 7-13 40pt)
 
--   **80x80@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/80x80@2x.png`
--   **120x120@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/120x120@3x.png`
+-   **40x40@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@2x.png`
+-   **40x40@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@3x.png`
 
 ##### iPhone App (iOS 7-13 60pt)
 
--   **120x120@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/120x120@2x.png`
--   **180x180@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/180x180@3x.png`
+-   **60x60@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/60x60@2x.png`
+-   **60x60@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/60x60@3x.png`
 
 ##### iPad Notifications (iOS 7-13 20pt)
 
 -   **20x20@1x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/20x20@1x.png`
--   **40x40@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@2x.png`
+-   **20x20@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/20x20@2x.png`
 
 ##### iPad Settings (iOS 7-13 29pt)
 
 -   **29x29@1x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/29x29@1x.png`
--   **58x58@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/58x58@2x.png`
+-   **29x29@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/29x29@2x.png`
 
 ##### iPad Spotlight (iOS 7-13 40pt)
 
 -   **40x40@1x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@1x.png`
--   **80x80@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/80x80@2x.png`
+-   **40x40@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@2x.png`
 
 ##### iPad App (iOS 7-13 76pt)
 
 -   **76x76@1x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/76x76@1x.png`
--   **152x152@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/152x152@2x.png`
+-   **76x76@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/76x76@2x.png`
 
 ##### iPad Pro App (iOS 7-13 83.5pt)
 
--   **167x167@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/167x167@2x.png`
+-   **83.5x83.5@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/83.5x83.5@2x.png`
 
 ##### App Store (iOS 1024pt)
 
