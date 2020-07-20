@@ -76,3 +76,7 @@ buck-out/
 # JS bundles
 **/index.android.bundle
 **/index.ios.bundle
+
+# Sentry
+#
+sentry.properties
