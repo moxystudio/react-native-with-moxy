@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1065309954966",
+    "firebase_url": "https://rnmw-eb311.firebaseio.com",
+    "project_id": "rnmw-eb311",
+    "storage_bucket": "rnmw-eb311.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065309954966:android:cb56c791fb2d022c6333b7",
+        "android_client_info": {
+          "package_name": "studio.moxy.rnwm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065309954966-ojqgaj4cb91e7n8sbk5749r6bce3jucj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATRznP4E4la5hmz_VqGfGQEEbPJR46inA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065309954966-ojqgaj4cb91e7n8sbk5749r6bce3jucj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1065309954966-an5lfcnv5b4c2kmkrfedquire67ukji5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "studio.moxy.rnwm"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
