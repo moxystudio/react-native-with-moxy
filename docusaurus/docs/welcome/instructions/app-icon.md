@@ -91,7 +91,7 @@ It is possible to either click and browse the image source or simply drag and dr
 After selecting the image, click on the "Generate" button to download the assets.
 
 Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`.
-This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name.
+This way, it becomes easier to identify the size of each icon and their purpose simply by glancing at its name.
 
 **Alternative tools:**
 
