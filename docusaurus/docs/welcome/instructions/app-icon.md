@@ -90,12 +90,13 @@ It is possible to either click and browse the image source or simply drag and dr
 
 After selecting the image, click on the "Generate" button to download the assets.
 
-> ℹ️ An alternative to the App Icon Generator could be [MakeAppIcon](https://makeappicon.com/).
-
-We can also recommend the [Fueled/ios-icon-generator](https://github.com/Fueled/ios-icon-generator) tool, which is a command line interface (CLI) that generates the icons.
-
 Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`.
 This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name.
+
+**Alternative tools:**
+
+-   [MakeAppIcon](https://makeappicon.com/): a web generator by [Skygear](https://skygear.io/)
+-   [ios-icon-generator](https://github.com/Fueled/ios-icon-generator): a CLI generator by [Fueled](https://fueled.com/)
 
 ### Output assets location
 
