@@ -85,7 +85,9 @@ How to upload the icon:
 iOS assets can be generated using [App Icon Generator](https://appicon.co/).
 In the "iOS and macOS" section, only `iPhone` and `iPad` should be selected.
 It is possible to either click and browse the image source or simply drag and drop it.
-Note that the file extension must be `.png`.
+
+> ❗️ Note that the file extension must be `.png`.
+
 After selecting the image, click on the "Generate" button to download the assets.
 
 > ℹ️ An alternative to the App Icon Generator could be [MakeAppIcon](https://makeappicon.com/).
