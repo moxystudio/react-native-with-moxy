@@ -1,4 +1,4 @@
-# react-native-with-moxy
+# React Native with MOXY
 
 [![Build Status][build-status-image]][build-status-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
