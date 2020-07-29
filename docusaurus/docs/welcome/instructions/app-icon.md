@@ -8,11 +8,11 @@ Every app should have an impactul icon that stands out from all the others apps 
 
 An app icon is a graphic that represents your app to users. It can:
 
-- Appear in the list of apps installed on a device and on the Home screen.
-- Represent shortcuts into your app (for example, a contact shortcut icon that opens detail information for a contact).
-- Help users find your app on Google Play and App Store.
+-   Appear in the list of apps installed on a device and on the Home screen.
+-   Represent shortcuts into your app (for example, a contact shortcut icon that opens detail information for a contact).
+-   Help users find your app on Google Play and App Store.
 
-> ℹ️  An app icon is mandatory to publish the app to TestFlight/App Store and Google Play.
+> ℹ️ An app icon is mandatory to publish the app to TestFlight/App Store and Google Play.
 
 ### How to generate the assets
 
@@ -40,7 +40,7 @@ To start Image Asset Studio, follow these steps:
 The app icon should have both a square and a round version.
 The tool offers a few options which you can tweak as much as you like, but we only cover the necessary ones.
 
-> ℹ️  The following instructions don't cover how to generate [adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive), which are icons that can display a variety of shapes across different device models.
+> ℹ️ The following instructions don't cover how to generate [adaptive icons](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive), which are icons that can display a variety of shapes across different device models.
 > However it isn't much different, actually. To generate those, you should use the **Launcher Icons (Adaptive and Legacy)** option for the **Icon Type**.
 
 ##### Square icons
@@ -85,12 +85,18 @@ How to upload the icon:
 iOS assets can be generated using [App Icon Generator](https://appicon.co/).
 In the "iOS and macOS" section, only `iPhone` and `iPad` should be selected.
 It is possible to either click and browse the image source or simply drag and drop it.
+
+> ❗️ Note that the file extension must be `.png`.
+
 After selecting the image, click on the "Generate" button to download the assets.
 
-We can also recommend the [Fueled/ios-icon-generator](https://github.com/Fueled/ios-icon-generator) tool, which is a command line interface (CLI) that generates the icons.
-
 Although not mandatory, we recommend to rename the generated assets according to the following pattern: `<resolution>@x<multiplier>`.
-This way, it becomes makes easier to identify the attributes of each icon and their purpose simply by glancing at its name.
+This way, it becomes easier to identify the size of each icon and their purpose simply by glancing at its name.
+
+**Alternative tools:**
+
+-   [MakeAppIcon](https://makeappicon.com/): a web generator by [Skygear](https://skygear.io/)
+-   [ios-icon-generator](https://github.com/Fueled/ios-icon-generator): a CLI generator by [Fueled](https://fueled.com/)
 
 ### Output assets location
 
@@ -138,47 +144,47 @@ Now you should be able to drag and drop each asset to its correct location.
 
 ##### iPhone Notifications (iOS 7-13 20pt)
 
--   **40x40@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@2x.png`
--   **60x60@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/60x60@3x.png`
+-   **20x20@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/20x20@2x.png`
+-   **20x20@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/20x20@3x.png`
 
 ##### iPhone Settings (iOS 7-13 29pt)
 
--   **58x58@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/58x58@2x.png`
--   **87x87@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/87x87@3x.png`
+-   **29x29@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/29x29@2x.png`
+-   **29x29@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/29x29@3x.png`
 
 ##### iPhone Spotlight (iOS 7-13 40pt)
 
--   **80x80@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/80x80@2x.png`
--   **120x120@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/120x120@3x.png`
+-   **40x40@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@2x.png`
+-   **40x40@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@3x.png`
 
 ##### iPhone App (iOS 7-13 60pt)
 
--   **120x120@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/120x120@2x.png`
--   **180x180@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/180x180@3x.png`
+-   **60x60@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/60x60@2x.png`
+-   **60x60@3x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/60x60@3x.png`
 
 ##### iPad Notifications (iOS 7-13 20pt)
 
 -   **20x20@1x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/20x20@1x.png`
--   **40x40@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@2x.png`
+-   **20x20@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/20x20@2x.png`
 
 ##### iPad Settings (iOS 7-13 29pt)
 
 -   **29x29@1x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/29x29@1x.png`
--   **58x58@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/58x58@2x.png`
+-   **29x29@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/29x29@2x.png`
 
 ##### iPad Spotlight (iOS 7-13 40pt)
 
 -   **40x40@1x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@1x.png`
--   **80x80@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/80x80@2x.png`
+-   **40x40@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/40x40@2x.png`
 
 ##### iPad App (iOS 7-13 76pt)
 
 -   **76x76@1x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/76x76@1x.png`
--   **152x152@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/152x152@2x.png`
+-   **76x76@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/76x76@2x.png`
 
 ##### iPad Pro App (iOS 7-13 83.5pt)
 
--   **167x167@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/167x167@2x.png`
+-   **83.5x83.5@2x**: `ios/reactNativeWithMoxy/Images.xcassets/AppIcon.appiconset/83.5x83.5@2x.png`
 
 ##### App Store (iOS 1024pt)
 
@@ -187,6 +193,7 @@ Now you should be able to drag and drop each asset to its correct location.
 ### References
 
 -   [App Icon - Icons and Images - iOS - Human Interface guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)
+-   [App Icons on iPhone, iPad and Apple Watch](https://developer.apple.com/library/archive/qa/qa1686/_index.html)
 -   [Google Play icon design specifications](https://developer.android.com/google-play/resources/icon-design-specifications)
 -   [Understanding Android Adaptive Icons - Google Design](https://medium.com/google-design/understanding-android-adaptive-icons-cee8a9de93e2)
 -   [Designing Adaptive Icons - Google Design](https://medium.com/google-design/designing-adaptive-icons-515af294c783)
