@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
-import React, { useState } from 'react';
+import React from 'react';
 import crashlytics from '@react-native-firebase/crashlytics';
-import { View, Button, Text } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import {
@@ -14,16 +13,12 @@ import Navigation, { rootNavigation } from '../navigation';
 import localeConfig from '../../intl';
 
 const App = () => {
-    const [enabled, setEnabled] = useState(
-        crashlytics().isCrashlyticsCollectionEnabled,
-    );
+    try {
+        throw new Error('Testing if the source maps will be readable');
+    } catch (err) {
+        Object.assign(err, { status: 'invalid data' });
 
-    async function toggleCrashlytics() {
-        await crashlytics()
-            .setCrashlyticsCollectionEnabled(!enabled)
-            .then(() =>
-                setEnabled(crashlytics().isCrashlyticsCollectionEnabled),
-            );
+        crashlytics().recordError(err);
     }
 
     return (
@@ -35,18 +30,6 @@ const App = () => {
                             <NavigationContainer
                                 ref={ rootNavigation.navigationRef }>
                                 <Navigation />
-                                <View>
-                                    <Button
-                                        title="Toggle Crashlytics"
-                                        onPress={ toggleCrashlytics } />
-                                    <Button
-                                        title="Crash"
-                                        onPress={ () => crashlytics().crash() } />
-                                    <Text>
-                                        Crashlytics is currently{' '}
-                                        {enabled ? 'enabled' : 'disabled'}
-                                    </Text>
-                                </View>
                             </NavigationContainer>
                         </SplashScreen>
                     </LocaleProvider>
