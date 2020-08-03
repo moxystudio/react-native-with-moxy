@@ -1,4 +1,4 @@
 defaults.url=https://sentry.io/
-defaults.org=moxy
-defaults.project=rnwm
-auth.token=d4dde6588bb242b7aaaef9e40b22bd2d9431eb1a96444c6399ed73c42a3ea5be
+defaults.org=<organization-name>
+defaults.project=<project-name>
+auth.token=<api-token>
