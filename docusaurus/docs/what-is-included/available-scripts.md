@@ -24,37 +24,37 @@ This script will launch the app on the first available simulator it is found. Yo
 
 Runs the Android app in debug mode.
 
-This script will launch the app on the first available connected device it is found. You can override this behavior by passing the argument `--deviceId <device id>` where `device id` can be obtained from the output of `list:android:devices` script. 
+This script will launch the app on the first available connected device it is found. You can override this behavior by passing the argument `--deviceId <device id>` where `device id` can be obtained from the output of `list:android:devices` script.
 
 ## `npm run start:android:prod`
 
 Runs the Android app in release mode.
 
-This script will launch the app on the first available connected device it is found. You can override this behavior by passing the argument `--deviceId <device id>` where `device id` can be obtained from the output of `list:android:devices` script. 
+This script will launch the app on the first available connected device it is found. You can override this behavior by passing the argument `--deviceId <device id>` where `device id` can be obtained from the output of `list:android:devices` script.
 
-## `npm run build:android:js:dev`
+## `npm run build:ios:js:prod`
 
-This script will create a non-optimized JavaScript bundle targeted for debugging purposes targeted to the Android platform.
+This script will generate a source map for the iOS platform.
 
-You can find the bundle file, `index.android.bundle`, in the project's root directory.
+You can find the source map file, `ios.bundle.map`, in the project's root directory.
 
 ## `npm run build:android:js:prod`
 
-This script will create an optimized, production-ready JavaScript bundle targeted to the Android platform.
+This script will create an optimized, production-ready JavaScript bundle targeted to the Android platform. It will also generate a source map.
 
-You can find the bundle file, `index.android.bundle`, in the project's root directory.
+You can find the both the bundle, `index.android.bundle`, in the project's `/android/app/src/main/assets/` directory. The source map file, `android.bundle.map`, will be in the project's root directory.
 
-## `npm run build:android:aab:prod`
+## `npm run build:android:aab`
 
-This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle) configured for the staging environment. This is the binary that you should upload to the Google Play Console to release the app.
-
-You can find the AAB file at `android/app/build/outputs/bundle/<release|debug>/app.aab`.
-
-## `npm run build:android:aab:staging`
-
-This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle) configured for the staging environment. This is the binary that you should upload to the Google Play Console to release the app.
+This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle) configured for the production environment. This is the binary that you should upload to the Google Play Console to release the app.
 
 You can find the AAB file at `android/app/build/outputs/bundle/<release|debug>/app.aab`.
+
+## `npm run build:android:apk`
+
+This script will create a production-ready Android package (APK) configured for the production environment.
+
+You can find the APK file at `android/app/build/outputs/bundle/<release|debug>/app.apk`.
 
 ## `npm run list:ios:simulators`
 
@@ -67,6 +67,18 @@ This script will list all the available [Android Virtual Devices (AVD)](https://
 ## `npm run list:android:devices`
 
 This script will list all the connected Android devices, either virtual (simulator) or physical.
+
+## `npm run sourcemap:ios:resolve`
+
+This script will resolve the `ios.bundle.map` file according to the given line and column.
+
+Usage: `npm run sourcemap:ios:resolve 42 70`
+
+## `npm run sourcemap:android:resolve`
+
+This script will resolve the `android.bundle.map` file according to the given line and column.
+
+Usage: `npm run sourcemap:android:resolve 42 70`
 
 ## `npm run pods`
 
@@ -91,6 +103,10 @@ This script will automatically open the documentation in your default browser.
 
 Keep in mind, you must have your documentation's dependencies installed before running this script!
 To to so, please run `npm install --prefix docusaurus` first.
+
+## `npm run prerelease`
+
+This script will run both `build:android:js` and `build:ios:js:prod` scripts, preparing for a release.
 
 ## `npm run release`
 
