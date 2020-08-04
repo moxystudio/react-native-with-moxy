@@ -104,10 +104,6 @@ This script will automatically open the documentation in your default browser.
 Keep in mind, you must have your documentation's dependencies installed before running this script!
 To to so, please run `npm install --prefix docusaurus` first.
 
-## `npm run prerelease`
-
-This script will run both `build:android:js` and `build:ios:js:prod` scripts, preparing for a release.
-
 ## `npm run release`
 
 This script updates your CHANGELOG.md file, following [Semantic Versioning](https://semver.org/) and [Conventional Commits](conventionalcommits.org) conventions and generates a new Git tag (to read more about this process, you can read through the standard-version documentation).
