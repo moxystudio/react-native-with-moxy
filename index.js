@@ -13,6 +13,6 @@ config.appVersion = version;
 
 const bugsnag = new Client(config);
 
-bugsnag.notify(new Error('Test error'));
+bugsnag.notify(new Error('Test error from prod build with dSYM files uploaded'));
 
 AppRegistry.registerComponent(appName, () => App);
