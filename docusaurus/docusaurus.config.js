@@ -20,7 +20,7 @@ module.exports = {
                 alt: 'React Native with MOXY',
                 src: 'img/logo-nwm.png',
             },
-            links: [
+            items: [
                 {
                     href: 'https://github.com/moxystudio/react-native-with-moxy',
                     label: 'GitHub',
@@ -39,7 +39,7 @@ module.exports = {
     },
     presets: [
         [
-            '@docusaurus/preset-classic',
+            require.resolve('@docusaurus/preset-classic'),
             {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),

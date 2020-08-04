@@ -94,7 +94,7 @@ To to so, please run `npm install --prefix docusaurus` first.
 
 ## `npm run release`
 
-This script updates your CHANGELOG.md file, following [Semantic Versioning](https://semver.org/) and [Conventional Commits](conventionalcommits.org) conventions and generates a new Git tag (to read more about this process, you can read through the standard-version documentation).
+This script updates your CHANGELOG.md file, following [Semantic Versioning](https://semver.org/) and [Conventional Commits](https://conventionalcommits.org) conventions and generates a new Git tag (to read more about this process, you can read through the standard-version documentation).
 
 ## `npm run lint`
 
