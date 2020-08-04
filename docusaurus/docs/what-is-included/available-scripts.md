@@ -32,27 +32,27 @@ Runs the Android app in release mode.
 
 This script will launch the app on the first available connected device it is found. You can override this behavior by passing the argument `--deviceId <device id>` where `device id` can be obtained from the output of `list:android:devices` script.
 
-## `npm run build:ios:js:prod`
+## `npm run bundle:ios:js:prod`
 
-This script will generate a source map for the iOS platform.
+This script will generate a JavaScript source map for the iOS platform.
 
 You can find the source map file, `ios.bundle.map`, in the project's root directory.
 
-## `npm run build:android:js:prod`
+## `npm run bundle:android:js:prod`
 
-This script will create an optimized, production-ready JavaScript bundle targeted to the Android platform. It will also generate a source map.
+This script will create an optimized, production-ready JavaScript bundle targeted to the Android platform and it's respective source map.
 
-You can find the both the bundle, `index.android.bundle`, in the project's `/android/app/src/main/assets/` directory. The source map file, `android.bundle.map`, will be in the project's root directory.
+You will find the the bundle file, `index.android.bundle`, in the directory `android/app/src/main/assets/`. The source map file, `android.bundle.map`, is created at the project's root directory.
 
 ## `npm run build:android:aab`
 
-This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle) configured for the production environment. This is the binary that you should upload to the Google Play Console to release the app.
+This script will create a production-ready [Android App Bundle (AAB)](https://developer.android.com/platform/technology/app-bundle). This is the binary that you should upload to the Google Play Console to release the app.
 
 You can find the AAB file at `android/app/build/outputs/bundle/<release|debug>/app.aab`.
 
 ## `npm run build:android:apk`
 
-This script will create a production-ready Android package (APK) configured for the production environment.
+This script will create a production-ready Android Package (APK).
 
 You can find the APK file at `android/app/build/outputs/bundle/<release|debug>/app.apk`.
 
@@ -70,13 +70,13 @@ This script will list all the connected Android devices, either virtual (simulat
 
 ## `npm run sourcemap:ios:resolve`
 
-This script will resolve the `ios.bundle.map` file according to the given line and column.
+Given the stack trace created at runtime when an error occurs in the JavaScript production bundle, this script resolves the location (file, line and column) from which the error originated in the original source code. This is done by taking the line and column reported and match it is against `ios.bundle.map` source map. Useful for debugging purposes.
 
 Usage: `npm run sourcemap:ios:resolve 42 70`
 
 ## `npm run sourcemap:android:resolve`
 
-This script will resolve the `android.bundle.map` file according to the given line and column.
+Given the stack trace created at runtime when an error occurs in the JavaScript production bundle, this script resolves the location (file, line and column) from which the error originated in the original source code. This is done by taking the line and column reported and match it is against `android.bundle.map` source map. Useful for debugging purposes.
 
 Usage: `npm run sourcemap:android:resolve 42 70`
 
