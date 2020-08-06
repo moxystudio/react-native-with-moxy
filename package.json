@@ -20,7 +20,7 @@
     "start:ios:prod": "react-native run-ios --configuration Release --scheme 'reactNativeWithMoxy Prod'",
     "start:android:dev": "react-native run-android --variant debug",
     "start:android:prod": "react-native run-android --variant release",
-    "bundle:ios:js:prod": "react-native bundle --platform ios --dev false --entry-file index.js --bundle-output index.ios.bundle --sourcemap-output ios.bundle.map",
+    "bundle:ios:js:prod": "react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ./ios/index.ios.bundle --sourcemap-output ios.bundle.map",
     "bundle:android:js:prod": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --sourcemap-output android.bundle.map",
     "build:android:aab": "cd android && ./gradlew bundleRelease || cd -",
     "build:android:apk": "npm run bundle:android:js:prod && cd android && ./gradlew assembleRelease || cd -",

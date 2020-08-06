@@ -34,13 +34,13 @@ This script will launch the app on the first available connected device it is fo
 
 ## `npm run bundle:ios:js:prod`
 
-This script will generate a JavaScript source map for the iOS platform.
+This script will create an optimized, production-ready JavaScript bundle targeted to the iOS platform and its respective source map.
 
-You can find the source map file, `ios.bundle.map`, in the project's root directory.
+You will find the the bundle file, `index.ios.bundle`, in the directory `ios/`. The source map file, `ios.bundle.map`, is created at the project's root directory.
 
 ## `npm run bundle:android:js:prod`
 
-This script will create an optimized, production-ready JavaScript bundle targeted to the Android platform and it's respective source map.
+This script will create an optimized, production-ready JavaScript bundle targeted to the Android platform and its respective source map.
 
 You will find the the bundle file, `index.android.bundle`, in the directory `android/app/src/main/assets/`. The source map file, `android.bundle.map`, is created at the project's root directory.
 
