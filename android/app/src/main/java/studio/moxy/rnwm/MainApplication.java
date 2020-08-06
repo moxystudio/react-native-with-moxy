@@ -2,6 +2,8 @@ package studio.moxy.rnwm;
 
 import android.app.Application;
 import android.content.Context;
+
+import com.bugsnag.BugsnagReactNative;
 import com.facebook.react.PackageList;
 import studio.moxy.rnwm.BuildConfig;
 
@@ -45,8 +47,10 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    BugsnagReactNative.start(this);
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
+    throw new RuntimeException("Test error from native Android code");
   }
 
   /**
