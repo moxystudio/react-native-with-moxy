@@ -54,7 +54,7 @@ You can find the AAB file at `android/app/build/outputs/bundle/<release|debug>/a
 
 This script will create a production-ready Android Package (APK).
 
-You can find the APK file at `android/app/build/outputs/bundle/<release|debug>/app.apk`.
+You can find the APK file at `android/app/build/outputs/apk/release/app-release.apk`.
 
 ## `npm run list:ios:simulators`
 
