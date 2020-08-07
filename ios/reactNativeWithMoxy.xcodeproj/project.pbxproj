@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2C5774C663FF42E89DE68962 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F35FE121987246A19C5567DD /* Lato-Bold.ttf */; };
+		79911FAF24DDC5B900657BA3 /* CrashyCrashy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79911FAB24DDC55E00657BA3 /* CrashyCrashy.m */; };
 		9011242DF31F48CC8B52497F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65DDB238321548FC9B6E6E96 /* Lato-Thin.ttf */; };
 		A567246F24320D8500145E57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A567246E24320D8500145E57 /* AppDelegate.m */; };
 		A567247124320DA600145E57 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A567247024320DA600145E57 /* BootSplash.storyboard */; };
@@ -50,6 +51,8 @@
 		65DDB238321548FC9B6E6E96 /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../src/shared/media/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
 		69A5CB3980C8421584210BB0 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/shared/media/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		6A0752B6A57A44881470BD44 /* libPods-reactNativeWithMoxyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeWithMoxyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79911FAA24DDC55E00657BA3 /* CrashyCrashy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrashyCrashy.h; path = reactNativeWithMoxy/CrashyCrashy.h; sourceTree = "<group>"; };
+		79911FAB24DDC55E00657BA3 /* CrashyCrashy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrashyCrashy.m; path = reactNativeWithMoxy/CrashyCrashy.m; sourceTree = "<group>"; };
 		7D594C9C719E95F7373D6941 /* Pods-reactNativeWithMoxy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeWithMoxy.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeWithMoxy/Pods-reactNativeWithMoxy.debug.xcconfig"; sourceTree = "<group>"; };
 		83BF14C948D89CFAAC12AE55 /* libPods-reactNativeWithMoxy-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeWithMoxy-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928C9E4F30B46B455196B37D /* Pods-reactNativeWithMoxyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeWithMoxyTests.release.xcconfig"; path = "Target Support Files/Pods-reactNativeWithMoxyTests/Pods-reactNativeWithMoxyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 		13B07FAE1A68108700A75B9A /* reactNativeWithMoxy */ = {
 			isa = PBXGroup;
 			children = (
+				79911FAA24DDC55E00657BA3 /* CrashyCrashy.h */,
+				79911FAB24DDC55E00657BA3 /* CrashyCrashy.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				A567246E24320D8500145E57 /* AppDelegate.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -423,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				79911FAF24DDC5B900657BA3 /* CrashyCrashy.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				A567246F24320D8500145E57 /* AppDelegate.m in Sources */,
 			);
