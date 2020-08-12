@@ -13,7 +13,7 @@ Sentry.init({
 });
 
 const aFunctionThatMightFail = () => {
-    throw new Error('💣 BOOM!');
+    throw new Error('💣 BOOM from the JavaScript code!');
 };
 
 try {

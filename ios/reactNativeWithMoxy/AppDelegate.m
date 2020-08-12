@@ -12,6 +12,7 @@
 #import <React/RCTRootView.h>
 
 #import "RNBootSplash.h"
+#import "Sentry.h"
 
 @implementation AppDelegate
 
@@ -30,6 +31,14 @@
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  [SentrySDK startWithOptions:@{
+      @"dsn": @"https://54f37a5a169c439ead943ba92ece15f2@o422688.ingest.sentry.io/5351715",
+      @"debug": @(YES) // Enabled debug when first installing is always helpful
+  }];
+  
+  [SentrySDK captureMessage:@"My first test message from iOS native code"];
+  
   return YES;
 }
 
