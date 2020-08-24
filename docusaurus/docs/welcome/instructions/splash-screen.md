@@ -6,7 +6,7 @@ sidebar_label: Splash screen
 
 React Native with MOXY includes a splash screen which was generated from MOXY's logo by [`react-native-bootsplash`](https://github.com/zoontek/react-native-bootsplash). Nowadays, it's common for apps to have a splash screen with a plain background color and a logo both vertically and horizontally centered in the screen. As such, by default, we adhere to this principle. Take Twitter and Notion apps for example:
 
-| Notion   | Twitter   |
+| Twitter  | Notion    |
 |:--------:|:---------:|
 | ![Twitter splash screen](/img/twitter-splash-screen.png) | ![Notion splash screen](/img/notion-splash-screen.png) |
 
