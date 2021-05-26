@@ -221,19 +221,19 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/jscallinvoker (= 0.61.5)
-  - RNBootSplash (2.1.0):
+  - RNBootSplash (2.2.8):
+    - React-Core
+  - RNCMaskedView (0.1.11):
     - React
-  - RNCMaskedView (0.1.7):
-    - React
-  - RNGestureHandler (1.6.1):
-    - React
-  - RNLocalize (1.4.0):
-    - React
-  - RNReanimated (1.7.1):
-    - React
-  - RNScreens (2.4.0):
-    - React
-  - RNSVG (12.0.3):
+  - RNGestureHandler (1.10.3):
+    - React-Core
+  - RNLocalize (1.4.3):
+    - React-Core
+  - RNReanimated (1.13.3):
+    - React-Core
+  - RNScreens (2.18.1):
+    - React-Core
+  - RNSVG (12.1.1):
     - React
   - Yoga (1.14.0)
 
@@ -378,15 +378,15 @@ SPEC CHECKSUMS:
   React-RCTText: 9ccc88273e9a3aacff5094d2175a605efa854dbe
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
-  RNBootSplash: fbf76a4bf1c03e9acd1dd08ce064847f26d6d8bf
-  RNCMaskedView: 76c40a1d41c3e2535df09246a2b5487f04de0814
-  RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
-  RNLocalize: b6df30cc25ae736d37874f9bce13351db2f56796
-  RNReanimated: 4e102df74a9674fa943e05f97f3362b6e44d0b48
-  RNScreens: b5c0e1b2b04512919e78bd3898e144a157ce2363
-  RNSVG: 7e16ddfc6e00d5aa69c9eb83e699bcce5dcb85d4
+  RNBootSplash: 14d30c2e1de7247d334540cb2c2d7f3c2acc6150
+  RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
+  RNLocalize: 7c7aeda16c01db7a0918981c14875c0a53be9b79
+  RNReanimated: 514a11da3a2bcc6c3dfd9de32b38e2b9bf101926
+  RNScreens: f7ad633b2e0190b77b6a7aab7f914fad6f198d8d
+  RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
 PODFILE CHECKSUM: 6d232769a3df22ec242f559aad72d785e04186ad
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

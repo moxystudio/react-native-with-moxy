@@ -32,6 +32,7 @@ const ReactNativeLocaleProvider = ({
     locales,
     initialLocaleId,
     onLocaleChange,
+    textComponent,
 }) => {
     const intlCache = useRef(createIntlCache());
     const [currentLocale, setCurrentLocale] = useState(getInitialLocale(locales, locales[0], initialLocaleId));
@@ -46,6 +47,7 @@ const ReactNativeLocaleProvider = ({
         setCurrentLocale(nextLocale);
 
         if (localeId !== currentLocale.id) {
+            /* eslint-disable-next-line babel/no-unused-expressions */
             onLocaleChange?.(nextLocale.id);
         }
     }, [setCurrentLocale, locales, onLocaleChange, currentLocale]);
@@ -54,6 +56,7 @@ const ReactNativeLocaleProvider = ({
         const intl = createIntl({
             locale: currentLocale.id,
             messages: currentLocale.messages,
+            textComponent,
         }, intlCache);
 
         return {
@@ -63,7 +66,7 @@ const ReactNativeLocaleProvider = ({
             id: currentLocale.id,
             changeLocale: handleLocaleChange,
         };
-    }, [handleLocaleChange, currentLocale, locales]);
+    }, [handleLocaleChange, currentLocale, locales, textComponent]);
 
     useEffect(() => {
         const locale = findLocaleById(locales, currentLocale.id);
@@ -83,7 +86,7 @@ const ReactNativeLocaleProvider = ({
 };
 
 ReactNativeLocaleProvider.propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.element.isRequired,
     initialLocaleId: PropTypes.string,
     locales: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
@@ -91,6 +94,7 @@ ReactNativeLocaleProvider.propTypes = {
         messages: PropTypes.object.isRequired,
     })).isRequired,
     onLocaleChange: PropTypes.func,
+    textComponent: PropTypes.elementType,
 };
 
 export default ReactNativeLocaleProvider;
