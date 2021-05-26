@@ -14,7 +14,7 @@ module.exports = compose(
         ...config,
         moduleNameMapper: {
             ...config.moduleNameMapper,
-            '\\.svg': '<rootDir>/__mocks__/SvgMock.js',
+            '\\.svg': '<rootDir>/__mocks__/MockSvg.js',
         },
         coveragePathIgnorePatterns: [
             ...config.coveragePathIgnorePatterns,

@@ -1,22 +1,23 @@
 import React from 'react';
+import { TouchableHighlight, TouchableOpacity } from 'react-native';
 import { fireEvent, render } from '@testing-library/react-native';
 import Button from './Button';
 
 it('should render a TouchableHighlight when no type is supplied', () => {
-    const { getByLabelText } = render(
+    const { UNSAFE_getByType: getByType } = render(
         <Button
             accessibilityLabel="button"
             title="button"
             onPress={ () => null } />,
     );
 
-    const pressable = getByLabelText('button');
+    const touchableHighlight = getByType(TouchableHighlight);
 
-    expect(pressable.type).toBe('TouchableHighlight');
+    expect(touchableHighlight).toBeDefined();
 });
 
 it('should render a TouchableOpacity when type is opacity', () => {
-    const { getByLabelText } = render(
+    const { UNSAFE_getByType: getByType } = render(
         <Button
             accessibilityLabel="button"
             title="button"
@@ -24,9 +25,9 @@ it('should render a TouchableOpacity when type is opacity', () => {
             type="opacity" />,
     );
 
-    const pressable = getByLabelText('button');
+    const touchableOpacity = getByType(TouchableOpacity);
 
-    expect(pressable.type).toBe('TouchableOpacity');
+    expect(touchableOpacity).toBeDefined();
 });
 
 it('should render title', () => {

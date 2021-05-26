@@ -8,7 +8,7 @@ import useLocale from './use-locale';
 
 const messages = {
     'en-US': { apple: 'apple' }, // Default locale
-    'pt-PT': { apple: 'maça' },
+    'pt-PT': { apple: 'maçã' },
     'ru-RU': { apple: 'яблоко' },
 };
 
@@ -20,6 +20,7 @@ const locales = [
 
 beforeEach(() => {
     jest.clearAllMocks();
+    /* eslint-disable-next-line babel/no-unused-expressions */
     console.error.mockRestore?.();
 });
 
@@ -30,7 +31,7 @@ it("should load matching user's device preferred locale", () => {
     }));
 
     const { queryByText } = render(
-        <LocaleProvider locales={ locales }>
+        <LocaleProvider locales={ locales } textComponent={ Text }>
             <Text>
                 <FormattedMessage id="apple" />
             </Text>
@@ -47,7 +48,7 @@ it("should load default locale if there is no matching user's device preferred l
     }));
 
     const { queryByText } = render(
-        <LocaleProvider locales={ locales }>
+        <LocaleProvider locales={ locales } textComponent={ Text }>
             <Text>
                 <FormattedMessage id="apple" />
             </Text>
@@ -59,7 +60,7 @@ it("should load default locale if there is no matching user's device preferred l
 
 it('should load initial locale by id if it exists', () => {
     const { queryByText } = render(
-        <LocaleProvider locales={ locales } initialLocaleId="pt-PT">
+        <LocaleProvider locales={ locales } initialLocaleId="pt-PT" textComponent={ Text }>
             <Text>
                 <FormattedMessage id="apple" />
             </Text>
@@ -74,7 +75,7 @@ it('should throw if initial locale id does not exist', () => {
 
     expect(() =>
         render(
-            <LocaleProvider locales={ locales } initialLocaleId="es-ES">
+            <LocaleProvider locales={ locales } initialLocaleId="es-ES" textComponent={ Text }>
                 <Text>
                     <FormattedMessage id="apple" />
                 </Text>
@@ -88,7 +89,7 @@ it('should throw if locales array is empty', () => {
 
     expect(() =>
         render(
-            <LocaleProvider locales={ [] }>
+            <LocaleProvider locales={ [] } textComponent={ Text }>
                 <Text>
                     <FormattedMessage id="apple" />
                 </Text>
@@ -115,7 +116,7 @@ it('should change locale when requested by a consumer', () => {
     };
 
     const { getByTestId, getByText } = render(
-        <LocaleProvider locales={ locales } initialLocaleId="en-US">
+        <LocaleProvider locales={ locales } initialLocaleId="en-US" textComponent={ Text }>
             <MyComponent />
         </LocaleProvider>,
     );
@@ -145,7 +146,7 @@ it('should not change locale when a consumer requests an unknown locale', () => 
     };
 
     const { getByTestId, getByText } = render(
-        <LocaleProvider locales={ locales } initialLocaleId="en-US">
+        <LocaleProvider locales={ locales } initialLocaleId="en-US" textComponent={ Text }>
             <MyComponent />
         </LocaleProvider>,
     );
@@ -172,7 +173,8 @@ it('should callback when locale changes', () => {
         <LocaleProvider
             locales={ locales }
             initialLocaleId="en-US"
-            onLocaleChange={ onLocalChange }>
+            onLocaleChange={ onLocalChange }
+            textComponent={ Text }>
             <MyComponent />
         </LocaleProvider>,
     );
@@ -186,7 +188,7 @@ it('should callback when locale changes', () => {
 it('should fail if locales change but current locale does not exist', () => {
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    const { rerender } = render(<LocaleProvider locales={ locales } />);
+    const { rerender } = render(<LocaleProvider locales={ locales } textComponent={ Text } />);
 
     expect(() => {
         rerender(<LocaleProvider locales={ locales.slice(1) } />);

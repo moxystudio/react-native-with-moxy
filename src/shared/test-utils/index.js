@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { render } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -18,6 +19,23 @@ const localeConfig = {
             messages: idObj,
         },
     ],
+    // Consider the following React code:
+    //
+    // <Text>
+    //    <FormattedMessage id="foo" />
+    // </Text>
+    //
+    // In this case, the "foo" key will resolve into the text "bar", and the following will be rendered:
+    //
+    // <Text>
+    //    <Text>
+    //       bar
+    //    </Text>
+    // </Text>
+    //
+    // This a is necessary workaround because *ByText queries can only look up a string if it's
+    // a direct child of a Text component.
+    textComponent: Text,
 };
 
 const Providers = ({ children }) => (
@@ -38,7 +56,7 @@ Providers.propTypes = {
 
 const customRender = (ui, options) => render(ui, { wrapper: Providers, ...options });
 
-// re-export everything
+// Export everything from NTL
 export * from '@testing-library/react-native';
 
 // Override render method
