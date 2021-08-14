@@ -14,10 +14,6 @@ PODS:
     - DoubleConversion
     - Folly/Default (= 2018.10.22.00)
     - glog
-  - Folly/Default (2018.10.22.00):
-    - boost-for-react-native
-    - DoubleConversion
-    - glog
   - glog (0.3.5)
   - RCTRequired (0.61.5)
   - RCTTypeSafety (0.61.5):
@@ -170,11 +166,6 @@ PODS:
     - Folly (= 2018.10.22.00)
     - glog
     - React-jsi/Default (= 0.61.5)
-  - React-jsi/Default (0.61.5):
-    - boost-for-react-native (= 1.63.0)
-    - DoubleConversion
-    - Folly (= 2018.10.22.00)
-    - glog
   - React-jsiexecutor (0.61.5):
     - DoubleConversion
     - Folly (= 2018.10.22.00)
@@ -183,6 +174,8 @@ PODS:
     - React-jsi (= 0.61.5)
   - React-jsinspector (0.61.5)
   - react-native-config (0.12.0):
+    - React
+  - react-native-nfc-manager (3.10.0):
     - React
   - react-native-safe-area-context (0.7.3):
     - React
@@ -255,6 +248,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-config (from `../node_modules/react-native-config`)
+  - react-native-nfc-manager (from `../node_modules/react-native-nfc-manager`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -311,6 +305,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-config:
     :path: "../node_modules/react-native-config"
+  react-native-nfc-manager:
+    :path: "../node_modules/react-native-nfc-manager"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-RCTActionSheet:
@@ -367,6 +363,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
   react-native-config: f2c2ae45625a068c35681a16b9bfb1ca58b0adc7
+  react-native-nfc-manager: e8435c5adb8d805f5575663e2108c17d762ec3e1
   react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
@@ -387,6 +384,6 @@ SPEC CHECKSUMS:
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 6d232769a3df22ec242f559aad72d785e04186ad
+PODFILE CHECKSUM: 2824c24083282821d570c43bf44ed857c120dbe3
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

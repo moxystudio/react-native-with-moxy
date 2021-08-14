@@ -1,9 +1,9 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Text, View } from 'react-native';
-import { FormattedMessage } from 'react-intl';
 import SafeAreaView from 'react-native-safe-area-view';
-import { Button, useTheme, useLocale } from '../../shared/modules';
+import NfcManager, { NfcTech, NfcEvents, NfcError } from 'react-native-nfc-manager';
+import { Button, useTheme } from '../../shared/modules';
 import HomeHeader from './header';
 
 import createStyles from './styles';
@@ -15,41 +15,92 @@ const HomeScreen = ({ navigation }) => {
 
     const { themeStyles } = useTheme();
     const styles = useMemo(() => createStyles(themeStyles), [themeStyles]);
-    const locale = useLocale();
-    const handleNavigateToProfile = useCallback(() => {
-        navigation.navigate('Profile', { screen: 'Profile2' });
-    }, [navigation]);
-    const handleSwitchLanguage = useCallback(() => {
-        locale.changeLocale(locale.id === 'pt-PT' ? 'en-US' : 'pt-PT');
-    }, [locale]);
+    const [isNfcSessionActive, setNfcSessionActive] = useState(false);
+    const [isSafeTimeoutEnabled, setEnableSafeTimeout] = useState(false);
+
+    useEffect(() => {
+        const setupNfc = async () => {
+            try {
+                const nfcSupported = await NfcManager.isSupported(NfcTech.Iso15693IOS);
+
+                if (!nfcSupported) {
+                    console.error('[setupNfc] NFC is not supported');
+                }
+
+                await NfcManager.start();
+            } catch (error) {
+                console.error('[setupNfc] NfcManager did not start', { error });
+            }
+        };
+
+        setupNfc();
+    }, []);
+
+    useEffect(() => {
+        let timeoutId;
+
+        NfcManager.setEventListener(NfcEvents.SessionClosed, () => {
+            console.log('[NFC event] session closed');
+
+            if (isSafeTimeoutEnabled) {
+                timeoutId = setTimeout(() => {
+                    setNfcSessionActive(false);
+                }, 2000);
+            } else {
+                setNfcSessionActive(false);
+            }
+        });
+
+        return () => {
+            timeoutId && clearTimeout(timeoutId);
+            NfcManager.setEventListener(NfcEvents.SessionClosed, null);
+        };
+    }, [isSafeTimeoutEnabled]);
+
+    const toggleSafetyTimeout = useCallback(() => {
+        setEnableSafeTimeout((state) => !state);
+    }, []);
+
+    const startNfcScan = useCallback(async () => {
+        setNfcSessionActive(true);
+
+        try {
+            await NfcManager.requestTechnology(NfcTech.Iso15693IOS);
+        } catch (error) {
+            if (error instanceof NfcError.UserCancel) {
+                console.log('[startNfcScan] requestTechnology canceled by user');
+
+                return;
+            }
+
+            console.error('[startNfcScan] requestTechnology failed', { error: error.message });
+        }
+    }, []);
 
     return (
         <SafeAreaView style={ styles.safeArea }>
             <View style={ styles.container }>
-                <Text
-                    accessibilityLabel="title"
-                    accessibilityHint="title"
-                    style={ styles.text }>
-                    <FormattedMessage id="home.title" />
+                <Text style={ styles.text }>
+                    { isNfcSessionActive ? 'NFC session still active, please wait...' : 'Ready to scan!' }
+                </Text>
+                <Text style={ styles.text }>
+                    { isSafeTimeoutEnabled ? '2 second safety timeout enabled!' : 'Safety timeout disabled' }
                 </Text>
                 <Button
-                    accessibilityLabel="navigate to profile screen"
-                    accessibilityHint="navigate to profile screen"
                     type="highlight"
-                    title={ <FormattedMessage id="home.buttons.navigate-to-profile" /> }
-                    style={ styles.button }
-                    onPress={ handleNavigateToProfile }
+                    title="Start NFC scan"
+                    style={ [styles.button, isNfcSessionActive && styles.buttonDisabled] }
+                    onPress={ startNfcScan }
                     textStyle={ styles.buttonText }
-                    underlayColor={ themeStyles.colors.terciary } />
+                    underlayColor="blue" />
                 <Button
-                    accessibilityLabel="switch language button"
-                    accessibilityHint="switch language button"
                     type="highlight"
-                    title={ <FormattedMessage id="home.buttons.switch-language" values={ { localeId: locale.id } } /> }
+                    title={ isSafeTimeoutEnabled ? 'Disable safety timeout' : 'Enable safety timeout' }
                     style={ styles.button }
-                    onPress={ handleSwitchLanguage }
+                    onPress={ toggleSafetyTimeout }
                     textStyle={ styles.buttonText }
-                    underlayColor={ themeStyles.colors.terciary } />
+                    underlayColor="blue"
+                    disabled={ isNfcSessionActive } />
             </View>
         </SafeAreaView>
     );

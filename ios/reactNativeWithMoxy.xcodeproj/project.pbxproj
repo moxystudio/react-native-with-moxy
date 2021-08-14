@@ -57,6 +57,7 @@
 		A567246E24320D8500145E57 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reactNativeWithMoxy/AppDelegate.m; sourceTree = "<group>"; };
 		A567247024320DA600145E57 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = reactNativeWithMoxy/BootSplash.storyboard; sourceTree = "<group>"; };
 		A6762403B4ADAA866EEACF72 /* libPods-reactNativeWithMoxy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reactNativeWithMoxy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1D11ED26C854A800BBABF1 /* RNWM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = RNWM.entitlements; path = reactNativeWithMoxy/RNWM.entitlements; sourceTree = "<group>"; };
 		DF6E86F4AEA37B7497C26F4A /* Pods-reactNativeWithMoxy-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reactNativeWithMoxy-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-reactNativeWithMoxy-tvOSTests/Pods-reactNativeWithMoxy-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -104,6 +105,7 @@
 		13B07FAE1A68108700A75B9A /* reactNativeWithMoxy */ = {
 			isa = PBXGroup;
 			children = (
+				CE1D11ED26C854A800BBABF1 /* RNWM.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				A567246E24320D8500145E57 /* AppDelegate.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -243,7 +245,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = XCWLX38QFY;
+						DevelopmentTeam = EW538Z9DRY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -461,11 +463,12 @@
 			baseConfigurationReference = 7D594C9C719E95F7373D6941 /* Pods-reactNativeWithMoxy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = reactNativeWithMoxy/RNWM.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = XCWLX38QFY;
+				DEVELOPMENT_TEAM = EW538Z9DRY;
 				INFOPLIST_FILE = reactNativeWithMoxy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.1.0;
@@ -474,7 +477,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = studio.moxy.rnwm;
+				PRODUCT_BUNDLE_IDENTIFIER = "studio.moxy.rnwm.nfc-ios";
 				PRODUCT_NAME = RNWM;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -486,10 +489,11 @@
 			baseConfigurationReference = A358263909E99303F2945FA6 /* Pods-reactNativeWithMoxy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = reactNativeWithMoxy/RNWM.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = XCWLX38QFY;
+				DEVELOPMENT_TEAM = EW538Z9DRY;
 				INFOPLIST_FILE = reactNativeWithMoxy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.1.0;
@@ -498,7 +502,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = studio.moxy.rnwm;
+				PRODUCT_BUNDLE_IDENTIFIER = "studio.moxy.rnwm.nfc-ios";
 				PRODUCT_NAME = RNWM;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";

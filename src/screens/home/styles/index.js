@@ -1,18 +1,24 @@
+/* eslint-disable react-native/no-color-literals */
+
 import { StyleSheet } from 'react-native';
 
 export default ({ typography, colors, layout }) => StyleSheet.create({
     button: {
         alignItems: 'center',
-        backgroundColor: colors.primary,
+        backgroundColor: 'green',
         borderRadius: layout.gutter,
         height: 50,
         justifyContent: 'center',
         marginTop: layout.gutter,
         width: 200,
     },
+    buttonDisabled: {
+        backgroundColor: 'red',
+    },
     buttonText: {
         ...typography.bold,
-        color: colors.secondary,
+        color: 'white',
+        fontSize: 16,
     },
     container: {
         alignItems: 'center',
